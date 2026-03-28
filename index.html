@@ -117,6 +117,22 @@ body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--tex
 .pill-v{font-size:20px;font-weight:bold;}
 .pill-l{font-size:10px;color:var(--muted);margin-top:3px;}
 
+/* FUNNEL TABLE */
+.ftbl{width:100%;border-collapse:collapse;font-size:13px;}
+.ftbl td{padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.ftbl tr:last-child td{border-bottom:none;}
+.ftbl tr:hover td{background:var(--surface);}
+.f-label{display:flex;align-items:center;gap:6px;white-space:nowrap;}
+.f-indent1{padding-left:22px;}
+.f-indent2{padding-left:44px;}
+.f-connector{color:var(--muted);font-size:14px;flex-shrink:0;}
+.f-num{font-size:18px;font-weight:bold;text-align:right;white-space:nowrap;}
+.f-pct{font-size:11px;font-weight:bold;text-align:right;white-space:nowrap;}
+.f-drop{font-size:11px;text-align:right;white-space:nowrap;padding:3px 8px;border-radius:4px;}
+.f-bar-cell{width:35%;padding-right:16px;}
+.f-track{background:var(--surface);border-radius:4px;height:10px;width:100%;}
+.f-fill{height:10px;border-radius:4px;transition:width .5s ease;}
+
 /* NOTE */
 .note{font-size:10px;color:var(--muted);margin-top:8px;font-style:italic;}
 
@@ -160,6 +176,13 @@ footer{text-align:center;font-size:10px;color:var(--muted);padding:16px;backgrou
     <div class="kcard g"><div class="kl">Com 1.º pagamento</div><div class="kv grn" id="kPay">—</div><div class="ks" id="kPayS">Taxa de conversão</div></div>
     <div class="kcard b"><div class="kl">Lojas ativas</div><div class="kv" id="kActive">—</div><div class="ks" id="kActiveS">Tag Client-Active</div></div>
     <div class="kcard p"><div class="kl">Conversas abertas</div><div class="kv red" id="kConv">—</div><div class="ks">Open + Snoozed agora</div></div>
+  </div>
+
+  <!-- FUNIL TABULAR -->
+  <div class="sec">Funil de Conversão — Visão Hierárquica <span class="badge live">LIVE</span></div>
+  <div class="card">
+    <table class="ftbl" id="funnelTable"></table>
+    <p class="note" style="margin-top:12px">Funil calculado sobre o total acumulado de lojas registadas. Taxas de conversão em relação ao nível imediatamente acima.</p>
   </div>
 
   <!-- Q1 COMPARAÇÃO HOMÓLOGA -->
@@ -286,8 +309,51 @@ function mkChart(id,type,labels,datasets,opts={}){
   });
 }
 
+function funnelRow(label, indent, value, total, parentValue, color, isLast){
+  const pctOfTotal = total>0 ? (value/total*100).toFixed(1) : '—';
+  const pctOfParent = parentValue>0 ? (value/parentValue*100).toFixed(1) : null;
+  const dropPp = (parentValue>0 && parentValue!==value) ? Math.round((1 - value/parentValue)*100) : null;
+  const barWidth = total>0 ? Math.round(value/total*100) : 0;
+  const indentClass = indent===1?'f-indent1':indent===2?'f-indent2':'';
+  const connector = indent>0 ? '<span class="f-connector">└</span>' : '';
+  const dropHtml = dropPp!==null
+    ? `<span class="f-drop dn">−${dropPp} pp</span>`
+    : `<span style="font-size:11px;color:var(--muted)">base</span>`;
+  const convRate = pctOfParent && parentValue!==total
+    ? `<div style="font-size:10px;color:var(--muted);margin-top:2px">${pctOfParent}% do nível anterior</div>`
+    : '';
+  return `<tr>
+    <td style="width:28%">
+      <div class="f-label ${indentClass}">${connector}<span style="font-weight:${indent===0?'bold':'normal'}">${label}</span></div>
+    </td>
+    <td class="f-bar-cell">
+      <div class="f-track"><div class="f-fill" style="width:${barWidth}%;background:${color}"></div></div>
+    </td>
+    <td class="f-num" style="color:${indent===0?'var(--text)':color}">${fmt(value)}</td>
+    <td class="f-pct" style="color:var(--muted)">${pctOfTotal}%</td>
+    <td style="text-align:right">${dropHtml}${convRate}</td>
+  </tr>`;
+}
+
 function render(d){
   const f=d.funnel||{};
+  // Funnel table
+  const fTotal=f.total||0, fPay=f.first_payment||0, fActive=f.active||0, fConv=f.open_conversations||0;
+  document.getElementById('funnelTable').innerHTML=`
+    <thead><tr>
+      <th style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;padding:6px 10px;border-bottom:2px solid var(--border);text-align:left">Métrica</th>
+      <th style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;padding:6px 10px;border-bottom:2px solid var(--border);width:35%">Proporção</th>
+      <th style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;padding:6px 10px;border-bottom:2px solid var(--border);text-align:right">Total</th>
+      <th style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;padding:6px 10px;border-bottom:2px solid var(--border);text-align:right">% Registadas</th>
+      <th style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;padding:6px 10px;border-bottom:2px solid var(--border);text-align:right">Drop-off</th>
+    </tr></thead>
+    <tbody>
+      ${funnelRow('Lojas Registadas', 0, fTotal, fTotal, fTotal, R)}
+      ${funnelRow('Com 1.º Pagamento', 1, fPay, fTotal, fTotal, '#3B6D11')}
+      ${funnelRow('Lojas Ativas (Client-Active)', 1, fActive, fTotal, fPay, '#444')}
+      ${funnelRow('Conversas de Suporte Abertas', 2, fConv, fTotal, fActive, P)}
+    </tbody>`;
+
   document.getElementById('kTotal').textContent=fmt(f.total);
   document.getElementById('kPay').textContent=fmt(f.first_payment);
   document.getElementById('kPayS').textContent=pct(f.first_payment,f.total)+' das registadas';
