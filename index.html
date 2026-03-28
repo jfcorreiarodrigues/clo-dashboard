@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CTT Criar Lojas Online — Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+:root {
+  --red: #DF0024; --green: #3B6D11; --green-l: #B4D246;
+  --purple: #821E82; --amber: #854F0B; --amber-l: #E8A000;
+  --bg: #F0F0EE; --card: #fff; --text: #1a1a1a; --muted: #555;
+  --border: #e0e0e0; --surface: #F5F5F3;
+  --up-bg: #EAF3DE; --up-fg: #3B6D11;
+  --dn-bg: #FCEBEB; --dn-fg: #A32D2D;
+}
+@media(prefers-color-scheme:dark){
+  :root{--bg:#1a1a1a;--card:#252525;--text:#f0f0f0;--muted:#aaa;--border:#333;--surface:#2a2a2a;--up-bg:#1a2e10;--up-fg:#86c55a;--dn-bg:#2e1010;--dn-fg:#e88;}
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);font-size:14px;min-height:100vh;}
+
+/* HEADER */
+.hdr{background:var(--card);border-bottom:3px solid var(--red);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:100;}
+.logo{font-weight:900;font-size:28px;color:var(--red);letter-spacing:-1px;margin-right:12px;}
+.hdr-sub{font-size:11px;color:var(--muted);}
+.hdr-sub strong{display:block;font-size:15px;color:var(--text);font-weight:bold;}
+.hdr-r{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.ts-label{font-size:11px;color:var(--muted);}
+.btn-r{background:var(--red);color:#fff;border:none;padding:8px 16px;border-radius:5px;font-size:12px;font-weight:bold;cursor:pointer;display:flex;align-items:center;gap:6px;white-space:nowrap;}
+.btn-r:hover{background:#bf001f;}
+.spin{display:inline-block;width:12px;height:12px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* LAYOUT */
+.main{padding:20px 24px;max-width:1440px;margin:0 auto;}
+.sec{font-size:10px;font-weight:bold;color:var(--red);text-transform:uppercase;letter-spacing:1.2px;margin:20px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--red);display:flex;align-items:center;gap:8px;}
+.badge{font-size:8px;padding:2px 7px;border-radius:20px;font-weight:normal;text-transform:none;letter-spacing:0;}
+.live{background:var(--red);color:#fff;}
+.smp{background:#777;color:#fff;}
+
+/* KPI GRID */
+.kgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
+.kcard{background:var(--surface);border-radius:8px;padding:14px 16px;border-left:4px solid var(--red);}
+.kcard.g{border-left-color:var(--green);}
+.kcard.b{border-left-color:#444;}
+.kcard.p{border-left-color:var(--purple);}
+.kcard.a{border-left-color:var(--amber-l);}
+.kl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;}
+.kv{font-size:26px;font-weight:bold;line-height:1.1;margin-bottom:4px;}
+.kv.red{color:var(--red);}
+.kv.grn{color:var(--green);}
+.ks{font-size:11px;color:var(--muted);}
+.yoy{font-size:11px;font-weight:bold;padding:2px 7px;border-radius:4px;display:inline-block;margin-top:4px;}
+.up{background:var(--up-bg);color:var(--up-fg);}
+.dn{background:var(--dn-bg);color:var(--dn-fg);}
+.nt{background:var(--surface);color:var(--muted);border:1px solid var(--border);}
+
+/* CARDS */
+.card{background:var(--card);border-radius:8px;padding:16px 18px;border:1px solid var(--border);}
+.card-t{font-size:13px;font-weight:bold;margin-bottom:12px;}
+.grid2{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:12px;}
+.grid2e{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+
+/* Q1 COMPARE */
+.q1row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:12px;}
+.q1c{background:var(--surface);border-radius:8px;padding:12px 14px;text-align:center;}
+.q1c.active{border:2px solid var(--red);}
+.q1y{font-size:10px;color:var(--muted);margin-bottom:4px;}
+.q1v{font-size:22px;font-weight:bold;}
+.q1d{font-size:11px;font-weight:bold;margin-top:4px;}
+
+/* INSIGHT */
+.insight{background:#FFF8E1;border:1px solid #F59E0B;border-left-width:4px;border-radius:0 8px 8px 0;padding:9px 14px;font-size:12px;color:#633806;margin-bottom:10px;}
+@media(prefers-color-scheme:dark){.insight{background:#2a1f00;border-color:#854F0B;color:#FAC775;}}
+
+/* BAR ROWS */
+.brow{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.blbl{font-size:11px;min-width:110px;color:var(--text);}
+.blbl.sm{min-width:80px;}
+.btrack{flex:1;background:var(--surface);border-radius:3px;height:7px;}
+.bfill{height:7px;border-radius:3px;}
+.bcnt{font-size:11px;font-weight:bold;min-width:38px;text-align:right;color:var(--muted);}
+
+/* COHORT TABLE */
+.ctbl{width:100%;border-collapse:collapse;font-size:12px;}
+.ctbl th{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);padding:7px 8px;border-bottom:2px solid var(--border);text-align:left;white-space:nowrap;}
+.ctbl td{padding:8px 8px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.ctbl tr:last-child td{border-bottom:none;}
+.ctbl tr:hover td{background:var(--surface);}
+.yr-badge{font-size:10px;font-weight:bold;padding:3px 8px;border-radius:12px;background:var(--red);color:#fff;}
+
+/* TOP STORES */
+.stbl{width:100%;border-collapse:collapse;font-size:11px;}
+.stbl th{font-size:9px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);padding:7px 6px;border-bottom:2px solid var(--border);text-align:left;white-space:nowrap;}
+.stbl td{padding:8px 6px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.stbl tr:last-child td{border-bottom:none;}
+.stbl tr:hover td{background:var(--surface);}
+.plan-badge{font-size:9px;padding:2px 7px;border-radius:20px;font-weight:bold;white-space:nowrap;}
+.bcp{background:#FCEBEB;color:#791F1F;}
+.bc{background:#EEEDFE;color:#3C3489;}
+.bp{background:#FAEEDA;color:#633806;}
+.bb{background:#EAF3DE;color:#27500A;}
+
+/* CONV ROWS */
+.crow{padding:7px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:8px;font-size:12px;}
+.crow:last-child{border-bottom:none;}
+.cst{font-size:9px;padding:2px 6px;border-radius:3px;font-weight:bold;white-space:nowrap;flex-shrink:0;margin-top:2px;}
+.open{background:#DCFCE7;color:#15803D;}
+.snz{background:#FEF9C3;color:#854D0E;}
+.closed{background:var(--surface);color:var(--muted);}
+
+/* PILLS */
+.pills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+.pill{background:var(--surface);border-radius:8px;padding:10px 12px;text-align:center;}
+.pill-v{font-size:20px;font-weight:bold;}
+.pill-l{font-size:10px;color:var(--muted);margin-top:3px;}
+
+/* NOTE */
+.note{font-size:10px;color:var(--muted);margin-top:8px;font-style:italic;}
+
+/* ERROR */
+.err-box{background:#FFF3F3;border:1px solid #FFCDD2;color:#B71C1C;padding:12px 16px;border-radius:8px;margin-bottom:14px;display:none;}
+
+/* FOOTER */
+footer{text-align:center;font-size:10px;color:var(--muted);padding:16px;background:var(--card);border-top:1px solid var(--border);margin-top:24px;}
+
+@media(max-width:1100px){.kgrid,.grid3{grid-template-columns:repeat(2,minmax(0,1fr));}.grid2{grid-template-columns:1fr;}}
+@media(max-width:600px){.kgrid{grid-template-columns:1fr 1fr;}.main,.hdr{padding:12px;}.grid2e{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div style="display:flex;align-items:center;">
+    <span class="logo">ctt</span>
+    <div>
+      <div class="hdr-sub">
+        <strong>Criar Lojas Online — Dashboard Executivo</strong>
+        Histórico 2020–2026 · Período Homólogo · Dados Intercom
+      </div>
+    </div>
+  </div>
+  <div class="hdr-r">
+    <span class="ts-label" id="ts">A carregar...</span>
+    <button class="btn-r" id="btnR" onclick="loadData()">
+      <span id="ico">↻</span> Atualizar
+    </button>
+  </div>
+</header>
+
+<main class="main">
+  <div class="err-box" id="err"></div>
+
+  <!-- FUNNEL KPIs -->
+  <div class="sec">Funil CLO — Snapshot Atual <span class="badge live">LIVE</span></div>
+  <div class="kgrid" id="kpiGrid">
+    <div class="kcard"><div class="kl">Lojas registadas</div><div class="kv" id="kTotal">—</div><div class="ks">Total acumulado desde 2020</div></div>
+    <div class="kcard g"><div class="kl">Com 1.º pagamento</div><div class="kv grn" id="kPay">—</div><div class="ks" id="kPayS">Taxa de conversão</div></div>
+    <div class="kcard b"><div class="kl">Lojas ativas</div><div class="kv" id="kActive">—</div><div class="ks" id="kActiveS">Tag Client-Active</div></div>
+    <div class="kcard p"><div class="kl">Conversas abertas</div><div class="kv red" id="kConv">—</div><div class="ks">Open + Snoozed agora</div></div>
+  </div>
+
+  <!-- Q1 COMPARAÇÃO HOMÓLOGA -->
+  <div class="sec">Período Homólogo Q1 — Conversas de Suporte <span class="badge live">EXACT</span></div>
+  <div class="card">
+    <div class="card-t">Q1 ano a ano — conversas criadas</div>
+    <div class="q1row" id="q1Row"></div>
+    <div class="insight" id="q1Insight"></div>
+  </div>
+
+  <!-- CONVERSAS POR ANO -->
+  <div class="sec">Volume de Conversas 2020–2026 <span class="badge live">EXACT — todos os anos</span></div>
+  <div class="card">
+    <div class="card-t">Total de conversas criadas por ano</div>
+    <div style="position:relative;height:220px;"><canvas id="cConv"></canvas></div>
+    <div id="convYoY" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;font-size:11px;color:var(--muted);"></div>
+  </div>
+
+  <!-- ANÁLISE POR COHORT -->
+  <div class="sec">Maturidade por Cohort de Registo <span class="badge smp">AMOSTRA</span></div>
+  <div class="insight">Empresas mais antigas geram muito mais GMV e receita CTT — reflexo natural de anos de operação acumulada, não diferença de qualidade das novas lojas. Os cohorts 2024–2025 têm taxa de subscrição anual baixa porque ainda estão no período de experimentação.</div>
+  <div class="card" style="margin-bottom:12px;overflow-x:auto;">
+    <div class="card-t">Resumo por cohort (amostra)</div>
+    <table class="ctbl" id="cohortTable"></table>
+  </div>
+
+  <!-- CHARTS COHORT -->
+  <div class="grid2e" style="margin-bottom:12px;">
+    <div class="card">
+      <div class="card-t">GMV acumulado por cohort (€)</div>
+      <div style="position:relative;height:200px;"><canvas id="cGMV"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-t">Spend mensal médio por cohort (€/mês)</div>
+      <div style="position:relative;height:200px;"><canvas id="cSpend"></canvas></div>
+    </div>
+  </div>
+  <div class="grid2e">
+    <div class="card">
+      <div class="card-t">Taxa subscrição anual por cohort (%)</div>
+      <div style="position:relative;height:200px;"><canvas id="cAnnual"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-t">Taxa de conversão para 1.º pagamento (%)</div>
+      <div style="position:relative;height:200px;"><canvas id="cConv2"></canvas></div>
+    </div>
+  </div>
+
+  <!-- PLANOS + INDUSTRIAS + PAGAMENTOS -->
+  <div class="sec">Distribuição de Lojas <span class="badge smp">AMOSTRA</span></div>
+  <div class="grid3">
+    <div class="card">
+      <div class="card-t">Por plano</div>
+      <div id="planDiv"></div>
+    </div>
+    <div class="card">
+      <div class="card-t">Por indústria (top 8)</div>
+      <div id="indDiv"></div>
+    </div>
+    <div class="card">
+      <div class="card-t">Métodos de pagamento ativos</div>
+      <div style="position:relative;height:160px;"><canvas id="cPay"></canvas></div>
+      <div id="payLegend" style="margin-top:8px;"></div>
+    </div>
+  </div>
+
+  <!-- TOP STORES -->
+  <div class="sec">Top Lojas por Receita CTT <span class="badge smp">AMOSTRA</span></div>
+  <div class="card">
+    <div style="overflow-x:auto;">
+      <table class="stbl">
+        <thead><tr><th>#</th><th>Loja</th><th>Cohort</th><th>Indústria</th><th>Plano</th><th>Receita CTT</th><th>GMV</th><th>Envios</th><th>Encomendas</th><th>Anual</th></tr></thead>
+        <tbody id="storeBody"></tbody>
+      </table>
+    </div>
+    <p class="note" id="storeNote"></p>
+  </div>
+
+  <!-- CONVERSAS ABERTAS -->
+  <div class="sec">Conversas de Suporte Abertas <span class="badge live">LIVE</span></div>
+  <div class="card" id="convDiv"></div>
+
+</main>
+
+<footer>
+  CTT Criar Lojas Online — Dashboard Executivo &nbsp;|&nbsp; 
+  Fonte: Intercom API &nbsp;|&nbsp; 
+  Atualizado automaticamente a cada hora via GitHub Actions &nbsp;|&nbsp; 
+  <a href=".github/workflows/refresh-data.yml" style="color:var(--red);">Ver workflow</a>
+</footer>
+
+<script>
+const R='#DF0024', G='#3B6D11', Gl='#B4D246', P='#821E82', A='#E8A000';
+const YEARS=[2020,2021,2022,2023,2024,2025];
+let charts={};
+
+function fmt(n){return Math.round(n||0).toLocaleString('pt-PT');}
+function money(n){return '€'+Math.round(n||0).toLocaleString('pt-PT');}
+function pct(a,b){return b>0?Math.round(a/b*100)+'%':'—';}
+function yoy(cur,prev){
+  if(!cur||!prev) return '<span class="yoy nt">—</span>';
+  const p=Math.round((cur/prev-1)*100);
+  const cls=p>=0?'up':'dn', sign=p>=0?'+':'';
+  return `<span class="yoy ${cls}">${sign}${p}%</span>`;
+}
+function bar(label, val, max, color, count){
+  const w=max>0?Math.round(val/max*100):0;
+  return `<div class="brow"><span class="blbl sm">${label}</span><div class="btrack"><div class="bfill" style="width:${w}%;background:${color};opacity:.8;"></div></div><span class="bcnt">${count}</span></div>`;
+}
+function destroyCharts(){Object.values(charts).forEach(c=>{try{c.destroy();}catch(e){}});charts={};}
+const isDark=window.matchMedia('(prefers-color-scheme:dark)').matches;
+const gc=isDark?'rgba(255,255,255,.08)':'rgba(0,0,0,.06)';
+const tc=isDark?'rgba(255,255,255,.5)':'rgba(0,0,0,.45)';
+
+function mkChart(id,type,labels,datasets,opts={}){
+  const ctx=document.getElementById(id);
+  if(!ctx) return;
+  charts[id]=new Chart(ctx,{
+    type,
+    data:{labels,datasets},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+      scales:{x:{grid:{display:false},ticks:{color:tc}},y:{grid:{color:gc},ticks:{color:tc}}},
+      ...opts}
+  });
+}
+
+function render(d){
+  const f=d.funnel||{};
+  document.getElementById('kTotal').textContent=fmt(f.total);
+  document.getElementById('kPay').textContent=fmt(f.first_payment);
+  document.getElementById('kPayS').textContent=pct(f.first_payment,f.total)+' das registadas';
+  document.getElementById('kActive').textContent=fmt(f.active);
+  document.getElementById('kActiveS').textContent=pct(f.active,f.total)+' das registadas';
+  document.getElementById('kConv').textContent=fmt(f.open_conversations);
+
+  // Q1 homólogo
+  const q=d.q1_by_year||{};
+  const q24=q['2024'], q25=q['2025'], q26=q['2026'];
+  document.getElementById('q1Row').innerHTML=`
+    <div class="q1c"><div class="q1y">Q1 2024</div><div class="q1v">${fmt(q24)}</div><div class="q1d" style="color:var(--muted)">referência</div></div>
+    <div class="q1c"><div class="q1y">Q1 2025</div><div class="q1v">${fmt(q25)}</div><div class="q1d">${yoy(q25,q24)}</div></div>
+    <div class="q1c active"><div class="q1y">Q1 2026 (até hoje)</div><div class="q1v" style="color:var(--red)">${fmt(q26)}</div><div class="q1d">${yoy(q26,q25)} vs Q1 2025</div></div>
+  `;
+  const p2526=q25&&q26?Math.round((q26/q25-1)*100):null;
+  const trend=p2526!==null?(p2526<0?`Queda de ${Math.abs(p2526)}% face ao mesmo período de 2025.`:'Crescimento face a 2025.'):'';
+  document.getElementById('q1Insight').textContent=`Q1 2026 com ${fmt(q26)} conversas vs ${fmt(q25)} em Q1 2025. ${trend} Desde 2022 que o volume de suporte oscila — acompanhar se esta descida reflecte melhor self-service ou menor actividade das lojas.`;
+
+  // Conversas por ano
+  const cy=d.conv_by_year||{};
+  const cyLabels=Object.keys(cy).sort();
+  const cyVals=cyLabels.map(y=>cy[y]||0);
+  const maxCy=Math.max(...cyVals.filter((v,i)=>i<cyLabels.length-1));
+  const cyColors=cyVals.map((v,i)=>{
+    if(cyLabels[i]==='2026') return A;
+    if(v===maxCy) return R;
+    return isDark?'#666':'#C0647A';
+  });
+  destroyCharts();
+  mkChart('cConv','bar',cyLabels,[{data:cyVals,backgroundColor:cyColors,borderRadius:4}],{
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+c.raw.toLocaleString('pt-PT')+' conversas'}}},
+    scales:{x:{grid:{display:false},ticks:{color:tc}},y:{grid:{color:gc},ticks:{color:tc,callback:v=>v.toLocaleString('pt-PT')}}}
+  });
+  // YoY labels
+  const yoyItems=[];
+  for(let i=1;i<cyLabels.length;i++){
+    const prev=cy[cyLabels[i-1]], cur=cy[cyLabels[i]];
+    if(prev&&cur){const p=Math.round((cur/prev-1)*100);yoyItems.push(`<span>${cyLabels[i]} vs ${cyLabels[i-1]}: <strong style="color:${p>=0?'var(--green)':'var(--red)'}">${p>=0?'+':''}${p}%</strong></span>`);}
+  }
+  document.getElementById('convYoY').innerHTML=yoyItems.join('<span style="color:var(--muted);margin:0 2px">·</span>');
+
+  // Cohorts
+  const co=d.cohorts||{};
+  const coYears=Object.keys(co).map(Number).sort();
+  const cohortColors=coYears.map((_,i)=>[R,'#C0647A','#A08090','#888','#B4D246',G,'#4CAF50'][i]||'#aaa');
+
+  mkChart('cGMV','bar',coYears.map(String),[{data:coYears.map(y=>(co[y]||{}).gmv||0),backgroundColor:cohortColors,borderRadius:4}],{
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' €'+Math.round(c.raw).toLocaleString('pt-PT')}}},
+    scales:{x:{grid:{display:false},ticks:{color:tc}},y:{grid:{color:gc},ticks:{color:tc,callback:v=>'€'+Math.round(v/1000)+'k'}}}
+  });
+  mkChart('cSpend','bar',coYears.map(String),[{data:coYears.map(y=>(co[y]||{}).monthly_spend_avg||0),backgroundColor:cohortColors,borderRadius:4}],{
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' €'+Math.round(c.raw)+'/mês'}}},
+    scales:{x:{grid:{display:false},ticks:{color:tc}},y:{grid:{color:gc},ticks:{color:tc,callback:v=>'€'+v}}}
+  });
+  mkChart('cAnnual','bar',coYears.map(String),[{data:coYears.map(y=>(co[y]||{}).annual_rate||0),backgroundColor:cohortColors,borderRadius:4}],{
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+c.raw+'%'}}},
+    scales:{x:{grid:{display:false},ticks:{color:tc}},y:{grid:{color:gc},max:100,ticks:{color:tc,callback:v=>v+'%'}}}
+  });
+  mkChart('cConv2','bar',coYears.map(String),[{data:coYears.map(y=>(co[y]||{}).conversion_rate||0),backgroundColor:cohortColors,borderRadius:4}],{
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+c.raw+'%'}}},
+    scales:{x:{grid:{display:false},ticks:{color:tc}},y:{grid:{color:gc},ticks:{color:tc,callback:v=>v+'%'}}}
+  });
+
+  // Cohort table
+  const hdr=['Cohort','N (amostra)','GMV médio/loja','Receita CTT média','Spend/mês','Taxa anual','Dom. próprio','Conversão'].map(h=>`<th>${h}</th>`).join('');
+  const rows=coYears.map((y,i)=>{
+    const c=co[y]||{};
+    return `<tr>
+      <td><span class="yr-badge" style="background:${cohortColors[i]}">${y}</span></td>
+      <td>${fmt(c.count)}</td>
+      <td style="font-weight:bold">${money(c.gmv_avg)}</td>
+      <td style="color:var(--red);font-weight:bold">${money(c.revenue_ctt_avg)}</td>
+      <td>${money(c.monthly_spend_avg)}/mês</td>
+      <td>${c.annual_rate??0}%</td>
+      <td>${c.custom_domain_rate??0}%</td>
+      <td>${c.conversion_rate??0}%</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('cohortTable').innerHTML=`<thead><tr>${hdr}</tr></thead><tbody>${rows}</tbody>`;
+
+  // Plans
+  const pc=d.plan_counts||{};
+  const planOrder=[['Corporate Plus',R],['Corporate','#6B46C1'],['Plus',A],['Base',G]];
+  const maxP=Math.max(...planOrder.map(([k])=>pc[k]||0),1);
+  document.getElementById('planDiv').innerHTML=planOrder.map(([k,c])=>{
+    const v=pc[k]||0;
+    return bar(k,v,maxP,c,v);
+  }).join('');
+
+  // Industries
+  const ind=d.top_industries||{};
+  const indEntries=Object.entries(ind).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  const maxI=indEntries[0]?.[1]||1;
+  document.getElementById('indDiv').innerHTML=indEntries.map(([k,v])=>bar(k,v,maxI,R,v)).join('');
+
+  // Payment methods
+  const pm=d.payment_methods||{};
+  const pmKeys=Object.keys(pm).filter(k=>pm[k]>0);
+  const pmVals=pmKeys.map(k=>pm[k]);
+  const pmColors=[R,P,Gl,'#444','#888'];
+  charts['cPay']=new Chart(document.getElementById('cPay'),{
+    type:'doughnut',
+    data:{labels:pmKeys,datasets:[{data:pmVals,backgroundColor:pmColors.slice(0,pmKeys.length),borderWidth:2,borderColor:isDark?'#252525':'#fff'}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},cutout:'55%'}
+  });
+  document.getElementById('payLegend').innerHTML=pmKeys.map((k,i)=>
+    `<div style="display:flex;align-items:center;gap:4px;font-size:10px;color:var(--muted);margin-bottom:2px"><span style="width:10px;height:10px;border-radius:2px;background:${pmColors[i]};display:inline-block;"></span>${k}: ${pm[k]}</div>`
+  ).join('');
+
+  // Top stores
+  const bm={'Corporate Plus':'bcp','Corporate':'bc','Plus':'bp','Base':'bb'};
+  const bt={'Corporate Plus':'Corp+','Corporate':'Corp','Plus':'Plus','Base':'Base'};
+  const stores=d.top_stores||[];
+  document.getElementById('storeBody').innerHTML=stores.map((s,i)=>`
+    <tr>
+      <td style="color:var(--muted);font-weight:bold">${i+1}</td>
+      <td><strong>${s.name}</strong></td>
+      <td><span class="yr-badge" style="font-size:9px;padding:2px 6px">${s.cohort||'—'}</span></td>
+      <td style="color:var(--muted)">${s.industry||'—'}</td>
+      <td><span class="plan-badge ${bm[s.plan]||'bb'}">${bt[s.plan]||s.plan||'—'}</span></td>
+      <td style="font-weight:bold;color:var(--red)">${money(s.revenue_ctt)}</td>
+      <td>${money(s.gmv)}</td>
+      <td>${fmt(s.shipments)}</td>
+      <td>${fmt(s.paid_orders)}</td>
+      <td style="color:${s.is_annual?'var(--green)':'var(--muted)'};font-weight:${s.is_annual?'bold':'normal'}">${s.is_annual?'Sim':'—'}</td>
+    </tr>`).join('');
+  document.getElementById('storeNote').textContent=`Amostra de ${d.sample_size||0} empresas, ordenadas por company_lifetime_revenue (receita CTT acumulada).`;
+
+  // Open conversations
+  const cl=d.open_conversations_list||[];
+  document.getElementById('convDiv').innerHTML=cl.length
+    ? cl.map(c=>`<div class="crow"><span class="cst ${c.state==='open'?'open':c.state==='snoozed'?'snz':'closed'}">${c.state==='open'?'Aberta':c.state==='snoozed'?'Snoozed':'Fechada'}</span><div><strong>${c.author||'—'}</strong><span style="color:var(--muted);margin-left:6px">${(c.preview||'').substring(0,130)}</span></div></div>`).join('')
+    : '<p style="color:var(--muted);font-size:12px;text-align:center;padding:12px">Sem conversas abertas neste momento.</p>';
+}
+
+async function loadData(){
+  const btn=document.getElementById('btnR');
+  const ico=document.getElementById('ico');
+  const ts=document.getElementById('ts');
+  btn.disabled=true;
+  ico.innerHTML='<span class="spin"></span>';
+  document.getElementById('err').style.display='none';
+  try{
+    const r=await fetch('data.json?t='+Date.now());
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const d=await r.json();
+    render(d);
+    const gen=d.generated_at?new Date(d.generated_at).toLocaleString('pt-PT',{dateStyle:'short',timeStyle:'short'}):'—';
+    ts.textContent='Dados de: '+gen;
+  }catch(e){
+    const el=document.getElementById('err');
+    el.style.display='block';
+    el.textContent='Erro ao carregar data.json: '+e.message+'. Certifica-te de que o ficheiro existe e o workflow foi executado.';
+    ts.textContent='Erro às '+new Date().toLocaleTimeString('pt-PT');
+  }finally{
+    btn.disabled=false;
+    ico.innerHTML='↻';
+  }
+}
+
+window.addEventListener('load', loadData);
+</script>
+</body>
+</html>

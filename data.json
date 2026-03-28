@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-03-28T00:00:00+00:00",
+  "funnel": {
+    "total": 3954,
+    "first_payment": 972,
+    "active": 541,
+    "open_conversations": 6
+  },
+  "open_conversations_list": [
+    {"id": "215473585022318", "state": "open",    "author": "SuporteCTT",               "preview": "Novos preços de subscrição de planos a partir de 23 de março"},
+    {"id": "215473465128511", "state": "snoozed", "author": "Cátia Magalhães Ramos",    "preview": "Questão de melhoria ou problema com a loja online"},
+    {"id": "215473503114589", "state": "snoozed", "author": "Alberto Oliveira",          "preview": "Encomenda para Bulgária — problema na expedição no backoffice CTT"},
+    {"id": "215472913648433", "state": "snoozed", "author": "Diogo Gaspar",             "preview": "Template para contemplar informação num artigo"},
+    {"id": "215472753029961", "state": "snoozed", "author": "Susana Cardoso",           "preview": "Foto de preview no Messenger — como alterar"},
+    {"id": "215473432681214", "state": "snoozed", "author": "yomna essam darwish",      "preview": "hello"}
+  ],
+  "conv_by_year": {
+    "2020": 4489, "2021": 3979, "2022": 3058,
+    "2023": 3405, "2024": 4017, "2025": 3032, "2026": 686
+  },
+  "q1_by_year": { "2024": 1020, "2025": 888, "2026": 686 },
+  "cohorts": {
+    "2020": {"count":25,"gmv":4084804,"gmv_avg":163392,"shipments":43716,"monthly_spend_avg":122,"revenue_ctt":31577,"revenue_ctt_avg":1263,"annual":11,"annual_rate":44.0,"custom_domain":23,"custom_domain_rate":92.0,"first_payments":23,"conversion_rate":92.0,"avg_days_to_fp":54},
+    "2021": {"count":11,"gmv":1106609,"gmv_avg":100601,"shipments":20436,"monthly_spend_avg":129,"revenue_ctt":18032,"revenue_ctt_avg":1639,"annual":8,"annual_rate":72.7,"custom_domain":10,"custom_domain_rate":90.9,"first_payments":12,"conversion_rate":109.1,"avg_days_to_fp":61},
+    "2022": {"count":5,"gmv":345125,"gmv_avg":69025,"shipments":9918,"monthly_spend_avg":186,"revenue_ctt":1809,"revenue_ctt_avg":362,"annual":2,"annual_rate":40.0,"custom_domain":5,"custom_domain_rate":100.0,"first_payments":3,"conversion_rate":60.0,"avg_days_to_fp":44},
+    "2023": {"count":14,"gmv":401466,"gmv_avg":28676,"shipments":8547,"monthly_spend_avg":89,"revenue_ctt":5776,"revenue_ctt_avg":413,"annual":5,"annual_rate":35.7,"custom_domain":12,"custom_domain_rate":85.7,"first_payments":10,"conversion_rate":71.4,"avg_days_to_fp":47},
+    "2024": {"count":97,"gmv":920247,"gmv_avg":9487,"shipments":59198,"monthly_spend_avg":23,"revenue_ctt":8374,"revenue_ctt_avg":86,"annual":8,"annual_rate":8.2,"custom_domain":78,"custom_domain_rate":80.4,"first_payments":21,"conversion_rate":21.6,"avg_days_to_fp":38},
+    "2025": {"count":75,"gmv":13349,"gmv_avg":178,"shipments":133,"monthly_spend_avg":6,"revenue_ctt":2097,"revenue_ctt_avg":28,"annual":2,"annual_rate":2.7,"custom_domain":42,"custom_domain_rate":56.0,"first_payments":10,"conversion_rate":13.3,"avg_days_to_fp":32},
+    "2026": {"count":7,"gmv":0,"gmv_avg":0,"shipments":0,"monthly_spend_avg":0,"revenue_ctt":62,"revenue_ctt_avg":9,"annual":0,"annual_rate":0,"custom_domain":2,"custom_domain_rate":28.6,"first_payments":1,"conversion_rate":14.3,"avg_days_to_fp":null}
+  },
+  "plan_counts": {"Corporate":49,"Corporate Plus":5,"Plus":5,"Base":1},
+  "top_industries": {"Artesanato":9,"Compras/Vendas a Retalho":8,"Vestuário":7,"Alimentação":4,"Artigos para crianças":3,"Equipamento Desportivo":3,"Tecnologia":3,"Joalharia":2,"Vestuário intimo/Lingerie":2,"Bebidas alcoólicas":2},
+  "payment_methods": {"Cartão Crédito":33,"MB Way":43,"Multibanco":41,"Transferência":48},
+  "top_stores": [
+    {"name":"Charme Biju Online","cohort":2020,"industry":"Joalharia","plan":"Corporate","revenue_ctt":1691.25,"gmv":92811.5,"shipments":604,"paid_orders":2951,"is_annual":true,"monthly_spend":51},
+    {"name":"Le Frappê","cohort":2021,"industry":"Alimentação","plan":"Corporate","revenue_ctt":1664.19,"gmv":25858.23,"shipments":266,"paid_orders":187,"is_annual":false,"monthly_spend":58},
+    {"name":"Cunha&Vale Jóias","cohort":2020,"industry":"Joalharia","plan":"Corporate","revenue_ctt":1562.1,"gmv":14669.15,"shipments":105,"paid_orders":152,"is_annual":false,"monthly_spend":32},
+    {"name":"Durães Online","cohort":2020,"industry":"Compras/Retalho","plan":"Corporate","revenue_ctt":1535.04,"gmv":18653.98,"shipments":492,"paid_orders":518,"is_annual":true,"monthly_spend":56},
+    {"name":"NAI roupa interior","cohort":2020,"industry":"Vestuário","plan":"Corporate","revenue_ctt":1519.05,"gmv":204138.38,"shipments":5978,"paid_orders":5504,"is_annual":true,"monthly_spend":318},
+    {"name":"BEJOO","cohort":2022,"industry":"Beleza/Spa","plan":"Corporate Plus","revenue_ctt":1507.53,"gmv":65058.95,"shipments":1435,"paid_orders":1412,"is_annual":true,"monthly_spend":115},
+    {"name":"Vesthyrso","cohort":2021,"industry":"Vestuário","plan":"Corporate","revenue_ctt":1412.04,"gmv":214648.92,"shipments":3534,"paid_orders":2595,"is_annual":true,"monthly_spend":222},
+    {"name":"Cardel","cohort":2020,"industry":"Vestuário","plan":"Corporate","revenue_ctt":1402.2,"gmv":79447.89,"shipments":973,"paid_orders":674,"is_annual":false,"monthly_spend":86},
+    {"name":"LavoreseCores by Célia","cohort":2020,"industry":"Artesanato","plan":"Corporate","revenue_ctt":1399.74,"gmv":59614.1,"shipments":1567,"paid_orders":1342,"is_annual":false,"monthly_spend":106},
+    {"name":"Quinta da Olaia","cohort":2020,"industry":"Compras/Retalho","plan":"Corporate","revenue_ctt":1309.95,"gmv":22783.57,"shipments":630,"paid_orders":615,"is_annual":false,"monthly_spend":59},
+    {"name":"Intimoda","cohort":2021,"industry":"Vestuário","plan":"Corporate","revenue_ctt":1273.05,"gmv":53467.29,"shipments":1649,"paid_orders":1348,"is_annual":false,"monthly_spend":100},
+    {"name":"MeowMeow Babies","cohort":2022,"industry":"Artigos crianças","plan":"Corporate","revenue_ctt":1266.9,"gmv":102838.39,"shipments":3456,"paid_orders":3028,"is_annual":true,"monthly_spend":179}
+  ],
+  "sample_size": 234
+}
