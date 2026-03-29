@@ -1,12 +1,18 @@
 {
-  "generated_at": "2026-03-29T03:27:58.756353+00:00",
+  "generated_at": "2026-03-29T05:47:43.045605+00:00",
   "funnel": {
     "total": 3954,
     "first_payment": 972,
     "active": 541,
-    "open_conversations": 7
+    "open_conversations": 8
   },
   "open_conversations_list": [
+    {
+      "id": "215473683137986",
+      "state": "open",
+      "author": "Tel-Seg.Com",
+      "preview": "Prezado(a),\nPrecisa de uma opinião séria e sem compromisso?\n O meu nome é Carlos Freitas Fernandes e dedico-me a optimiz"
+    },
     {
       "id": "215473681144520",
       "state": "open",
@@ -57,14 +63,31 @@
     "2023": 3405,
     "2024": 4017,
     "2025": 3032,
-    "2026": 687
+    "2026": 688
   },
   "q1_by_year": {
     "2024": 1020,
     "2025": 888,
-    "2026": 687
+    "2026": 688
   },
   "cohorts": {
+    "2020": {
+      "count": 22,
+      "gmv": 4129361.0,
+      "gmv_avg": 187698.0,
+      "shipments": 54087,
+      "monthly_spend_total": 3581,
+      "monthly_spend_avg": 163.0,
+      "revenue_ctt": 31562.0,
+      "revenue_ctt_avg": 1435.0,
+      "annual": 11,
+      "annual_rate": 50.0,
+      "custom_domain": 21,
+      "custom_domain_rate": 95.5,
+      "first_payments": 22,
+      "conversion_rate": 100.0,
+      "avg_days_to_fp": 53.0
+    },
     "2021": {
       "count": 14,
       "gmv": 667810.0,
@@ -132,23 +155,6 @@
       "first_payments": 8,
       "conversion_rate": 100.0,
       "avg_days_to_fp": 57.0
-    },
-    "2020": {
-      "count": 22,
-      "gmv": 4129319.0,
-      "gmv_avg": 187696.0,
-      "shipments": 54087,
-      "monthly_spend_total": 3581,
-      "monthly_spend_avg": 163.0,
-      "revenue_ctt": 31562.0,
-      "revenue_ctt_avg": 1435.0,
-      "annual": 11,
-      "annual_rate": 50.0,
-      "custom_domain": 21,
-      "custom_domain_rate": 95.5,
-      "first_payments": 22,
-      "conversion_rate": 100.0,
-      "avg_days_to_fp": 53.0
     },
     "2026": {
       "count": 46,
