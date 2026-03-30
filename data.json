@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30T03:31:00.561222+00:00",
+  "generated_at": "2026-03-30T06:04:22.630320+00:00",
   "funnel": {
     "total": 3957,
     "first_payment": 972,
@@ -72,38 +72,38 @@
   },
   "cohorts": {
     "2024": {
-      "count": 168,
-      "gmv": 633255.0,
-      "gmv_avg": 3769.0,
-      "shipments": 17384,
-      "monthly_spend_total": 5013,
+      "count": 169,
+      "gmv": 633674.0,
+      "gmv_avg": 3750.0,
+      "shipments": 17397,
+      "monthly_spend_total": 5055,
       "monthly_spend_avg": 30.0,
-      "revenue_ctt": 14132.0,
-      "revenue_ctt_avg": 84.0,
-      "annual": 13,
-      "annual_rate": 7.7,
-      "custom_domain": 31,
-      "custom_domain_rate": 18.5,
-      "first_payments": 38,
-      "conversion_rate": 22.6,
+      "revenue_ctt": 14704.0,
+      "revenue_ctt_avg": 87.0,
+      "annual": 14,
+      "annual_rate": 8.3,
+      "custom_domain": 32,
+      "custom_domain_rate": 18.9,
+      "first_payments": 39,
+      "conversion_rate": 23.1,
       "avg_days_to_fp": 32.0
     },
     "2020": {
       "count": 21,
-      "gmv": 4076068.0,
-      "gmv_avg": 194098.0,
-      "shipments": 47104,
-      "monthly_spend_total": 3140,
-      "monthly_spend_avg": 150.0,
-      "revenue_ctt": 30660.0,
-      "revenue_ctt_avg": 1460.0,
+      "gmv": 4228500.0,
+      "gmv_avg": 201357.0,
+      "shipments": 55134,
+      "monthly_spend_total": 3609,
+      "monthly_spend_avg": 172.0,
+      "revenue_ctt": 29787.0,
+      "revenue_ctt_avg": 1418.0,
       "annual": 9,
       "annual_rate": 42.9,
       "custom_domain": 20,
       "custom_domain_rate": 95.2,
       "first_payments": 21,
       "conversion_rate": 100.0,
-      "avg_days_to_fp": 47.0
+      "avg_days_to_fp": 46.0
     },
     "2025": {
       "count": 136,
@@ -126,7 +126,7 @@
       "count": 12,
       "gmv": 975055.0,
       "gmv_avg": 81255.0,
-      "shipments": 18793,
+      "shipments": 18795,
       "monthly_spend_total": 1271,
       "monthly_spend_avg": 106.0,
       "revenue_ctt": 11264.0,
@@ -174,46 +174,46 @@
       "avg_days_to_fp": 67.0
     },
     "2026": {
-      "count": 47,
+      "count": 46,
       "gmv": 89.0,
       "gmv_avg": 2.0,
       "shipments": 10,
-      "monthly_spend_total": 807,
-      "monthly_spend_avg": 17.0,
-      "revenue_ctt": 916.0,
-      "revenue_ctt_avg": 19.0,
-      "annual": 3,
-      "annual_rate": 6.4,
-      "custom_domain": 3,
-      "custom_domain_rate": 6.4,
-      "first_payments": 4,
-      "conversion_rate": 8.5,
-      "avg_days_to_fp": 30.0
+      "monthly_spend_total": 621,
+      "monthly_spend_avg": 14.0,
+      "revenue_ctt": 609.0,
+      "revenue_ctt_avg": 13.0,
+      "annual": 2,
+      "annual_rate": 4.3,
+      "custom_domain": 2,
+      "custom_domain_rate": 4.3,
+      "first_payments": 3,
+      "conversion_rate": 6.5,
+      "avg_days_to_fp": 24.0
     }
   },
   "plan_counts": {
-    "Plus": 32,
     "Corporate": 353,
+    "Plus": 32,
     "Corporate Plus": 12,
     "Base": 20
   },
   "top_industries": {
     "Outros": 91,
-    "Artesanato": 36,
+    "Artesanato": 37,
     "Vestuário": 35,
     "Compras/Vendas a Retalho": 31,
     "Acessórios": 27,
     "Arte & Design": 19,
     "Alimentação": 19,
-    "Beleza/Spa/Cuidados pessoais": 13,
+    "Beleza/Spa/Cuidados pessoais": 14,
     "Artigos para crianças": 10,
     "Cosmética e maquilhagem": 9
   },
   "payment_methods": {
-    "Cartão Crédito": 41,
-    "MB Way": 44,
+    "Cartão Crédito": 40,
+    "MB Way": 45,
     "Multibanco": 42,
-    "Transferência": 47
+    "Transferência": 46
   },
   "top_stores": [
     {
@@ -325,18 +325,6 @@
       "monthly_spend": 179
     },
     {
-      "name": "Quinta da Eireira",
-      "cohort": 2020,
-      "industry": "Agricultura",
-      "plan": "Corporate",
-      "revenue_ctt": 1230.0,
-      "gmv": 169013.25,
-      "shipments": 3345,
-      "paid_orders": 2929,
-      "is_annual": true,
-      "monthly_spend": 215
-    },
-    {
       "name": "Tunuka Hair",
       "cohort": 2020,
       "industry": "Beleza/Spa/Cuidados pessoais",
@@ -395,6 +383,18 @@
       "paid_orders": 2732,
       "is_annual": true,
       "monthly_spend": 428
+    },
+    {
+      "name": "Companhia dos Colchões®",
+      "cohort": 2020,
+      "industry": "Mobiliário",
+      "plan": "Corporate",
+      "revenue_ctt": 1057.8,
+      "gmv": 2082029.11,
+      "shipments": 730,
+      "paid_orders": 6096,
+      "is_annual": false,
+      "monthly_spend": 64
     }
   ],
   "sample_size": 417
