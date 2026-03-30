@@ -7,18 +7,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
 :root {
-  --red: #DF0024; --green: #3B6D11; --green-l: #B4D246;
+  --red: #DF0024; --green: #6C7E2A; --green-l: #C0D964;
   --purple: #821E82; --amber: #854F0B; --amber-l: #E8A000;
-  --bg: #F0F0EE; --card: #fff; --text: #1a1a1a; --muted: #555;
-  --border: #e0e0e0; --surface: #F5F5F3;
-  --up-bg: #EAF3DE; --up-fg: #3B6D11;
+  --bg: #F2F2F0; --card: #fff; --text: #222222; --muted: #555;
+  --border: #E0E0E0; --surface: #F5F5F3;
+  --up-bg: #EEF4D0; --up-fg: #6C7E2A;
   --dn-bg: #FCEBEB; --dn-fg: #A32D2D;
+  --ctt-lime: #C0D964; --ctt-lime-bg: #F3F8E0;
 }
 @media(prefers-color-scheme:dark){
-  :root{--bg:#1a1a1a;--card:#252525;--text:#f0f0f0;--muted:#aaa;--border:#333;--surface:#2a2a2a;--up-bg:#1a2e10;--up-fg:#86c55a;--dn-bg:#2e1010;--dn-fg:#e88;}
+  :root{--bg:#1a1a1a;--card:#252525;--text:#f0f0f0;--muted:#aaa;--border:#333;--surface:#2a2a2a;--up-bg:#1e2e10;--up-fg:#C0D964;--dn-bg:#2e1010;--dn-fg:#e88;--ctt-lime-bg:#1e2800;}
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);font-size:14px;min-height:100vh;}
+body{font-family:'Acto CTT',Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);font-size:14px;min-height:100vh;}
 
 /* HEADER */
 .hdr{background:var(--card);border-bottom:3px solid var(--red);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:100;}
@@ -35,9 +36,10 @@ body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--tex
 /* LAYOUT */
 .main{padding:20px 24px;max-width:1440px;margin:0 auto;}
 .sec{font-size:10px;font-weight:bold;color:var(--red);text-transform:uppercase;letter-spacing:1.2px;margin:20px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--red);display:flex;align-items:center;gap:8px;}
-.badge{font-size:8px;padding:2px 7px;border-radius:20px;font-weight:normal;text-transform:none;letter-spacing:0;}
+.badge{font-size:8px;padding:2px 9px;border-radius:999px;font-weight:normal;text-transform:none;letter-spacing:0;}
 .live{background:var(--red);color:#fff;}
 .smp{background:#777;color:#fff;}
+.lime{background:var(--ctt-lime);color:#222;}
 
 /* KPI GRID */
 .kgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
@@ -89,7 +91,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--tex
 .ctbl td{padding:8px 8px;border-bottom:1px solid var(--border);vertical-align:middle;}
 .ctbl tr:last-child td{border-bottom:none;}
 .ctbl tr:hover td{background:var(--surface);}
-.yr-badge{font-size:10px;font-weight:bold;padding:3px 8px;border-radius:12px;background:var(--red);color:#fff;}
+.yr-badge{font-size:10px;font-weight:bold;padding:3px 10px;border-radius:999px;background:var(--red);color:#fff;}
 
 /* TOP STORES */
 .stbl{width:100%;border-collapse:collapse;font-size:11px;}
@@ -136,6 +138,22 @@ body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--tex
 /* DATA QUALITY WARNING */
 .warn{font-size:9px;color:#854F0B;background:#FFF8E1;border:1px solid #F59E0B;border-radius:3px;padding:1px 5px;display:inline-block;margin-top:2px;}
 
+/* VOZ DO CLIENTE */
+.fb-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+.fb-card{background:var(--card);border-radius:10px;padding:16px 18px;border:1px solid var(--border);border-top:3px solid var(--ctt-lime);}
+.fb-cat{font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:.5px;color:var(--green);margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;}
+.fb-count{font-size:22px;font-weight:bold;margin-bottom:4px;}
+.fb-bar{background:var(--surface);border-radius:999px;height:6px;margin-bottom:10px;}
+.fb-bar-fill{height:6px;border-radius:999px;background:var(--ctt-lime);}
+.fb-examples{list-style:none;padding:0;margin:0;}
+.fb-examples li{font-size:11px;color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);display:flex;gap:6px;align-items:flex-start;}
+.fb-examples li:last-child{border-bottom:none;}
+.fb-examples li::before{content:"›";color:var(--ctt-lime);font-weight:bold;flex-shrink:0;margin-top:1px;}
+.fb-insight{background:var(--ctt-lime-bg);border:1px solid var(--ctt-lime);border-left-width:4px;border-radius:0 8px 8px 0;padding:9px 14px;font-size:12px;color:var(--green);margin-bottom:12px;}
+@media(prefers-color-scheme:dark){.fb-insight{color:var(--ctt-lime);}}
+@media(max-width:1100px){.fb-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:600px){.fb-grid{grid-template-columns:1fr;}}
+
 /* NOTE */
 .note{font-size:10px;color:var(--muted);margin-top:8px;font-style:italic;}
 
@@ -173,7 +191,7 @@ footer{text-align:center;font-size:10px;color:var(--muted);padding:16px;backgrou
   <div class="err-box" id="err"></div>
 
   <!-- INDICADORES DE NEGÓCIO -->
-  <div class="sec">Indicadores de Negócio <span class="badge smp">AMOSTRA — 234 lojas</span></div>
+  <div class="sec">Indicadores de Negócio <span class="badge lime" id="bizBadge">TOTAL</span></div>
   <div id="bizAlert"></div>
   <div class="kgrid" style="margin-bottom:12px;">
     <div class="kcard"><div class="kl">GMV Total (amostra)</div><div class="kv" id="bGMV">—</div><div class="ks">Volume de vendas gerado pelas lojas</div></div>
@@ -244,6 +262,12 @@ footer{text-align:center;font-size:10px;color:var(--muted);padding:16px;backgrou
     </div>
     <p class="note" id="storeNote"></p>
   </div>
+
+  <!-- VOZ DO CLIENTE -->
+  <div class="sec">Voz do Cliente — Oportunidades de Melhoria <span class="badge lime">ÚLTIMOS 90 DIAS</span></div>
+  <div class="fb-insight" id="fbInsight"></div>
+  <div class="fb-grid" id="fbGrid"></div>
+  <p class="note" id="fbNote" style="margin-top:10px"></p>
 
   <!-- PLANOS + INDUSTRIAS + PAGAMENTOS -->
   <div class="sec">Distribuição de Lojas <span class="badge smp">AMOSTRA</span></div>
@@ -361,17 +385,28 @@ function render(d){
   const fTotal=f.total||0, fPay=f.first_payment||0, fActive=f.active||0, fConv=f.open_conversations||0;
 
   // --- INDICADORES DE NEGÓCIO ---
-  let bizGMV=0,bizShip=0,bizRevCTT=0,bizMRR=0,bizSample=0,bizWD=0,bizWDN=0;
+  const tot=d.totals||null;
+  let bizGMV,bizShip,bizRevCTT,bizMRR,bizSample,bizWD=0,bizWDN=0,hasTotals=false;
+  if(tot&&tot.gmv>0){
+    bizGMV=tot.gmv; bizShip=tot.shipments; bizRevCTT=tot.revenue_ctt;
+    bizMRR=tot.mrr; bizSample=tot.companies_scanned; hasTotals=true;
+  } else {
+    bizGMV=0;bizShip=0;bizRevCTT=0;bizMRR=0;bizSample=0;
+    for(const[,c] of Object.entries(co)){
+      bizGMV+=c.gmv||0; bizShip+=c.shipments||0; bizRevCTT+=c.revenue_ctt||0;
+      bizMRR+=(c.monthly_spend_avg||0)*(c.count||0); bizSample+=c.count||0;
+    }
+  }
   for(const[,c] of Object.entries(co)){
-    bizGMV+=c.gmv||0; bizShip+=c.shipments||0; bizRevCTT+=c.revenue_ctt||0;
-    bizMRR+=(c.monthly_spend_avg||0)*(c.count||0); bizSample+=c.count||0;
     if(c.avg_days_to_fp&&c.first_payments>0){bizWD+=c.avg_days_to_fp*Math.min(c.first_payments,c.count);bizWDN+=Math.min(c.first_payments,c.count);}
   }
+  const badgeEl=document.getElementById('bizBadge');
+  if(badgeEl) badgeEl.textContent=hasTotals?'TOTAL — '+fmt(bizSample)+' lojas':'AMOSTRA — '+fmt(bizSample)+' lojas';
   document.getElementById('bGMV').textContent=money(bizGMV);
   document.getElementById('bShip').textContent=fmt(bizShip);
   document.getElementById('bRevCTT').textContent=money(bizRevCTT);
   document.getElementById('bMRR').textContent=money(Math.round(bizMRR));
-  document.getElementById('bMRRS').textContent='Estimativa baseada em '+bizSample+' lojas';
+  document.getElementById('bMRRS').textContent=(hasTotals?'Receita mensal actual':'Estimativa')+' — '+fmt(bizSample)+' lojas';
   const e2e=fTotal>0?(fActive/fTotal*100).toFixed(1):'—';
   const ret=fPay>0?(fActive/fPay*100).toFixed(1):'—';
   document.getElementById('bE2E').textContent=e2e+'%';
@@ -546,6 +581,35 @@ function render(d){
       <td style="color:${s.is_annual?'var(--green)':'var(--muted)'};font-weight:${s.is_annual?'bold':'normal'}">${s.is_annual?'Sim':'—'}</td>
     </tr>`).join('');
   document.getElementById('storeNote').textContent=`Amostra de ${d.sample_size||0} empresas, ordenadas por company_lifetime_revenue (receita CTT acumulada).`;
+
+  // Voz do Cliente — feedback categories
+  const fb=d.feedback||{};
+  const fbCats=fb.categories||[];
+  const fbTotal=fb.total_analyzed||0;
+  const fbPeriod=fb.period_days||90;
+  const fbIcons={'Expedição e Envios':'📦','Faturação e Pagamentos':'💳','Templates e Design':'🎨','Produtos e Catálogo':'🏷️','Integrações e Marketing':'📣','Configurações e Backoffice':'⚙️','Outro':'💬'};
+  const maxFbCount=fbCats.length>0?fbCats[0].count:1;
+  if(fbTotal>0){
+    const top1=fbCats[0]?.name||'—', top2=fbCats[1]?.name||'—';
+    document.getElementById('fbInsight').textContent=`Análise de ${fbTotal} conversas dos últimos ${fbPeriod} dias. As categorias com mais pedidos de suporte são "${top1}" e "${top2}" — principais oportunidades de melhoria da plataforma. Cada categoria representa fricção recorrente na jornada do cliente.`;
+    document.getElementById('fbGrid').innerHTML=fbCats.map(cat=>{
+      const icon=fbIcons[cat.name]||'💬';
+      const barW=maxFbCount>0?Math.round(cat.count/maxFbCount*100):0;
+      const examplesHtml=cat.examples.length
+        ?cat.examples.map(e=>`<li>${e}</li>`).join('')
+        :'<li style="color:var(--muted);font-style:italic">Sem exemplos recentes</li>';
+      return `<div class="fb-card">
+        <div class="fb-cat"><span>${icon} ${cat.name}</span><span class="badge lime">${cat.pct}%</span></div>
+        <div class="fb-count">${cat.count} <span style="font-size:13px;font-weight:normal;color:var(--muted)">conversas</span></div>
+        <div class="fb-bar"><div class="fb-bar-fill" style="width:${barW}%"></div></div>
+        <ul class="fb-examples">${examplesHtml}</ul>
+      </div>`;
+    }).join('');
+    document.getElementById('fbNote').textContent=`Baseado em ${fbTotal} conversas encerradas nos últimos ${fbPeriod} dias. Categorização automática por palavras-chave. Executa o workflow para atualizar.`;
+  } else {
+    document.getElementById('fbInsight').textContent='Dados de feedback ainda não disponíveis. Executa o workflow para gerar a análise.';
+    document.getElementById('fbGrid').innerHTML='';
+  }
 
   // Open conversations
   const cl=d.open_conversations_list||[];
