@@ -133,6 +133,9 @@ body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--tex
 .f-track{background:var(--surface);border-radius:4px;height:10px;width:100%;}
 .f-fill{height:10px;border-radius:4px;transition:width .5s ease;}
 
+/* DATA QUALITY WARNING */
+.warn{font-size:9px;color:#854F0B;background:#FFF8E1;border:1px solid #F59E0B;border-radius:3px;padding:1px 5px;display:inline-block;margin-top:2px;}
+
 /* NOTE */
 .note{font-size:10px;color:var(--muted);margin-top:8px;font-style:italic;}
 
@@ -169,66 +172,77 @@ footer{text-align:center;font-size:10px;color:var(--muted);padding:16px;backgrou
 <main class="main">
   <div class="err-box" id="err"></div>
 
-  <!-- FUNNEL KPIs -->
+  <!-- INDICADORES DE NEGÓCIO -->
+  <div class="sec">Indicadores de Negócio <span class="badge smp">AMOSTRA — 234 lojas</span></div>
+  <div id="bizAlert"></div>
+  <div class="kgrid" style="margin-bottom:12px;">
+    <div class="kcard"><div class="kl">GMV Total (amostra)</div><div class="kv" id="bGMV">—</div><div class="ks">Volume de vendas gerado pelas lojas</div></div>
+    <div class="kcard g"><div class="kl">Total de Envios (amostra)</div><div class="kv grn" id="bShip">—</div><div class="ks">Encomendas expedidas pelas lojas</div></div>
+    <div class="kcard a"><div class="kl">Receita CTT (amostra)</div><div class="kv" style="color:var(--amber-l)" id="bRevCTT">—</div><div class="ks">Subscrições de planos acumuladas</div></div>
+    <div class="kcard p"><div class="kl">Receita Mensal Estimada</div><div class="kv" style="color:var(--purple)" id="bMRR">—</div><div class="ks" id="bMRRS">—</div></div>
+  </div>
+  <div class="grid3">
+    <div class="kcard b"><div class="kl">Conversão Global (registo → ativa)</div><div class="kv" id="bE2E">—</div><div class="ks" id="bE2ES">—</div></div>
+    <div class="kcard b"><div class="kl">Retenção (pagamento → ativa)</div><div class="kv" id="bRet">—</div><div class="ks" id="bRetS">—</div></div>
+    <div class="kcard b"><div class="kl">Dias Médios até 1.º Pagamento</div><div class="kv" id="bDays">—</div><div class="ks">Tempo médio até conversão</div></div>
+  </div>
+
+  <!-- FUNIL CLO -->
   <div class="sec">Funil CLO — Snapshot Atual <span class="badge live">LIVE</span></div>
   <div class="kgrid" id="kpiGrid">
     <div class="kcard"><div class="kl">Lojas registadas</div><div class="kv" id="kTotal">—</div><div class="ks">Total acumulado desde 2020</div></div>
-    <div class="kcard g"><div class="kl">Com 1.º pagamento</div><div class="kv grn" id="kPay">—</div><div class="ks" id="kPayS">Taxa de conversão</div></div>
+    <div class="kcard g"><div class="kl">Com 1.º pagamento</div><div class="kv grn" id="kPay">—</div><div class="ks" id="kPayS">—</div></div>
     <div class="kcard b"><div class="kl">Lojas ativas</div><div class="kv" id="kActive">—</div><div class="ks" id="kActiveS">Tag Client-Active</div></div>
-    <div class="kcard p"><div class="kl">Conversas abertas</div><div class="kv red" id="kConv">—</div><div class="ks">Open + Snoozed agora</div></div>
+    <div class="kcard p"><div class="kl">Conversas de suporte abertas</div><div class="kv red" id="kConv">—</div><div class="ks">Neste momento (open + snoozed)</div></div>
   </div>
 
   <!-- FUNIL TABULAR -->
   <div class="sec">Funil de Conversão — Visão Hierárquica <span class="badge live">LIVE</span></div>
   <div class="card">
     <table class="ftbl" id="funnelTable"></table>
-    <p class="note" style="margin-top:12px">Funil calculado sobre o total acumulado de lojas registadas. Taxas de conversão em relação ao nível imediatamente acima.</p>
+    <p class="note" style="margin-top:12px">Funil calculado sobre o total acumulado de lojas registadas. Taxas em relação ao nível imediatamente acima.</p>
   </div>
 
-  <!-- Q1 COMPARAÇÃO HOMÓLOGA -->
-  <div class="sec">Período Homólogo Q1 — Conversas de Suporte <span class="badge live">EXACT</span></div>
-  <div class="card">
-    <div class="card-t">Q1 ano a ano — conversas criadas</div>
-    <div class="q1row" id="q1Row"></div>
-    <div class="insight" id="q1Insight"></div>
-  </div>
-
-  <!-- CONVERSAS POR ANO -->
-  <div class="sec">Volume de Conversas 2020–2026 <span class="badge live">EXACT — todos os anos</span></div>
-  <div class="card">
-    <div class="card-t">Total de conversas criadas por ano</div>
-    <div style="position:relative;height:220px;"><canvas id="cConv"></canvas></div>
-    <div id="convYoY" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;font-size:11px;color:var(--muted);"></div>
-  </div>
-
-  <!-- ANÁLISE POR COHORT -->
-  <div class="sec">Maturidade por Cohort de Registo <span class="badge smp">AMOSTRA</span></div>
-  <div class="insight">Empresas mais antigas geram muito mais GMV e receita CTT — reflexo natural de anos de operação acumulada, não diferença de qualidade das novas lojas. Os cohorts 2024–2025 têm taxa de subscrição anual baixa porque ainda estão no período de experimentação.</div>
+  <!-- ANÁLISE POR COORTE -->
+  <div class="sec">Maturidade por Coorte de Registo <span class="badge smp">AMOSTRA</span></div>
+  <div class="insight" id="cohortInsight"></div>
   <div class="card" style="margin-bottom:12px;overflow-x:auto;">
-    <div class="card-t">Resumo por cohort (amostra)</div>
+    <div class="card-t">Resumo por coorte <span style="font-weight:normal;font-size:11px;color:var(--muted)">(amostra de 234 lojas — 5,9% do total registado)</span></div>
     <table class="ctbl" id="cohortTable"></table>
   </div>
 
   <!-- CHARTS COHORT -->
   <div class="grid2e" style="margin-bottom:12px;">
     <div class="card">
-      <div class="card-t">GMV acumulado por cohort (€)</div>
+      <div class="card-t">GMV total por coorte (€)</div>
       <div style="position:relative;height:200px;"><canvas id="cGMV"></canvas></div>
     </div>
     <div class="card">
-      <div class="card-t">Spend mensal médio por cohort (€/mês)</div>
+      <div class="card-t">Receita mensal média por coorte (€/mês)</div>
       <div style="position:relative;height:200px;"><canvas id="cSpend"></canvas></div>
     </div>
   </div>
-  <div class="grid2e">
+  <div class="grid2e" style="margin-bottom:12px;">
     <div class="card">
-      <div class="card-t">Taxa subscrição anual por cohort (%)</div>
+      <div class="card-t">Taxa de plano anual por coorte (%) — indicador de retenção</div>
       <div style="position:relative;height:200px;"><canvas id="cAnnual"></canvas></div>
     </div>
     <div class="card">
       <div class="card-t">Taxa de conversão para 1.º pagamento (%)</div>
       <div style="position:relative;height:200px;"><canvas id="cConv2"></canvas></div>
     </div>
+  </div>
+
+  <!-- TOP STORES -->
+  <div class="sec">Top Lojas por Receita CTT <span class="badge smp">AMOSTRA</span></div>
+  <div class="card">
+    <div style="overflow-x:auto;">
+      <table class="stbl">
+        <thead><tr><th>#</th><th>Loja</th><th>Coorte</th><th>Indústria</th><th>Plano</th><th>Receita CTT</th><th>GMV</th><th>Envios</th><th>Encomendas pagas</th><th>Plano anual</th></tr></thead>
+        <tbody id="storeBody"></tbody>
+      </table>
+    </div>
+    <p class="note" id="storeNote"></p>
   </div>
 
   <!-- PLANOS + INDUSTRIAS + PAGAMENTOS -->
@@ -249,16 +263,20 @@ footer{text-align:center;font-size:10px;color:var(--muted);padding:16px;backgrou
     </div>
   </div>
 
-  <!-- TOP STORES -->
-  <div class="sec">Top Lojas por Receita CTT <span class="badge smp">AMOSTRA</span></div>
+  <!-- Q1 COMPARAÇÃO HOMÓLOGA -->
+  <div class="sec">Período Homólogo Q1 — Conversas de Suporte <span class="badge live">EXACT</span></div>
   <div class="card">
-    <div style="overflow-x:auto;">
-      <table class="stbl">
-        <thead><tr><th>#</th><th>Loja</th><th>Cohort</th><th>Indústria</th><th>Plano</th><th>Receita CTT</th><th>GMV</th><th>Envios</th><th>Encomendas</th><th>Anual</th></tr></thead>
-        <tbody id="storeBody"></tbody>
-      </table>
-    </div>
-    <p class="note" id="storeNote"></p>
+    <div class="card-t">Q1 ano a ano — conversas criadas</div>
+    <div class="q1row" id="q1Row"></div>
+    <div class="insight" id="q1Insight"></div>
+  </div>
+
+  <!-- CONVERSAS POR ANO -->
+  <div class="sec">Volume de Conversas de Suporte 2020–2026 <span class="badge live">EXACT</span></div>
+  <div class="card">
+    <div class="card-t">Total de conversas criadas por ano <span style="font-weight:normal;font-size:11px;color:var(--muted)">(2026 = apenas Q1 — ano parcial)</span></div>
+    <div style="position:relative;height:220px;"><canvas id="cConv"></canvas></div>
+    <div id="convYoY" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;font-size:11px;color:var(--muted);"></div>
   </div>
 
   <!-- CONVERSAS ABERTAS -->
@@ -337,8 +355,48 @@ function funnelRow(label, indent, value, total, parentValue, color, isLast){
 
 function render(d){
   const f=d.funnel||{};
-  // Funnel table
+  const co=d.cohorts||{};
+  const q=d.q1_by_year||{};
+  const q24=q['2024'], q25=q['2025'], q26=q['2026'];
   const fTotal=f.total||0, fPay=f.first_payment||0, fActive=f.active||0, fConv=f.open_conversations||0;
+
+  // --- INDICADORES DE NEGÓCIO ---
+  let bizGMV=0,bizShip=0,bizRevCTT=0,bizMRR=0,bizSample=0,bizWD=0,bizWDN=0;
+  for(const[,c] of Object.entries(co)){
+    bizGMV+=c.gmv||0; bizShip+=c.shipments||0; bizRevCTT+=c.revenue_ctt||0;
+    bizMRR+=(c.monthly_spend_avg||0)*(c.count||0); bizSample+=c.count||0;
+    if(c.avg_days_to_fp&&c.first_payments>0){bizWD+=c.avg_days_to_fp*Math.min(c.first_payments,c.count);bizWDN+=Math.min(c.first_payments,c.count);}
+  }
+  document.getElementById('bGMV').textContent=money(bizGMV);
+  document.getElementById('bShip').textContent=fmt(bizShip);
+  document.getElementById('bRevCTT').textContent=money(bizRevCTT);
+  document.getElementById('bMRR').textContent=money(Math.round(bizMRR));
+  document.getElementById('bMRRS').textContent='Estimativa baseada em '+bizSample+' lojas';
+  const e2e=fTotal>0?(fActive/fTotal*100).toFixed(1):'—';
+  const ret=fPay>0?(fActive/fPay*100).toFixed(1):'—';
+  document.getElementById('bE2E').textContent=e2e+'%';
+  document.getElementById('bE2ES').textContent=fmt(fActive)+' de '+fmt(fTotal)+' registadas';
+  document.getElementById('bRet').textContent=ret+'%';
+  document.getElementById('bRetS').textContent=fmt(fActive)+' de '+fmt(fPay)+' que pagaram';
+  document.getElementById('bDays').textContent=bizWDN>0?Math.round(bizWD/bizWDN)+' dias':'—';
+
+  // Alert Q1 YoY
+  const q1yoyPct=q25&&q26?Math.round((q26/q25-1)*100):null;
+  const bizAlertEl=document.getElementById('bizAlert');
+  if(q1yoyPct!==null&&q1yoyPct<0){
+    bizAlertEl.innerHTML=`<div class="insight" style="border-color:var(--red);background:#FFF3F3;color:#B71C1C;margin-bottom:12px">⚠ Q1 2026 regista <strong>${Math.abs(q1yoyPct)}% menos conversas de suporte</strong> face ao Q1 2025 (${fmt(q26)} vs ${fmt(q25)}). Pode reflectir menor actividade das lojas ou melhoria no self-service — confirmar com dados de actividade das lojas.</div>`;
+  } else { bizAlertEl.innerHTML=''; }
+
+  // Cohort insight
+  const gmv20=(co['2020']||{}).gmv_avg||0, gmv24=(co['2024']||{}).gmv_avg||0;
+  const matF=gmv20>0&&gmv24>0?Math.round(gmv20/gmv24):null;
+  const ann20=(co['2020']||{}).annual_rate||0, ann25=(co['2025']||{}).annual_rate||0;
+  const days20=(co['2020']||{}).avg_days_to_fp, days25=(co['2025']||{}).avg_days_to_fp;
+  document.getElementById('cohortInsight').textContent=[
+    matF?`Lojas registadas em 2020 geram em média ${matF}x mais GMV que as de 2024 (€${Math.round(gmv20/1000)}k vs €${Math.round(gmv24/1000)}k por loja) — reflexo natural de anos de operação acumulada.`:'',
+    `Taxa de plano anual caiu de ${ann20}% (2020) para ${ann25}% (2025): lojas recentes são maioritariamente mensais, o que aumenta o risco de abandono. O plano anual é um indicador precoce de fidelização.`,
+    days20&&days25?`Tempo até 1.º pagamento melhorou: ${days20} dias (2020) → ${days25} dias (2025), provável melhoria no onboarding.`:''
+  ].filter(Boolean).join(' ');
   document.getElementById('funnelTable').innerHTML=`
     <thead><tr>
       <th style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;padding:6px 10px;border-bottom:2px solid var(--border);text-align:left">Métrica</th>
@@ -362,8 +420,6 @@ function render(d){
   document.getElementById('kConv').textContent=fmt(f.open_conversations);
 
   // Q1 homólogo
-  const q=d.q1_by_year||{};
-  const q24=q['2024'], q25=q['2025'], q26=q['2026'];
   document.getElementById('q1Row').innerHTML=`
     <div class="q1c"><div class="q1y">Q1 2024</div><div class="q1v">${fmt(q24)}</div><div class="q1d" style="color:var(--muted)">referência</div></div>
     <div class="q1c"><div class="q1y">Q1 2025</div><div class="q1v">${fmt(q25)}</div><div class="q1d">${yoy(q25,q24)}</div></div>
@@ -397,7 +453,6 @@ function render(d){
   document.getElementById('convYoY').innerHTML=yoyItems.join('<span style="color:var(--muted);margin:0 2px">·</span>');
 
   // Cohorts
-  const co=d.cohorts||{};
   const coYears=Object.keys(co).map(Number).sort();
   const cohortColors=coYears.map((_,i)=>[R,'#C0647A','#A08090','#888','#B4D246',G,'#4CAF50'][i]||'#aaa');
 
@@ -419,18 +474,27 @@ function render(d){
   });
 
   // Cohort table
-  const hdr=['Cohort','N (amostra)','GMV médio/loja','Receita CTT média','Spend/mês','Taxa anual','Dom. próprio','Conversão'].map(h=>`<th>${h}</th>`).join('');
+  const hdr=['Coorte','N (amostra)','GMV médio/loja','Receita CTT média','Receita/mês','Taxa anual','Dom. próprio','Conversão 1.º pgt.'].map(h=>`<th>${h}</th>`).join('');
   const rows=coYears.map((y,i)=>{
     const c=co[y]||{};
+    const convCell=c.conversion_rate>100
+      ?`<span style="color:var(--amber)">${c.conversion_rate}%</span><div class="warn">⚠ &gt;100%: artefacto de dados</div>`
+      :`${c.conversion_rate??0}%`;
+    const countCell=c.count<=5
+      ?`${fmt(c.count)}<div class="warn">⚠ Amostra muito pequena</div>`
+      :fmt(c.count);
+    const yearCell=y===2026
+      ?`<span class="yr-badge" style="background:${cohortColors[i]}">${y}</span><div style="font-size:9px;color:var(--muted);margin-top:2px">Ano parcial (Q1)</div>`
+      :`<span class="yr-badge" style="background:${cohortColors[i]}">${y}</span>`;
     return `<tr>
-      <td><span class="yr-badge" style="background:${cohortColors[i]}">${y}</span></td>
-      <td>${fmt(c.count)}</td>
+      <td>${yearCell}</td>
+      <td>${countCell}</td>
       <td style="font-weight:bold">${money(c.gmv_avg)}</td>
       <td style="color:var(--red);font-weight:bold">${money(c.revenue_ctt_avg)}</td>
       <td>${money(c.monthly_spend_avg)}/mês</td>
       <td>${c.annual_rate??0}%</td>
       <td>${c.custom_domain_rate??0}%</td>
-      <td>${c.conversion_rate??0}%</td>
+      <td>${convCell}</td>
     </tr>`;
   }).join('');
   document.getElementById('cohortTable').innerHTML=`<thead><tr>${hdr}</tr></thead><tbody>${rows}</tbody>`;
