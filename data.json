@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-04T02:53:43.247002+00:00",
+  "generated_at": "2026-04-04T05:00:54.780344+00:00",
   "funnel": {
     "total": 3966,
     "first_payment": 974,
@@ -7,11 +7,11 @@
     "open_conversations": 8
   },
   "totals": {
-    "gmv": 17745301.0,
+    "gmv": 17745717.0,
     "shipments": 335919,
     "revenue_ctt": 562635.0,
-    "mrr": 55039,
-    "paid_orders": 376315,
+    "mrr": 54990,
+    "paid_orders": 376322,
     "companies_scanned": 3966
   },
   "open_conversations_list": [
@@ -115,11 +115,11 @@
     },
     "2022": {
       "count": 10,
-      "gmv": 428689.0,
-      "gmv_avg": 42869.0,
+      "gmv": 428711.0,
+      "gmv_avg": 42871.0,
       "shipments": 12009,
-      "monthly_spend_total": 1238,
-      "monthly_spend_avg": 124.0,
+      "monthly_spend_total": 1221,
+      "monthly_spend_avg": 122.0,
       "revenue_ctt": 6330.0,
       "revenue_ctt_avg": 633.0,
       "annual": 4,
@@ -149,11 +149,11 @@
     },
     "2023": {
       "count": 21,
-      "gmv": 448451.0,
-      "gmv_avg": 21355.0,
+      "gmv": 448554.0,
+      "gmv_avg": 21360.0,
       "shipments": 11457,
-      "monthly_spend_total": 1756,
-      "monthly_spend_avg": 84.0,
+      "monthly_spend_total": 1742,
+      "monthly_spend_avg": 83.0,
       "revenue_ctt": 6501.0,
       "revenue_ctt_avg": 310.0,
       "annual": 5,
@@ -183,7 +183,7 @@
     },
     "2024": {
       "count": 164,
-      "gmv": 1092038.0,
+      "gmv": 1092146.0,
       "gmv_avg": 6659.0,
       "shipments": 64867,
       "monthly_spend_total": 3233,
