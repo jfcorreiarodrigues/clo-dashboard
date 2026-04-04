@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-04T05:00:54.780344+00:00",
+  "generated_at": "2026-04-04T06:09:59.124653+00:00",
   "funnel": {
     "total": 3966,
     "first_payment": 974,
@@ -10,7 +10,7 @@
     "gmv": 17745717.0,
     "shipments": 335919,
     "revenue_ctt": 562635.0,
-    "mrr": 54990,
+    "mrr": 54988,
     "paid_orders": 376322,
     "companies_scanned": 3966
   },
@@ -79,6 +79,57 @@
     "2026": 706
   },
   "cohorts": {
+    "2020": {
+      "count": 21,
+      "gmv": 2201939.0,
+      "gmv_avg": 104854.0,
+      "shipments": 53272,
+      "monthly_spend_total": 3361,
+      "monthly_spend_avg": 160.0,
+      "revenue_ctt": 32911.0,
+      "revenue_ctt_avg": 1567.0,
+      "annual": 12,
+      "annual_rate": 57.1,
+      "custom_domain": 17,
+      "custom_domain_rate": 81.0,
+      "first_payments": 21,
+      "conversion_rate": 100.0,
+      "avg_days_to_fp": 45.0
+    },
+    "2025": {
+      "count": 144,
+      "gmv": 47131.0,
+      "gmv_avg": 327.0,
+      "shipments": 1684,
+      "monthly_spend_total": 1576,
+      "monthly_spend_avg": 11.0,
+      "revenue_ctt": 5104.0,
+      "revenue_ctt_avg": 35.0,
+      "annual": 7,
+      "annual_rate": 4.9,
+      "custom_domain": 15,
+      "custom_domain_rate": 10.4,
+      "first_payments": 23,
+      "conversion_rate": 16.0,
+      "avg_days_to_fp": 25.0
+    },
+    "2022": {
+      "count": 10,
+      "gmv": 415985.0,
+      "gmv_avg": 41598.0,
+      "shipments": 10829,
+      "monthly_spend_total": 1131,
+      "monthly_spend_avg": 113.0,
+      "revenue_ctt": 6290.0,
+      "revenue_ctt_avg": 629.0,
+      "annual": 4,
+      "annual_rate": 40.0,
+      "custom_domain": 9,
+      "custom_domain_rate": 90.0,
+      "first_payments": 10,
+      "conversion_rate": 100.0,
+      "avg_days_to_fp": 24.0
+    },
     "2021": {
       "count": 13,
       "gmv": 1062286.0,
@@ -95,57 +146,6 @@
       "first_payments": 13,
       "conversion_rate": 100.0,
       "avg_days_to_fp": 144.0
-    },
-    "2025": {
-      "count": 143,
-      "gmv": 47083.0,
-      "gmv_avg": 329.0,
-      "shipments": 1683,
-      "monthly_spend_total": 1492,
-      "monthly_spend_avg": 10.0,
-      "revenue_ctt": 4950.0,
-      "revenue_ctt_avg": 35.0,
-      "annual": 7,
-      "annual_rate": 4.9,
-      "custom_domain": 14,
-      "custom_domain_rate": 9.8,
-      "first_payments": 22,
-      "conversion_rate": 15.4,
-      "avg_days_to_fp": 25.0
-    },
-    "2022": {
-      "count": 10,
-      "gmv": 428711.0,
-      "gmv_avg": 42871.0,
-      "shipments": 12009,
-      "monthly_spend_total": 1221,
-      "monthly_spend_avg": 122.0,
-      "revenue_ctt": 6330.0,
-      "revenue_ctt_avg": 633.0,
-      "annual": 4,
-      "annual_rate": 40.0,
-      "custom_domain": 8,
-      "custom_domain_rate": 80.0,
-      "first_payments": 10,
-      "conversion_rate": 100.0,
-      "avg_days_to_fp": 22.0
-    },
-    "2020": {
-      "count": 22,
-      "gmv": 2240716.0,
-      "gmv_avg": 101851.0,
-      "shipments": 54558,
-      "monthly_spend_total": 3437,
-      "monthly_spend_avg": 156.0,
-      "revenue_ctt": 34282.0,
-      "revenue_ctt_avg": 1558.0,
-      "annual": 13,
-      "annual_rate": 59.1,
-      "custom_domain": 17,
-      "custom_domain_rate": 77.3,
-      "first_payments": 22,
-      "conversion_rate": 100.0,
-      "avg_days_to_fp": 44.0
     },
     "2023": {
       "count": 21,
@@ -212,7 +212,7 @@
     "Vestuário": 33,
     "Artesanato": 32,
     "Arte & Design": 17,
-    "Alimentação": 16,
+    "Alimentação": 15,
     "Beleza/Spa/Cuidados pessoais": 14,
     "Tecnologia": 12,
     "Artigos para crianças": 9
@@ -220,8 +220,8 @@
   "payment_methods": {
     "Cartão Crédito": 40,
     "MB Way": 36,
-    "Multibanco": 40,
-    "Transferência": 48
+    "Multibanco": 41,
+    "Transferência": 47
   },
   "top_stores": [
     {
@@ -393,16 +393,16 @@
       "monthly_spend": 29
     },
     {
-      "name": "A Mariazinha",
+      "name": "MeowMeow Babies and Kids Store",
       "cohort": 2020,
-      "industry": "Alimentação",
+      "industry": "Artigos para crianças",
       "plan": "Corporate",
-      "revenue_ctt": 1371.45,
-      "gmv": 38776.69,
-      "shipments": 1286,
-      "paid_orders": 1086,
+      "revenue_ctt": 1266.9,
+      "gmv": 103108.45,
+      "shipments": 3470,
+      "paid_orders": 3035,
       "is_annual": true,
-      "monthly_spend": 76
+      "monthly_spend": 179
     }
   ],
   "sample_size": 420,
