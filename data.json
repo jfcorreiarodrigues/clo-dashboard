@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06T22:50:39.592958+00:00",
+  "generated_at": "2026-04-06T23:46:59.900474+00:00",
   "funnel": {
     "total": 3968,
     "first_payment": 975,
@@ -55,55 +55,38 @@
     "2026": 706
   },
   "cohorts": {
-    "2021": {
-      "count": 20,
-      "gmv": 1435101.0,
-      "gmv_avg": 71755.0,
-      "shipments": 27503,
-      "monthly_spend_total": 2445,
-      "monthly_spend_avg": 122.0,
-      "revenue_ctt": 20882.0,
-      "revenue_ctt_avg": 1044.0,
-      "annual": 11,
-      "annual_rate": 55.0,
-      "custom_domain": 18,
-      "custom_domain_rate": 90.0,
-      "first_payments": 20,
-      "conversion_rate": 100.0,
-      "avg_days_to_fp": 95.0
-    },
     "2026": {
-      "count": 47,
+      "count": 48,
       "gmv": 946.0,
       "gmv_avg": 20.0,
       "shipments": 12,
-      "monthly_spend_total": 478,
-      "monthly_spend_avg": 10.0,
-      "revenue_ctt": 670.0,
-      "revenue_ctt_avg": 14.0,
+      "monthly_spend_total": 549,
+      "monthly_spend_avg": 11.0,
+      "revenue_ctt": 699.0,
+      "revenue_ctt_avg": 15.0,
       "annual": 2,
-      "annual_rate": 4.3,
+      "annual_rate": 4.2,
       "custom_domain": 2,
-      "custom_domain_rate": 4.3,
-      "first_payments": 5,
-      "conversion_rate": 10.6,
-      "avg_days_to_fp": 21.0
+      "custom_domain_rate": 4.2,
+      "first_payments": 6,
+      "conversion_rate": 12.5,
+      "avg_days_to_fp": 24.0
     },
-    "2024": {
-      "count": 165,
-      "gmv": 608588.0,
-      "gmv_avg": 3688.0,
-      "shipments": 14420,
-      "monthly_spend_total": 3383,
-      "monthly_spend_avg": 21.0,
-      "revenue_ctt": 9851.0,
-      "revenue_ctt_avg": 60.0,
-      "annual": 10,
-      "annual_rate": 6.1,
-      "custom_domain": 22,
-      "custom_domain_rate": 13.3,
-      "first_payments": 30,
-      "conversion_rate": 18.2,
+    "2025": {
+      "count": 138,
+      "gmv": 11643.0,
+      "gmv_avg": 84.0,
+      "shipments": 707,
+      "monthly_spend_total": 899,
+      "monthly_spend_avg": 7.0,
+      "revenue_ctt": 3439.0,
+      "revenue_ctt_avg": 25.0,
+      "annual": 6,
+      "annual_rate": 4.3,
+      "custom_domain": 8,
+      "custom_domain_rate": 5.8,
+      "first_payments": 16,
+      "conversion_rate": 11.6,
       "avg_days_to_fp": 29.0
     },
     "2022": {
@@ -123,22 +106,56 @@
       "conversion_rate": 100.0,
       "avg_days_to_fp": 70.0
     },
+    "2024": {
+      "count": 162,
+      "gmv": 545089.0,
+      "gmv_avg": 3365.0,
+      "shipments": 13023,
+      "monthly_spend_total": 3097,
+      "monthly_spend_avg": 19.0,
+      "revenue_ctt": 8433.0,
+      "revenue_ctt_avg": 52.0,
+      "annual": 8,
+      "annual_rate": 4.9,
+      "custom_domain": 19,
+      "custom_domain_rate": 11.7,
+      "first_payments": 27,
+      "conversion_rate": 16.7,
+      "avg_days_to_fp": 29.0
+    },
+    "2021": {
+      "count": 21,
+      "gmv": 1438994.0,
+      "gmv_avg": 68524.0,
+      "shipments": 27567,
+      "monthly_spend_total": 2473,
+      "monthly_spend_avg": 118.0,
+      "revenue_ctt": 22001.0,
+      "revenue_ctt_avg": 1048.0,
+      "annual": 11,
+      "annual_rate": 52.4,
+      "custom_domain": 19,
+      "custom_domain_rate": 90.5,
+      "first_payments": 21,
+      "conversion_rate": 100.0,
+      "avg_days_to_fp": 99.0
+    },
     "2020": {
       "count": 21,
-      "gmv": 3959861.0,
-      "gmv_avg": 188565.0,
-      "shipments": 50085,
-      "monthly_spend_total": 3222,
-      "monthly_spend_avg": 153.0,
-      "revenue_ctt": 30360.0,
-      "revenue_ctt_avg": 1446.0,
+      "gmv": 1877552.0,
+      "gmv_avg": 89407.0,
+      "shipments": 49579,
+      "monthly_spend_total": 3202,
+      "monthly_spend_avg": 152.0,
+      "revenue_ctt": 30846.0,
+      "revenue_ctt_avg": 1469.0,
       "annual": 12,
       "annual_rate": 57.1,
       "custom_domain": 19,
       "custom_domain_rate": 90.5,
       "first_payments": 21,
       "conversion_rate": 100.0,
-      "avg_days_to_fp": 51.0
+      "avg_days_to_fp": 52.0
     },
     "2023": {
       "count": 24,
@@ -156,37 +173,20 @@
       "first_payments": 20,
       "conversion_rate": 83.3,
       "avg_days_to_fp": 61.0
-    },
-    "2025": {
-      "count": 137,
-      "gmv": 28651.0,
-      "gmv_avg": 209.0,
-      "shipments": 1147,
-      "monthly_spend_total": 1023,
-      "monthly_spend_avg": 7.0,
-      "revenue_ctt": 3482.0,
-      "revenue_ctt_avg": 25.0,
-      "annual": 6,
-      "annual_rate": 4.4,
-      "custom_domain": 8,
-      "custom_domain_rate": 5.8,
-      "first_payments": 15,
-      "conversion_rate": 10.9,
-      "avg_days_to_fp": 28.0
     }
   },
   "plan_counts": {
-    "Corporate": 362,
-    "Corporate Plus": 11,
-    "Plus": 24,
-    "Base": 23
+    "Corporate": 360,
+    "Plus": 25,
+    "Base": 24,
+    "Corporate Plus": 11
   },
   "top_industries": {
     "Outros": 94,
     "Compras/Vendas a Retalho": 39,
     "Acessórios": 36,
-    "Artesanato": 34,
-    "Vestuário": 28,
+    "Artesanato": 33,
+    "Vestuário": 27,
     "Alimentação": 16,
     "Arte & Design": 16,
     "Beleza/Spa/Cuidados pessoais": 14,
@@ -194,9 +194,9 @@
     "Artigos para crianças": 8
   },
   "payment_methods": {
-    "Cartão Crédito": 40,
-    "MB Way": 44,
-    "Multibanco": 47,
+    "Cartão Crédito": 38,
+    "MB Way": 42,
+    "Multibanco": 46,
     "Transferência": 45
   },
   "top_stores": [
@@ -259,6 +259,18 @@
       "paid_orders": 2964,
       "is_annual": true,
       "monthly_spend": 51
+    },
+    {
+      "name": "Roll up the sheep",
+      "cohort": 2020,
+      "industry": "Artesanato",
+      "plan": "Corporate",
+      "revenue_ctt": 1543.65,
+      "gmv": 10528.35,
+      "shipments": 238,
+      "paid_orders": 280,
+      "is_annual": false,
+      "monthly_spend": 45
     },
     {
       "name": "NAI roupa interior",
@@ -367,18 +379,6 @@
       "paid_orders": 853,
       "is_annual": true,
       "monthly_spend": 83
-    },
-    {
-      "name": "Quinta da Eireira",
-      "cohort": 2020,
-      "industry": "Agricultura",
-      "plan": "Corporate",
-      "revenue_ctt": 1230.0,
-      "gmv": 169454.02,
-      "shipments": 3357,
-      "paid_orders": 2939,
-      "is_annual": true,
-      "monthly_spend": 214
     }
   ],
   "sample_size": 420,
