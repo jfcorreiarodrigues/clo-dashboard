@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T03:47:05.115749+00:00",
+  "generated_at": "2026-05-02T06:19:00.408330+00:00",
   "funnel": {
     "total": 4014,
     "first_payment": 983,
@@ -10,7 +10,7 @@
     "gmv": 18040119.0,
     "shipments": 343211,
     "revenue_ctt": 728427.0,
-    "mrr": 54314,
+    "mrr": 54327,
     "paid_orders": 383235,
     "companies_scanned": 4014
   },
@@ -79,21 +79,21 @@
     "2026": 706
   },
   "cohorts": {
-    "2022": {
-      "count": 10,
-      "gmv": 380487.0,
-      "gmv_avg": 38049.0,
-      "shipments": 11376,
-      "monthly_spend_total": 1283,
-      "monthly_spend_avg": 128.0,
-      "revenue_ctt": 12253.0,
-      "revenue_ctt_avg": 1225.0,
-      "annual": 3,
-      "annual_rate": 30.0,
-      "custom_domain": 7,
-      "custom_domain_rate": 70.0,
-      "first_payments": 10,
-      "conversion_rate": 100.0,
+    "2026": {
+      "count": 34,
+      "gmv": 2684.0,
+      "gmv_avg": 79.0,
+      "shipments": 24,
+      "monthly_spend_total": 308,
+      "monthly_spend_avg": 9.0,
+      "revenue_ctt": 394.0,
+      "revenue_ctt_avg": 12.0,
+      "annual": 1,
+      "annual_rate": 2.9,
+      "custom_domain": 2,
+      "custom_domain_rate": 5.9,
+      "first_payments": 3,
+      "conversion_rate": 8.8,
       "avg_days_to_fp": 28.0
     },
     "2025": {
@@ -101,7 +101,7 @@
       "gmv": 36729.0,
       "gmv_avg": 260.0,
       "shipments": 1090,
-      "monthly_spend_total": 1214,
+      "monthly_spend_total": 1202,
       "monthly_spend_avg": 9.0,
       "revenue_ctt": 5353.0,
       "revenue_ctt_avg": 38.0,
@@ -112,6 +112,40 @@
       "first_payments": 24,
       "conversion_rate": 17.0,
       "avg_days_to_fp": 33.0
+    },
+    "2020": {
+      "count": 22,
+      "gmv": 4058257.0,
+      "gmv_avg": 184466.0,
+      "shipments": 50093,
+      "monthly_spend_total": 3188,
+      "monthly_spend_avg": 145.0,
+      "revenue_ctt": 24644.0,
+      "revenue_ctt_avg": 1120.0,
+      "annual": 14,
+      "annual_rate": 63.6,
+      "custom_domain": 18,
+      "custom_domain_rate": 81.8,
+      "first_payments": 22,
+      "conversion_rate": 100.0,
+      "avg_days_to_fp": 69.0
+    },
+    "2022": {
+      "count": 9,
+      "gmv": 344223.0,
+      "gmv_avg": 38247.0,
+      "shipments": 9877,
+      "monthly_spend_total": 1126,
+      "monthly_spend_avg": 125.0,
+      "revenue_ctt": 11478.0,
+      "revenue_ctt_avg": 1275.0,
+      "annual": 2,
+      "annual_rate": 22.2,
+      "custom_domain": 7,
+      "custom_domain_rate": 77.8,
+      "first_payments": 9,
+      "conversion_rate": 100.0,
+      "avg_days_to_fp": 30.0
     },
     "2021": {
       "count": 10,
@@ -147,40 +181,6 @@
       "conversion_rate": 17.9,
       "avg_days_to_fp": 31.0
     },
-    "2020": {
-      "count": 22,
-      "gmv": 4058257.0,
-      "gmv_avg": 184466.0,
-      "shipments": 50093,
-      "monthly_spend_total": 3188,
-      "monthly_spend_avg": 145.0,
-      "revenue_ctt": 24644.0,
-      "revenue_ctt_avg": 1120.0,
-      "annual": 14,
-      "annual_rate": 63.6,
-      "custom_domain": 18,
-      "custom_domain_rate": 81.8,
-      "first_payments": 22,
-      "conversion_rate": 100.0,
-      "avg_days_to_fp": 69.0
-    },
-    "2026": {
-      "count": 33,
-      "gmv": 2684.0,
-      "gmv_avg": 81.0,
-      "shipments": 24,
-      "monthly_spend_total": 308,
-      "monthly_spend_avg": 9.0,
-      "revenue_ctt": 394.0,
-      "revenue_ctt_avg": 12.0,
-      "annual": 1,
-      "annual_rate": 3.0,
-      "custom_domain": 2,
-      "custom_domain_rate": 6.1,
-      "first_payments": 3,
-      "conversion_rate": 9.1,
-      "avg_days_to_fp": 28.0
-    },
     "2023": {
       "count": 20,
       "gmv": 511430.0,
@@ -214,14 +214,14 @@
     "Arte & Design": 20,
     "Alimentação": 15,
     "Negócio": 12,
-    "Tecnologia": 10,
-    "Beleza/Spa/Cuidados pessoais": 10
+    "Beleza/Spa/Cuidados pessoais": 10,
+    "Tecnologia": 10
   },
   "payment_methods": {
-    "Cartão Crédito": 45,
-    "MB Way": 44,
-    "Multibanco": 47,
-    "Transferência": 48
+    "Cartão Crédito": 44,
+    "MB Way": 43,
+    "Multibanco": 46,
+    "Transferência": 47
   },
   "top_stores": [
     {
