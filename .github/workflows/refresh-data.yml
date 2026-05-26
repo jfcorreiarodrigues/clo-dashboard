@@ -22,9 +22,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Fetch Intercom data
+      - name: Fetch dashboard data (Intercom + InvoiceXpress)
         env:
           INTERCOM_TOKEN: ${{ secrets.INTERCOM_TOKEN }}
+          INVOICEXPRESS_API_KEY: ${{ secrets.INVOICEXPRESS_API_KEY }}
+          INVOICEXPRESS_ACCOUNT: ${{ secrets.INVOICEXPRESS_ACCOUNT }}
         run: python scripts/fetch_data.py
 
       - name: Commit updated data

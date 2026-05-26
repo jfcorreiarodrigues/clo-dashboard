@@ -205,6 +205,28 @@ footer{text-align:center;font-size:10px;color:var(--muted);padding:16px;backgrou
     <div class="kcard b"><div class="kl">Dias Médios até 1.º Pagamento</div><div class="kv" id="bDays">—</div><div class="ks">Tempo médio até conversão</div></div>
   </div>
 
+  <!-- FATURAÇÃO INVOICEXPRESS -->
+  <div class="sec" id="ixSec" style="display:none">Faturação de Subscrições <span class="badge" style="background:#0A7;color:#fff">INVOICEXPRESS</span></div>
+  <div id="ixWrap" style="display:none">
+    <div class="kgrid" style="margin-bottom:12px;">
+      <div class="kcard"><div class="kl">Faturado (período)</div><div class="kv" id="ixInvoiced">—</div><div class="ks" id="ixPeriod">—</div></div>
+      <div class="kcard g"><div class="kl">Liquidado (pago)</div><div class="kv grn" id="ixSettled">—</div><div class="ks" id="ixSettledS">—</div></div>
+      <div class="kcard a"><div class="kl">Vencido / em aberto</div><div class="kv" style="color:var(--amber-l)" id="ixOverdue">—</div><div class="ks" id="ixOverdueS">—</div></div>
+      <div class="kcard p"><div class="kl">Notas de crédito</div><div class="kv" style="color:var(--purple)" id="ixCN">—</div><div class="ks" id="ixCNS">reembolsos / anulações de valor</div></div>
+    </div>
+    <div class="grid2e" style="margin-bottom:12px;">
+      <div class="card">
+        <div class="card-t">Receita faturada por mês (€)</div>
+        <div style="position:relative;height:220px;"><canvas id="ixMonthly"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-t">Documentos por tipo</div>
+        <div id="ixTypeDiv"></div>
+      </div>
+    </div>
+    <p class="note" id="ixNote"></p>
+  </div>
+
   <!-- FUNIL CLO -->
   <div class="sec">Funil CLO — Snapshot Atual <span class="badge live">LIVE</span></div>
   <div class="kgrid" id="kpiGrid">
@@ -311,7 +333,7 @@ footer{text-align:center;font-size:10px;color:var(--muted);padding:16px;backgrou
 
 <footer>
   CTT Criar Lojas Online — Dashboard Executivo &nbsp;|&nbsp; 
-  Fonte: Intercom API &nbsp;|&nbsp; 
+  Fontes: Intercom + InvoiceXpress &nbsp;|&nbsp;
   Atualizado automaticamente a cada hora via GitHub Actions &nbsp;|&nbsp; 
   <a href=".github/workflows/refresh-data.yml" style="color:var(--red);">Ver workflow</a>
 </footer>
@@ -616,6 +638,44 @@ function render(d){
   document.getElementById('convDiv').innerHTML=cl.length
     ? cl.map(c=>`<div class="crow"><span class="cst ${c.state==='open'?'open':c.state==='snoozed'?'snz':'closed'}">${c.state==='open'?'Aberta':c.state==='snoozed'?'Snoozed':'Fechada'}</span><div><strong>${c.author||'—'}</strong><span style="color:var(--muted);margin-left:6px">${(c.preview||'').substring(0,130)}</span></div></div>`).join('')
     : '<p style="color:var(--muted);font-size:12px;text-align:center;padding:12px">Sem conversas abertas neste momento.</p>';
+
+  // Faturação InvoiceXpress
+  const iv=d.invoicing||{};
+  const ixSec=document.getElementById('ixSec'), ixWrap=document.getElementById('ixWrap');
+  if(iv.configured && iv.totals){
+    ixSec.style.display=''; ixWrap.style.display='';
+    const t=iv.totals||{}, c=iv.counts||{}, per=iv.period||{};
+    document.getElementById('ixInvoiced').textContent=money(t.invoiced);
+    document.getElementById('ixPeriod').textContent=`${per.from||''} → ${per.to||''} · ${fmt(c.documents)} documentos`;
+    document.getElementById('ixSettled').textContent=money(t.settled);
+    document.getElementById('ixSettledS').textContent=`${pct(t.settled,t.invoiced)} do faturado · ${fmt(c.settled)} liquidadas`;
+    document.getElementById('ixOverdue').textContent=money(t.overdue);
+    document.getElementById('ixOverdueS').textContent=`${fmt(c.overdue)} vencidas · ${money(t.outstanding)} em aberto`;
+    document.getElementById('ixCN').textContent=money(t.credit_notes);
+    document.getElementById('ixCNS').textContent=`${fmt(c.credit_notes)} notas · líquido ${money(t.net)}`;
+
+    const bm2=iv.by_month||{};
+    const mk=Object.keys(bm2).sort();
+    mkChart('ixMonthly','bar',mk,[
+      {label:'Faturado',data:mk.map(k=>bm2[k].invoiced||0),backgroundColor:R,borderRadius:4},
+      {label:'Liquidado',data:mk.map(k=>bm2[k].settled||0),backgroundColor:G,borderRadius:4}
+    ],{
+      plugins:{legend:{display:true,labels:{color:tc,boxWidth:10,font:{size:10}}},tooltip:{callbacks:{label:x=>' '+x.dataset.label+': €'+Math.round(x.raw).toLocaleString('pt-PT')}}},
+      scales:{x:{grid:{display:false},ticks:{color:tc}},y:{grid:{color:gc},ticks:{color:tc,callback:v=>'€'+Math.round(v/1000)+'k'}}}
+    });
+
+    const bt2=iv.by_type||{};
+    const typeLabels={'Invoice':'Faturas','InvoiceReceipt':'Faturas-Recibo','SimplifiedInvoice':'Faturas Simpl.','CreditNote':'Notas de Crédito','DebitNote':'Notas de Débito'};
+    const tEntries=Object.entries(bt2).sort((a,b)=>b[1].count-a[1].count);
+    const maxT=tEntries[0]?.[1].count||1;
+    document.getElementById('ixTypeDiv').innerHTML=tEntries.length
+      ? tEntries.map(([k,v])=>bar(typeLabels[k]||k,v.count,maxT,k==='CreditNote'?P:R,v.count)).join('')
+      : '<p style="color:var(--muted);font-size:12px">Sem documentos no período.</p>';
+
+    document.getElementById('ixNote').textContent=`Fonte: InvoiceXpress (conta ${iv.account||''}). Faturação real das subscrições — exclui rascunhos, anuladas e 2.ªs vias. Notas de crédito mostradas como valor de reembolso/anulação. Janela: últimos ${per.months||12} meses.`;
+  } else if(ixSec && ixWrap){
+    ixSec.style.display='none'; ixWrap.style.display='none';
+  }
 }
 
 async function loadData(){

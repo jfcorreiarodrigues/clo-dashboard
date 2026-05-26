@@ -10,6 +10,7 @@ from collections import Counter
 from datetime import datetime, timezone, timedelta
 from urllib.request import urlopen, Request
 from urllib.error import URLError
+from urllib.parse import urlencode
 
 TOKEN = os.environ.get("INTERCOM_TOKEN", "")
 if not TOKEN:
@@ -420,6 +421,169 @@ feedback_categories = [
 print(f"  Feedback: {len(feedback_raw)} convs analysed → {len(feedback_categories)} categories")
 
 
+# ── INVOICEXPRESS: subscription billing (central CTT account) ────────────────
+# Auth: api_key on the query string. Base: https://{account}.app.invoicexpress.com
+# Listing: GET /invoices.json filtered by type[]/status[]/date[from,to] (DD/MM/YYYY).
+# Rate limit is 780 req/min, so a light sleep between pages is enough.
+IX_KEY     = os.environ.get("INVOICEXPRESS_API_KEY", "")
+IX_ACCOUNT = os.environ.get("INVOICEXPRESS_ACCOUNT", "")
+IX_MONTHS  = int(os.environ.get("INVOICEXPRESS_MONTHS", "12") or 12)
+IX_TYPES   = ["Invoice", "InvoiceReceipt", "SimplifiedInvoice", "CreditNote", "DebitNote"]
+# Money-bearing invoice documents (credit notes are handled separately as refunds).
+IX_INVOICE_TYPES = {"Invoice", "InvoiceReceipt", "SimplifiedInvoice", "DebitNote"}
+# Statuses that must not count towards real billed revenue.
+IX_EXCLUDE_STATUS = {"draft", "canceled", "second_copy"}
+
+
+def ix_get(path, params):
+    url = f"https://{IX_ACCOUNT}.app.invoicexpress.com{path}?" + urlencode(params, doseq=True)
+    req = Request(url, headers={"Accept": "application/json"})
+    for attempt in range(4):
+        try:
+            with urlopen(req, timeout=30) as r:
+                return json.loads(r.read())
+        except URLError as e:
+            # Don't burn retries on auth/not-found — fail fast so the block is skipped.
+            if getattr(e, "code", None) in (401, 403, 404):
+                raise
+            if attempt == 3:
+                raise
+            time.sleep(2 ** attempt)
+
+
+def ix_parse_date(s):
+    if not s:
+        return None
+    s = str(s).strip()[:10]
+    for fmt_ in ("%d/%m/%Y", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(s, fmt_).date()
+        except ValueError:
+            continue
+    return None
+
+
+def fetch_invoicing():
+    if not (IX_KEY and IX_ACCOUNT):
+        print("InvoiceXpress not configured (INVOICEXPRESS_API_KEY / INVOICEXPRESS_ACCOUNT) — skipping")
+        return None
+
+    today = datetime.now(tz=timezone.utc).date()
+    sy, sm = today.year, today.month - (IX_MONTHS - 1)
+    while sm <= 0:
+        sm += 12
+        sy -= 1
+    date_from = f"01/{sm:02d}/{sy}"
+    date_to   = today.strftime("%d/%m/%Y")
+    print(f"Fetching InvoiceXpress invoicing {date_from} → {date_to} (account: {IX_ACCOUNT})...")
+
+    totals    = {k: 0.0 for k in ["invoiced", "before_taxes", "taxes", "settled",
+                                   "outstanding", "overdue", "credit_notes"]}
+    counts    = {k: 0 for k in ["documents", "settled", "outstanding", "overdue", "credit_notes"]}
+    by_month  = {}   # "YYYY-MM" -> {invoiced, settled, credit_notes, count}
+    by_type   = {}   # type -> {count, total}
+    by_status = {}   # status -> count
+    currency  = "EUR"
+
+    page, total_pages, fetched = 1, 1, 0
+    MAX_PAGES = 1500
+    while page <= total_pages and page <= MAX_PAGES:
+        params = [("api_key", IX_KEY), ("page", page),
+                  ("date[from]", date_from), ("date[to]", date_to)]
+        for t in IX_TYPES:
+            params.append(("type[]", t))
+        try:
+            r = ix_get("/invoices.json", params)
+        except Exception as e:
+            print(f"  InvoiceXpress page {page}: ERROR {e}")
+            if page == 1:
+                raise
+            break
+
+        invs = r.get("invoices", []) or []
+        pg   = r.get("pagination", {}) or {}
+        total_pages = int(pg.get("total_pages") or 1)
+
+        for inv in invs:
+            fetched += 1
+            typ    = inv.get("type") or "Unknown"
+            status = (inv.get("status") or "").lower()
+            total  = float(inv.get("total") or 0)
+            before = float(inv.get("before_taxes") or 0)
+            taxes  = float(inv.get("taxes") or 0)
+            if inv.get("currency"):
+                currency = inv["currency"]
+            d    = ix_parse_date(inv.get("date"))
+            mkey = f"{d.year}-{d.month:02d}" if d else "unknown"
+
+            by_type.setdefault(typ, {"count": 0, "total": 0.0})
+            by_type[typ]["count"] += 1
+            by_type[typ]["total"] += total
+            by_status[status] = by_status.get(status, 0) + 1
+            m = by_month.setdefault(mkey, {"invoiced": 0.0, "settled": 0.0,
+                                           "credit_notes": 0.0, "count": 0})
+            m["count"] += 1
+            counts["documents"] += 1
+
+            if status in IX_EXCLUDE_STATUS:
+                continue
+
+            if typ == "CreditNote":
+                totals["credit_notes"] += total
+                counts["credit_notes"] += 1
+                m["credit_notes"]      += total
+                continue
+
+            if typ in IX_INVOICE_TYPES:
+                totals["invoiced"]     += total
+                totals["before_taxes"] += before
+                totals["taxes"]        += taxes
+                m["invoiced"]          += total
+                if status == "settled":
+                    totals["settled"] += total
+                    counts["settled"] += 1
+                    m["settled"]      += total
+                else:
+                    totals["outstanding"] += total
+                    counts["outstanding"] += 1
+                    due = ix_parse_date(inv.get("due_date"))
+                    if due and due < today:
+                        totals["overdue"] += total
+                        counts["overdue"] += 1
+
+        if page == 1 or page % 25 == 0 or page == total_pages:
+            print(f"  Page {page}/{total_pages} — {fetched} docs")
+        page += 1
+        time.sleep(0.1)
+
+    totals["net"] = totals["invoiced"] - totals["credit_notes"]
+    by_month_sorted = dict(sorted((k, v) for k, v in by_month.items() if k != "unknown"))
+
+    print(f"  InvoiceXpress: {counts['documents']} docs | faturado €{totals['invoiced']:,.0f} | "
+          f"pago €{totals['settled']:,.0f} | vencido €{totals['overdue']:,.0f} | NC €{totals['credit_notes']:,.0f}")
+
+    return {
+        "configured": True,
+        "account":    IX_ACCOUNT,
+        "currency":   currency,
+        "period":     {"from": date_from, "to": date_to, "months": IX_MONTHS},
+        "totals":     {k: round(v, 2) for k, v in totals.items()},
+        "counts":     counts,
+        "by_month":   {k: {kk: (round(vv, 2) if isinstance(vv, float) else vv)
+                            for kk, vv in v.items()} for k, v in by_month_sorted.items()},
+        "by_type":    {k: {"count": v["count"], "total": round(v["total"], 2)} for k, v in by_type.items()},
+        "by_status":  by_status,
+    }
+
+
+print("Fetching InvoiceXpress invoicing data...")
+try:
+    invoicing = fetch_invoicing()
+except Exception as e:
+    print(f"InvoiceXpress fetch failed: {e}")
+    invoicing = {"configured": False, "error": str(e)}
+
+
 # ── OUTPUT ────────────────────────────────────────────────────────────────────
 now = datetime.now(tz=timezone.utc).isoformat()
 
@@ -453,6 +617,7 @@ output = {
         "total_analyzed": len(feedback_raw),
         "period_days":    90,
     },
+    "invoicing": invoicing or {"configured": False},
 }
 
 out_path = os.path.join(os.path.dirname(__file__), "..", "data.json")
