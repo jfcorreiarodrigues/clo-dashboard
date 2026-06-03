@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T23:56:58.343674+00:00",
+  "generated_at": "2026-06-03T05:05:10.807704+00:00",
   "funnel": {
     "total": 4056,
     "first_payment": 989,
@@ -7,11 +7,11 @@
     "open_conversations": 10
   },
   "totals": {
-    "gmv": 18446829.0,
-    "shipments": 352138,
+    "gmv": 18447421.0,
+    "shipments": 352143,
     "revenue_ctt": 740625.0,
-    "mrr": 54674,
-    "paid_orders": 391653,
+    "mrr": 54661,
+    "paid_orders": 391666,
     "companies_scanned": 4056
   },
   "open_conversations_list": [
@@ -79,19 +79,53 @@
     "2026": 706
   },
   "cohorts": {
+    "2024": {
+      "count": 192,
+      "gmv": 906198.0,
+      "gmv_avg": 4720.0,
+      "shipments": 16495,
+      "monthly_spend_total": 4547,
+      "monthly_spend_avg": 24.0,
+      "revenue_ctt": 15928.0,
+      "revenue_ctt_avg": 83.0,
+      "annual": 14,
+      "annual_rate": 7.3,
+      "custom_domain": 32,
+      "custom_domain_rate": 16.7,
+      "first_payments": 39,
+      "conversion_rate": 20.3,
+      "avg_days_to_fp": 35.0
+    },
+    "2020": {
+      "count": 22,
+      "gmv": 4287925.0,
+      "gmv_avg": 194906.0,
+      "shipments": 55874,
+      "monthly_spend_total": 3452,
+      "monthly_spend_avg": 157.0,
+      "revenue_ctt": 26647.0,
+      "revenue_ctt_avg": 1211.0,
+      "annual": 13,
+      "annual_rate": 59.1,
+      "custom_domain": 20,
+      "custom_domain_rate": 90.9,
+      "first_payments": 22,
+      "conversion_rate": 100.0,
+      "avg_days_to_fp": 60.0
+    },
     "2025": {
       "count": 121,
-      "gmv": 328383.0,
-      "gmv_avg": 2714.0,
-      "shipments": 1516,
-      "monthly_spend_total": 1147,
+      "gmv": 328138.0,
+      "gmv_avg": 2712.0,
+      "shipments": 1630,
+      "monthly_spend_total": 1126,
       "monthly_spend_avg": 9.0,
-      "revenue_ctt": 5852.0,
-      "revenue_ctt_avg": 48.0,
-      "annual": 8,
-      "annual_rate": 6.6,
-      "custom_domain": 11,
-      "custom_domain_rate": 9.1,
+      "revenue_ctt": 5884.0,
+      "revenue_ctt_avg": 49.0,
+      "annual": 7,
+      "annual_rate": 5.8,
+      "custom_domain": 10,
+      "custom_domain_rate": 8.3,
       "first_payments": 20,
       "conversion_rate": 16.5,
       "avg_days_to_fp": 37.0
@@ -132,8 +166,8 @@
     },
     "2026": {
       "count": 41,
-      "gmv": 10766.0,
-      "gmv_avg": 263.0,
+      "gmv": 10873.0,
+      "gmv_avg": 265.0,
       "shipments": 112,
       "monthly_spend_total": 799,
       "monthly_spend_avg": 19.0,
@@ -146,40 +180,6 @@
       "first_payments": 9,
       "conversion_rate": 22.0,
       "avg_days_to_fp": 17.0
-    },
-    "2024": {
-      "count": 192,
-      "gmv": 906178.0,
-      "gmv_avg": 4720.0,
-      "shipments": 16495,
-      "monthly_spend_total": 4548,
-      "monthly_spend_avg": 24.0,
-      "revenue_ctt": 15928.0,
-      "revenue_ctt_avg": 83.0,
-      "annual": 14,
-      "annual_rate": 7.3,
-      "custom_domain": 32,
-      "custom_domain_rate": 16.7,
-      "first_payments": 39,
-      "conversion_rate": 20.3,
-      "avg_days_to_fp": 35.0
-    },
-    "2020": {
-      "count": 22,
-      "gmv": 4287731.0,
-      "gmv_avg": 194897.0,
-      "shipments": 55874,
-      "monthly_spend_total": 3451,
-      "monthly_spend_avg": 157.0,
-      "revenue_ctt": 26647.0,
-      "revenue_ctt_avg": 1211.0,
-      "annual": 13,
-      "annual_rate": 59.1,
-      "custom_domain": 20,
-      "custom_domain_rate": 90.9,
-      "first_payments": 22,
-      "conversion_rate": 100.0,
-      "avg_days_to_fp": 60.0
     },
     "2021": {
       "count": 10,
@@ -200,9 +200,9 @@
     }
   },
   "plan_counts": {
-    "Plus": 35,
-    "Corporate": 346,
     "Corporate Plus": 15,
+    "Corporate": 345,
+    "Plus": 36,
     "Base": 24
   },
   "top_industries": {
@@ -210,18 +210,18 @@
     "Artesanato": 50,
     "Compras/Vendas a Retalho": 32,
     "Vestuário": 30,
-    "Acessórios": 23,
+    "Acessórios": 24,
     "Alimentação": 19,
     "Arte & Design": 19,
     "Bebidas alcoólicas": 12,
-    "Negócio": 10,
+    "Negócio": 9,
     "Artigos para crianças": 8
   },
   "payment_methods": {
     "Cartão Crédito": 38,
-    "MB Way": 47,
+    "MB Way": 46,
     "Multibanco": 45,
-    "Transferência": 50
+    "Transferência": 49
   },
   "top_stores": [
     {
@@ -330,7 +330,7 @@
       "shipments": 1673,
       "paid_orders": 1363,
       "is_annual": false,
-      "monthly_spend": 98
+      "monthly_spend": 99
     },
     {
       "name": "MeowMeow Babies and Kids Store",
