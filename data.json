@@ -1,20 +1,26 @@
 {
-  "generated_at": "2026-06-08T23:21:07.218113+00:00",
+  "generated_at": "2026-06-09T04:18:27.150213+00:00",
   "funnel": {
     "total": 4065,
     "first_payment": 990,
     "active": 537,
-    "open_conversations": 9
+    "open_conversations": 10
   },
   "totals": {
-    "gmv": 18521706.0,
-    "shipments": 353453,
+    "gmv": 18522890.0,
+    "shipments": 353466,
     "revenue_ctt": 742432.0,
-    "mrr": 54468,
-    "paid_orders": 393013,
+    "mrr": 54524,
+    "paid_orders": 393026,
     "companies_scanned": 4065
   },
   "open_conversations_list": [
+    {
+      "id": "215474620351576",
+      "state": "open",
+      "author": "TopCarPlay",
+      "preview": "WORLDWIDE DELIVERY\n   Diga adeus aos cabos! Ligação automática e instantânea. \n\n    \n      CAMPANHA: 60% DESCONTO\n\n\n\n\n  "
+    },
     {
       "id": "215474616264863",
       "state": "open",
@@ -56,12 +62,6 @@
       "state": "open",
       "author": "Celia Dias",
       "preview": "Quero esconder o RSS da página de contactos, na parte da personalização tenho a definição de esconder o RSS ativa, mas q"
-    },
-    {
-      "id": "215472753029961",
-      "state": "open",
-      "author": "Susana Cardoso",
-      "preview": "Boa tarde,\nQuando envio o link d a página por Messenger aparece-me esta foto, mas quero mudarComo posso fazer para alter"
     }
   ],
   "conv_by_year": {
@@ -71,7 +71,7 @@
     "2023": 3405,
     "2024": 4017,
     "2025": 3032,
-    "2026": 1150
+    "2026": 1151
   },
   "q1_by_year": {
     "2024": 1020,
@@ -79,73 +79,90 @@
     "2026": 706
   },
   "cohorts": {
-    "2026": {
-      "count": 41,
-      "gmv": 7839.0,
-      "gmv_avg": 191.0,
-      "shipments": 67,
-      "monthly_spend_total": 655,
-      "monthly_spend_avg": 16.0,
-      "revenue_ctt": 929.0,
-      "revenue_ctt_avg": 23.0,
-      "annual": 3,
-      "annual_rate": 7.3,
-      "custom_domain": 2,
-      "custom_domain_rate": 4.9,
-      "first_payments": 6,
-      "conversion_rate": 14.6,
-      "avg_days_to_fp": 24.0
+    "2020": {
+      "count": 15,
+      "gmv": 3451837.0,
+      "gmv_avg": 230122.0,
+      "shipments": 31082,
+      "monthly_spend_total": 1833,
+      "monthly_spend_avg": 122.0,
+      "revenue_ctt": 18202.0,
+      "revenue_ctt_avg": 1213.0,
+      "annual": 8,
+      "annual_rate": 53.3,
+      "custom_domain": 14,
+      "custom_domain_rate": 93.3,
+      "first_payments": 14,
+      "conversion_rate": 93.3,
+      "avg_days_to_fp": 49.0
     },
     "2025": {
       "count": 123,
-      "gmv": 29363.0,
-      "gmv_avg": 239.0,
-      "shipments": 1046,
-      "monthly_spend_total": 1317,
-      "monthly_spend_avg": 11.0,
-      "revenue_ctt": 7295.0,
-      "revenue_ctt_avg": 59.0,
-      "annual": 15,
-      "annual_rate": 12.2,
+      "gmv": 26591.0,
+      "gmv_avg": 216.0,
+      "shipments": 958,
+      "monthly_spend_total": 1257,
+      "monthly_spend_avg": 10.0,
+      "revenue_ctt": 6767.0,
+      "revenue_ctt_avg": 55.0,
+      "annual": 14,
+      "annual_rate": 11.4,
       "custom_domain": 15,
       "custom_domain_rate": 12.2,
-      "first_payments": 25,
-      "conversion_rate": 20.3,
+      "first_payments": 24,
+      "conversion_rate": 19.5,
+      "avg_days_to_fp": 35.0
+    },
+    "2022": {
+      "count": 10,
+      "gmv": 607371.0,
+      "gmv_avg": 60737.0,
+      "shipments": 15413,
+      "monthly_spend_total": 1453,
+      "monthly_spend_avg": 145.0,
+      "revenue_ctt": 7719.0,
+      "revenue_ctt_avg": 772.0,
+      "annual": 3,
+      "annual_rate": 30.0,
+      "custom_domain": 9,
+      "custom_domain_rate": 90.0,
+      "first_payments": 10,
+      "conversion_rate": 100.0,
       "avg_days_to_fp": 34.0
     },
-    "2020": {
-      "count": 16,
-      "gmv": 3534275.0,
-      "gmv_avg": 220892.0,
-      "shipments": 32081,
-      "monthly_spend_total": 1934,
-      "monthly_spend_avg": 121.0,
-      "revenue_ctt": 20531.0,
-      "revenue_ctt_avg": 1283.0,
-      "annual": 8,
-      "annual_rate": 50.0,
-      "custom_domain": 16,
-      "custom_domain_rate": 100.0,
-      "first_payments": 16,
-      "conversion_rate": 100.0,
-      "avg_days_to_fp": 50.0
+    "2026": {
+      "count": 42,
+      "gmv": 11986.0,
+      "gmv_avg": 285.0,
+      "shipments": 81,
+      "monthly_spend_total": 770,
+      "monthly_spend_avg": 18.0,
+      "revenue_ctt": 998.0,
+      "revenue_ctt_avg": 24.0,
+      "annual": 3,
+      "annual_rate": 7.1,
+      "custom_domain": 3,
+      "custom_domain_rate": 7.1,
+      "first_payments": 7,
+      "conversion_rate": 16.7,
+      "avg_days_to_fp": 24.0
     },
     "2023": {
-      "count": 37,
-      "gmv": 675563.0,
-      "gmv_avg": 18258.0,
-      "shipments": 14193,
-      "monthly_spend_total": 2138,
-      "monthly_spend_avg": 58.0,
-      "revenue_ctt": 10840.0,
-      "revenue_ctt_avg": 293.0,
+      "count": 36,
+      "gmv": 609012.0,
+      "gmv_avg": 16917.0,
+      "shipments": 11206,
+      "monthly_spend_total": 1709,
+      "monthly_spend_avg": 47.0,
+      "revenue_ctt": 10183.0,
+      "revenue_ctt_avg": 283.0,
       "annual": 6,
-      "annual_rate": 16.2,
-      "custom_domain": 18,
-      "custom_domain_rate": 48.6,
-      "first_payments": 21,
-      "conversion_rate": 56.8,
-      "avg_days_to_fp": 26.0
+      "annual_rate": 16.7,
+      "custom_domain": 17,
+      "custom_domain_rate": 47.2,
+      "first_payments": 20,
+      "conversion_rate": 55.6,
+      "avg_days_to_fp": 27.0
     },
     "2021": {
       "count": 7,
@@ -166,11 +183,11 @@
     },
     "2024": {
       "count": 187,
-      "gmv": 905739.0,
-      "gmv_avg": 4844.0,
-      "shipments": 16604,
-      "monthly_spend_total": 4582,
-      "monthly_spend_avg": 25.0,
+      "gmv": 906023.0,
+      "gmv_avg": 4845.0,
+      "shipments": 16607,
+      "monthly_spend_total": 4579,
+      "monthly_spend_avg": 24.0,
       "revenue_ctt": 16863.0,
       "revenue_ctt_avg": 90.0,
       "annual": 17,
@@ -180,48 +197,31 @@
       "first_payments": 39,
       "conversion_rate": 20.9,
       "avg_days_to_fp": 35.0
-    },
-    "2022": {
-      "count": 9,
-      "gmv": 583992.0,
-      "gmv_avg": 64888.0,
-      "shipments": 15413,
-      "monthly_spend_total": 1415,
-      "monthly_spend_avg": 157.0,
-      "revenue_ctt": 6673.0,
-      "revenue_ctt_avg": 741.0,
-      "annual": 3,
-      "annual_rate": 33.3,
-      "custom_domain": 8,
-      "custom_domain_rate": 88.9,
-      "first_payments": 9,
-      "conversion_rate": 100.0,
-      "avg_days_to_fp": 38.0
     }
   },
   "plan_counts": {
-    "Plus": 29,
-    "Corporate Plus": 17,
     "Corporate": 350,
-    "Base": 24
+    "Plus": 30,
+    "Corporate Plus": 17,
+    "Base": 23
   },
   "top_industries": {
     "Outros": 92,
     "Artesanato": 53,
-    "Vestuário": 31,
+    "Vestuário": 30,
     "Compras/Vendas a Retalho": 29,
-    "Acessórios": 27,
-    "Alimentação": 18,
-    "Arte & Design": 16,
+    "Acessórios": 28,
+    "Arte & Design": 17,
+    "Alimentação": 17,
     "Negócio": 10,
     "Artigos para crianças": 9,
     "Tecnologia": 9
   },
   "payment_methods": {
     "Cartão Crédito": 36,
-    "MB Way": 47,
+    "MB Way": 46,
     "Multibanco": 44,
-    "Transferência": 45
+    "Transferência": 42
   },
   "top_stores": [
     {
@@ -283,18 +283,6 @@
       "paid_orders": 1446,
       "is_annual": true,
       "monthly_spend": 114
-    },
-    {
-      "name": "Cardel",
-      "cohort": 2020,
-      "industry": "Vestuário",
-      "plan": "Corporate",
-      "revenue_ctt": 1505.52,
-      "gmv": 82340.11,
-      "shipments": 999,
-      "paid_orders": 694,
-      "is_annual": false,
-      "monthly_spend": 88
     },
     {
       "name": "Loja Fernando Daniel",
@@ -403,6 +391,18 @@
       "paid_orders": 6325,
       "is_annual": false,
       "monthly_spend": 68
+    },
+    {
+      "name": "Cavalinho Loja  Oficial",
+      "cohort": 2020,
+      "industry": "Calçado/acessórios",
+      "plan": "Corporate",
+      "revenue_ctt": 1126.68,
+      "gmv": 183418.62,
+      "shipments": 2279,
+      "paid_orders": 1824,
+      "is_annual": false,
+      "monthly_spend": 152
     }
   ],
   "sample_size": 420,
