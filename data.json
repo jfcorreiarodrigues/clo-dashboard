@@ -1,20 +1,26 @@
 {
-  "generated_at": "2026-07-04T20:15:12.766275+00:00",
+  "generated_at": "2026-07-04T22:06:55.115298+00:00",
   "funnel": {
     "total": 4120,
     "first_payment": 994,
     "active": 531,
-    "open_conversations": 14
+    "open_conversations": 15
   },
   "totals": {
-    "gmv": 18818188.0,
-    "shipments": 360413,
+    "gmv": 18818893.0,
+    "shipments": 360451,
     "revenue_ctt": 771091.0,
-    "mrr": 54166,
-    "paid_orders": 399407,
+    "mrr": 54187,
+    "paid_orders": 399421,
     "companies_scanned": 4120
   },
   "open_conversations_list": [
+    {
+      "id": "215474961112545",
+      "state": "open",
+      "author": "Andreia Filipe da Ponte",
+      "preview": "a minha pagina nao esta a aparecer"
+    },
     {
       "id": "215474960002741",
       "state": "open",
@@ -56,12 +62,6 @@
       "state": "open",
       "author": "SUCESSO REL UNIPESSOAL LDA",
       "preview": "Expedição [#529690]: Ocorreu um erro na autenticação do cliente com a Guid 93a65b35-19cd-4b06-a2a2-7f33caa082c9.​"
-    },
-    {
-      "id": "215474678318839",
-      "state": "open",
-      "author": "SUCESSO REL UNIP LDA",
-      "preview": "Não estou a conseguir validar a minha conta com o meu telemóvel 929364654 o SMS não chega"
     }
   ],
   "conv_by_year": {
@@ -71,7 +71,7 @@
     "2023": 3405,
     "2024": 4017,
     "2025": 3032,
-    "2026": 1314
+    "2026": 1315
   },
   "q1_by_year": {
     "2024": 1020,
@@ -79,39 +79,73 @@
     "2026": 706
   },
   "cohorts": {
-    "2020": {
-      "count": 25,
-      "gmv": 4632661.0,
-      "gmv_avg": 185306.0,
-      "shipments": 55812,
-      "monthly_spend_total": 3419,
-      "monthly_spend_avg": 137.0,
-      "revenue_ctt": 29504.0,
-      "revenue_ctt_avg": 1180.0,
-      "annual": 14,
-      "annual_rate": 56.0,
-      "custom_domain": 19,
-      "custom_domain_rate": 76.0,
-      "first_payments": 24,
-      "conversion_rate": 96.0,
+    "2026": {
+      "count": 41,
+      "gmv": 5554.0,
+      "gmv_avg": 135.0,
+      "shipments": 52,
+      "monthly_spend_total": 220,
+      "monthly_spend_avg": 5.0,
+      "revenue_ctt": 675.0,
+      "revenue_ctt_avg": 16.0,
+      "annual": 2,
+      "annual_rate": 4.9,
+      "custom_domain": 2,
+      "custom_domain_rate": 4.9,
+      "first_payments": 4,
+      "conversion_rate": 9.8,
+      "avg_days_to_fp": 21.0
+    },
+    "2025": {
+      "count": 127,
+      "gmv": 40175.0,
+      "gmv_avg": 316.0,
+      "shipments": 1299,
+      "monthly_spend_total": 1459,
+      "monthly_spend_avg": 11.0,
+      "revenue_ctt": 6847.0,
+      "revenue_ctt_avg": 54.0,
+      "annual": 6,
+      "annual_rate": 4.7,
+      "custom_domain": 17,
+      "custom_domain_rate": 13.4,
+      "first_payments": 28,
+      "conversion_rate": 22.0,
       "avg_days_to_fp": 52.0
     },
     "2024": {
-      "count": 136,
-      "gmv": 1210857.0,
-      "gmv_avg": 8903.0,
-      "shipments": 76426,
-      "monthly_spend_total": 4164,
-      "monthly_spend_avg": 31.0,
-      "revenue_ctt": 12842.0,
-      "revenue_ctt_avg": 94.0,
+      "count": 139,
+      "gmv": 1369460.0,
+      "gmv_avg": 9852.0,
+      "shipments": 82088,
+      "monthly_spend_total": 5208,
+      "monthly_spend_avg": 37.0,
+      "revenue_ctt": 14393.0,
+      "revenue_ctt_avg": 104.0,
+      "annual": 17,
+      "annual_rate": 12.2,
+      "custom_domain": 29,
+      "custom_domain_rate": 20.9,
+      "first_payments": 38,
+      "conversion_rate": 27.3,
+      "avg_days_to_fp": 44.0
+    },
+    "2020": {
+      "count": 24,
+      "gmv": 4448621.0,
+      "gmv_avg": 185359.0,
+      "shipments": 53517,
+      "monthly_spend_total": 3268,
+      "monthly_spend_avg": 136.0,
+      "revenue_ctt": 28343.0,
+      "revenue_ctt_avg": 1181.0,
       "annual": 14,
-      "annual_rate": 10.3,
-      "custom_domain": 27,
-      "custom_domain_rate": 19.9,
-      "first_payments": 35,
-      "conversion_rate": 25.7,
-      "avg_days_to_fp": 45.0
+      "annual_rate": 58.3,
+      "custom_domain": 18,
+      "custom_domain_rate": 75.0,
+      "first_payments": 23,
+      "conversion_rate": 95.8,
+      "avg_days_to_fp": 54.0
     },
     "2022": {
       "count": 11,
@@ -130,39 +164,22 @@
       "conversion_rate": 90.9,
       "avg_days_to_fp": 16.0
     },
-    "2025": {
-      "count": 129,
-      "gmv": 44786.0,
-      "gmv_avg": 347.0,
-      "shipments": 1430,
-      "monthly_spend_total": 1673,
-      "monthly_spend_avg": 13.0,
-      "revenue_ctt": 8168.0,
-      "revenue_ctt_avg": 63.0,
-      "annual": 8,
-      "annual_rate": 6.2,
-      "custom_domain": 21,
-      "custom_domain_rate": 16.3,
-      "first_payments": 30,
-      "conversion_rate": 23.3,
-      "avg_days_to_fp": 50.0
-    },
     "2021": {
       "count": 8,
-      "gmv": 1171174.0,
-      "gmv_avg": 146397.0,
-      "shipments": 18908,
-      "monthly_spend_total": 1212,
-      "monthly_spend_avg": 152.0,
-      "revenue_ctt": 9530.0,
-      "revenue_ctt_avg": 1191.0,
-      "annual": 3,
-      "annual_rate": 37.5,
+      "gmv": 1073922.0,
+      "gmv_avg": 134240.0,
+      "shipments": 19641,
+      "monthly_spend_total": 1230,
+      "monthly_spend_avg": 154.0,
+      "revenue_ctt": 9076.0,
+      "revenue_ctt_avg": 1134.0,
+      "annual": 4,
+      "annual_rate": 50.0,
       "custom_domain": 8,
       "custom_domain_rate": 100.0,
       "first_payments": 8,
       "conversion_rate": 100.0,
-      "avg_days_to_fp": 159.0
+      "avg_days_to_fp": 135.0
     },
     "2023": {
       "count": 70,
@@ -180,48 +197,31 @@
       "first_payments": 17,
       "conversion_rate": 24.3,
       "avg_days_to_fp": 23.0
-    },
-    "2026": {
-      "count": 41,
-      "gmv": 1558.0,
-      "gmv_avg": 38.0,
-      "shipments": 11,
-      "monthly_spend_total": 296,
-      "monthly_spend_avg": 7.0,
-      "revenue_ctt": 471.0,
-      "revenue_ctt_avg": 11.0,
-      "annual": 1,
-      "annual_rate": 2.4,
-      "custom_domain": 2,
-      "custom_domain_rate": 4.9,
-      "first_payments": 4,
-      "conversion_rate": 9.8,
-      "avg_days_to_fp": 16.0
     }
   },
   "plan_counts": {
-    "Corporate": 343,
-    "Corporate Plus": 17,
-    "Plus": 28,
-    "Base": 32
+    "Corporate": 341,
+    "Corporate Plus": 16,
+    "Plus": 30,
+    "Base": 33
   },
   "top_industries": {
     "Outros": 71,
-    "Compras/Vendas a Retalho": 44,
-    "Vestuário": 41,
-    "Artesanato": 41,
-    "Acessórios": 31,
+    "Compras/Vendas a Retalho": 45,
+    "Artesanato": 44,
+    "Vestuário": 40,
+    "Acessórios": 30,
     "Arte & Design": 21,
-    "Beleza/Spa/Cuidados pessoais": 16,
-    "Alimentação": 13,
-    "Tecnologia": 11,
-    "Animais": 11
+    "Beleza/Spa/Cuidados pessoais": 15,
+    "Alimentação": 14,
+    "Animais": 11,
+    "Tecnologia": 10
   },
   "payment_methods": {
-    "Cartão Crédito": 42,
-    "MB Way": 47,
-    "Multibanco": 43,
-    "Transferência": 44
+    "Cartão Crédito": 41,
+    "MB Way": 46,
+    "Multibanco": 42,
+    "Transferência": 43
   },
   "top_stores": [
     {
@@ -381,18 +381,6 @@
       "monthly_spend": 178
     },
     {
-      "name": "Digital Eletrónica - Comercio de Eletrónica.",
-      "cohort": 2021,
-      "industry": "Tecnologia",
-      "plan": "Corporate",
-      "revenue_ctt": 1259.52,
-      "gmv": 144366.15,
-      "shipments": 1947,
-      "paid_orders": 1521,
-      "is_annual": false,
-      "monthly_spend": 154
-    },
-    {
       "name": "StoRin",
       "cohort": 2020,
       "industry": "Compras/Vendas a Retalho",
@@ -403,6 +391,18 @@
       "paid_orders": 1350,
       "is_annual": true,
       "monthly_spend": 73
+    },
+    {
+      "name": "DFTELECOMUNICAÇOES",
+      "cohort": 2021,
+      "industry": "Tecnologia",
+      "plan": "Plus",
+      "revenue_ctt": 1234.31,
+      "gmv": 3514.49,
+      "shipments": 143,
+      "paid_orders": 25,
+      "is_annual": false,
+      "monthly_spend": 21
     }
   ],
   "sample_size": 420,
