@@ -1,20 +1,26 @@
 {
-  "generated_at": "2026-07-10T00:15:31.102400+00:00",
+  "generated_at": "2026-07-10T05:01:38.798480+00:00",
   "funnel": {
     "total": 4129,
     "first_payment": 997,
     "active": 532,
-    "open_conversations": 15
+    "open_conversations": 16
   },
   "totals": {
-    "gmv": 18951426.0,
-    "shipments": 362176,
-    "revenue_ctt": 771796.0,
-    "mrr": 54739,
-    "paid_orders": 398309,
+    "gmv": 18883860.0,
+    "shipments": 362173,
+    "revenue_ctt": 772491.0,
+    "mrr": 54162,
+    "paid_orders": 400866,
     "companies_scanned": 4129
   },
   "open_conversations_list": [
+    {
+      "id": "215475027343288",
+      "state": "open",
+      "author": "Appetite Control Coffee",
+      "preview": "Imagine não pensar em comida durante todo o dia   Desfrute de um café encorpado que ajuda a controlar o apetite, apoia a"
+    },
     {
       "id": "215474760235834",
       "state": "open",
@@ -56,12 +62,6 @@
       "state": "open",
       "author": "Paulo Filipe da Silva Oliveira Unipessoal Lda.",
       "preview": "Comprei aqui com vocês o domínio almofada.pt e não aparece para conectar na loja. Agradeço que verifiquem o que se passa"
-    },
-    {
-      "id": "215474992265368",
-      "state": "open",
-      "author": "Marcos Soares",
-      "preview": "Olá bom dia."
     }
   ],
   "conv_by_year": {
@@ -71,7 +71,7 @@
     "2023": 3405,
     "2024": 4017,
     "2025": 3032,
-    "2026": 1356
+    "2026": 1357
   },
   "q1_by_year": {
     "2024": 1020,
@@ -79,13 +79,30 @@
     "2026": 706
   },
   "cohorts": {
+    "2020": {
+      "count": 22,
+      "gmv": 3368542.0,
+      "gmv_avg": 153116.0,
+      "shipments": 27039,
+      "monthly_spend_total": 1917,
+      "monthly_spend_avg": 87.0,
+      "revenue_ctt": 25641.0,
+      "revenue_ctt_avg": 1165.0,
+      "annual": 7,
+      "annual_rate": 31.8,
+      "custom_domain": 15,
+      "custom_domain_rate": 68.2,
+      "first_payments": 21,
+      "conversion_rate": 95.5,
+      "avg_days_to_fp": 67.0
+    },
     "2024": {
       "count": 131,
-      "gmv": 747464.0,
-      "gmv_avg": 5706.0,
+      "gmv": 747670.0,
+      "gmv_avg": 5707.0,
       "shipments": 21101,
-      "monthly_spend_total": 4915,
-      "monthly_spend_avg": 38.0,
+      "monthly_spend_total": 4912,
+      "monthly_spend_avg": 37.0,
       "revenue_ctt": 13141.0,
       "revenue_ctt_avg": 100.0,
       "annual": 15,
@@ -95,23 +112,6 @@
       "first_payments": 37,
       "conversion_rate": 28.2,
       "avg_days_to_fp": 43.0
-    },
-    "2020": {
-      "count": 20,
-      "gmv": 3324791.0,
-      "gmv_avg": 166240.0,
-      "shipments": 25651,
-      "monthly_spend_total": 1816,
-      "monthly_spend_avg": 91.0,
-      "revenue_ctt": 22859.0,
-      "revenue_ctt_avg": 1143.0,
-      "annual": 6,
-      "annual_rate": 30.0,
-      "custom_domain": 14,
-      "custom_domain_rate": 70.0,
-      "first_payments": 19,
-      "conversion_rate": 95.0,
-      "avg_days_to_fp": 68.0
     },
     "2026": {
       "count": 44,
@@ -132,8 +132,8 @@
     },
     "2022": {
       "count": 10,
-      "gmv": 422469.0,
-      "gmv_avg": 42247.0,
+      "gmv": 422540.0,
+      "gmv_avg": 42254.0,
       "shipments": 15133,
       "monthly_spend_total": 1351,
       "monthly_spend_avg": 135.0,
@@ -149,10 +149,10 @@
     },
     "2025": {
       "count": 125,
-      "gmv": 46454.0,
-      "gmv_avg": 372.0,
-      "shipments": 1501,
-      "monthly_spend_total": 1659,
+      "gmv": 47646.0,
+      "gmv_avg": 381.0,
+      "shipments": 1504,
+      "monthly_spend_total": 1667,
       "monthly_spend_avg": 13.0,
       "revenue_ctt": 7919.0,
       "revenue_ctt_avg": 63.0,
@@ -165,26 +165,26 @@
       "avg_days_to_fp": 39.0
     },
     "2021": {
-      "count": 15,
-      "gmv": 1299704.0,
-      "gmv_avg": 86647.0,
-      "shipments": 23375,
-      "monthly_spend_total": 1622,
-      "monthly_spend_avg": 108.0,
-      "revenue_ctt": 17277.0,
-      "revenue_ctt_avg": 1152.0,
+      "count": 13,
+      "gmv": 1139150.0,
+      "gmv_avg": 87627.0,
+      "shipments": 21202,
+      "monthly_spend_total": 1426,
+      "monthly_spend_avg": 110.0,
+      "revenue_ctt": 15059.0,
+      "revenue_ctt_avg": 1158.0,
       "annual": 5,
-      "annual_rate": 33.3,
-      "custom_domain": 14,
-      "custom_domain_rate": 93.3,
-      "first_payments": 15,
+      "annual_rate": 38.5,
+      "custom_domain": 12,
+      "custom_domain_rate": 92.3,
+      "first_payments": 13,
       "conversion_rate": 100.0,
-      "avg_days_to_fp": 146.0
+      "avg_days_to_fp": 139.0
     },
     "2023": {
       "count": 75,
-      "gmv": 425150.0,
-      "gmv_avg": 5669.0,
+      "gmv": 425279.0,
+      "gmv_avg": 5670.0,
       "shipments": 10423,
       "monthly_spend_total": 1511,
       "monthly_spend_avg": 20.0,
@@ -200,28 +200,28 @@
     }
   },
   "plan_counts": {
-    "Corporate": 337,
+    "Corporate": 338,
     "Corporate Plus": 15,
-    "Plus": 33,
+    "Plus": 32,
     "Base": 35
   },
   "top_industries": {
     "Outros": 71,
     "Compras/Vendas a Retalho": 48,
     "Artesanato": 47,
-    "Vestuário": 33,
+    "Vestuário": 34,
     "Acessórios": 28,
     "Arte & Design": 22,
     "Alimentação": 19,
     "Beleza/Spa/Cuidados pessoais": 16,
-    "Tecnologia": 11,
-    "Negócio": 9
+    "Tecnologia": 10,
+    "Negócio": 8
   },
   "payment_methods": {
     "Cartão Crédito": 39,
     "MB Way": 38,
-    "Multibanco": 43,
-    "Transferência": 39
+    "Multibanco": 44,
+    "Transferência": 38
   },
   "top_stores": [
     {
@@ -295,6 +295,18 @@
       "paid_orders": 119,
       "is_annual": false,
       "monthly_spend": 20
+    },
+    {
+      "name": "Loja - Garcia & Silva",
+      "cohort": 2020,
+      "industry": "Vestuário",
+      "plan": "Corporate",
+      "revenue_ctt": 1549.8,
+      "gmv": 2485.66,
+      "shipments": 165,
+      "paid_orders": 100,
+      "is_annual": true,
+      "monthly_spend": 25
     },
     {
       "name": "Pop*Manga Portugal",
@@ -379,18 +391,6 @@
       "paid_orders": 77,
       "is_annual": false,
       "monthly_spend": 22
-    },
-    {
-      "name": "Digital Eletrónica - Comercio de Eletrónica.",
-      "cohort": 2021,
-      "industry": "Tecnologia",
-      "plan": "Corporate",
-      "revenue_ctt": 1259.52,
-      "gmv": 144665.49,
-      "shipments": 1954,
-      "paid_orders": 1525,
-      "is_annual": false,
-      "monthly_spend": 155
     },
     {
       "name": "DFTELECOMUNICAÇOES",
