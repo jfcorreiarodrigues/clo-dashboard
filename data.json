@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T03:32:01.236380+00:00",
+  "generated_at": "2026-07-11T06:24:08.059957+00:00",
   "funnel": {
     "total": 4129,
     "first_payment": 997,
@@ -7,11 +7,11 @@
     "open_conversations": 13
   },
   "totals": {
-    "gmv": 18894497.0,
+    "gmv": 18894901.0,
     "shipments": 362433,
     "revenue_ctt": 773441.0,
-    "mrr": 54179,
-    "paid_orders": 401123,
+    "mrr": 53876,
+    "paid_orders": 401132,
     "companies_scanned": 4129
   },
   "open_conversations_list": [
@@ -79,10 +79,27 @@
     "2026": 706
   },
   "cohorts": {
+    "2025": {
+      "count": 122,
+      "gmv": 50837.0,
+      "gmv_avg": 417.0,
+      "shipments": 1290,
+      "monthly_spend_total": 1304,
+      "monthly_spend_avg": 11.0,
+      "revenue_ctt": 7375.0,
+      "revenue_ctt_avg": 60.0,
+      "annual": 9,
+      "annual_rate": 7.4,
+      "custom_domain": 17,
+      "custom_domain_rate": 13.9,
+      "first_payments": 26,
+      "conversion_rate": 21.3,
+      "avg_days_to_fp": 42.0
+    },
     "2024": {
       "count": 134,
-      "gmv": 1333820.0,
-      "gmv_avg": 9954.0,
+      "gmv": 1333905.0,
+      "gmv_avg": 9955.0,
       "shipments": 81735,
       "monthly_spend_total": 5039,
       "monthly_spend_avg": 38.0,
@@ -130,23 +147,6 @@
       "conversion_rate": 100.0,
       "avg_days_to_fp": 131.0
     },
-    "2025": {
-      "count": 122,
-      "gmv": 46764.0,
-      "gmv_avg": 383.0,
-      "shipments": 1033,
-      "monthly_spend_total": 1265,
-      "monthly_spend_avg": 10.0,
-      "revenue_ctt": 7153.0,
-      "revenue_ctt_avg": 59.0,
-      "annual": 9,
-      "annual_rate": 7.4,
-      "custom_domain": 17,
-      "custom_domain_rate": 13.9,
-      "first_payments": 26,
-      "conversion_rate": 21.3,
-      "avg_days_to_fp": 42.0
-    },
     "2022": {
       "count": 12,
       "gmv": 451938.0,
@@ -169,8 +169,8 @@
       "gmv": 10743.0,
       "gmv_avg": 250.0,
       "shipments": 101,
-      "monthly_spend_total": 670,
-      "monthly_spend_avg": 16.0,
+      "monthly_spend_total": 454,
+      "monthly_spend_avg": 11.0,
       "revenue_ctt": 551.0,
       "revenue_ctt_avg": 13.0,
       "annual": 1,
@@ -200,8 +200,8 @@
     }
   },
   "plan_counts": {
-    "Corporate Plus": 19,
     "Corporate": 337,
+    "Corporate Plus": 19,
     "Plus": 29,
     "Base": 35
   },
@@ -215,13 +215,13 @@
     "Alimentação": 17,
     "Beleza/Spa/Cuidados pessoais": 15,
     "Tecnologia": 11,
-    "Negócio": 8
+    "Livraria": 8
   },
   "payment_methods": {
-    "Cartão Crédito": 45,
-    "MB Way": 41,
-    "Multibanco": 45,
-    "Transferência": 43
+    "Cartão Crédito": 44,
+    "MB Way": 40,
+    "Multibanco": 44,
+    "Transferência": 44
   },
   "top_stores": [
     {
