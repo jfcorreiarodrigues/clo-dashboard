@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T00:00:38.389889+00:00",
+  "generated_at": "2026-07-14T03:27:24.974654+00:00",
   "funnel": {
     "total": 4135,
     "first_payment": 997,
@@ -7,11 +7,11 @@
     "open_conversations": 18
   },
   "totals": {
-    "gmv": 18925041.0,
-    "shipments": 363203,
+    "gmv": 18927757.0,
+    "shipments": 363213,
     "revenue_ctt": 782800.0,
-    "mrr": 53871,
-    "paid_orders": 401735,
+    "mrr": 53720,
+    "paid_orders": 401780,
     "companies_scanned": 4135
   },
   "open_conversations_list": [
@@ -81,7 +81,7 @@
   "cohorts": {
     "2026": {
       "count": 50,
-      "gmv": 17483.0,
+      "gmv": 17506.0,
       "gmv_avg": 350.0,
       "shipments": 160,
       "monthly_spend_total": 380,
@@ -98,10 +98,10 @@
     },
     "2024": {
       "count": 134,
-      "gmv": 956445.0,
-      "gmv_avg": 7138.0,
-      "shipments": 18530,
-      "monthly_spend_total": 4613,
+      "gmv": 956777.0,
+      "gmv_avg": 7140.0,
+      "shipments": 18532,
+      "monthly_spend_total": 4610,
       "monthly_spend_avg": 34.0,
       "revenue_ctt": 15559.0,
       "revenue_ctt_avg": 116.0,
@@ -149,10 +149,10 @@
     },
     "2025": {
       "count": 116,
-      "gmv": 37354.0,
-      "gmv_avg": 322.0,
-      "shipments": 1230,
-      "monthly_spend_total": 1166,
+      "gmv": 39432.0,
+      "gmv_avg": 340.0,
+      "shipments": 1238,
+      "monthly_spend_total": 1170,
       "monthly_spend_avg": 10.0,
       "revenue_ctt": 4941.0,
       "revenue_ctt_avg": 43.0,
@@ -201,8 +201,8 @@
   },
   "plan_counts": {
     "Plus": 34,
-    "Corporate Plus": 15,
     "Corporate": 331,
+    "Corporate Plus": 15,
     "Base": 40
   },
   "top_industries": {
@@ -221,7 +221,7 @@
     "Cartão Crédito": 37,
     "MB Way": 43,
     "Multibanco": 42,
-    "Transferência": 39
+    "Transferência": 40
   },
   "top_stores": [
     {
