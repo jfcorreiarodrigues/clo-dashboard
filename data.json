@@ -1,26 +1,20 @@
 {
-  "generated_at": "2026-07-17T11:28:14.075787+00:00",
+  "generated_at": "2026-07-17T13:58:29.695253+00:00",
   "funnel": {
-    "total": 4140,
+    "total": 4141,
     "first_payment": 999,
     "active": 531,
-    "open_conversations": 9
+    "open_conversations": 8
   },
   "totals": {
-    "gmv": 18979644.0,
-    "shipments": 364650,
-    "revenue_ctt": 787703.0,
-    "mrr": 53812,
-    "paid_orders": 402954,
-    "companies_scanned": 4140
+    "gmv": 18971941.0,
+    "shipments": 364317,
+    "revenue_ctt": 787305.0,
+    "mrr": 53821,
+    "paid_orders": 402687,
+    "companies_scanned": 4141
   },
   "open_conversations_list": [
-    {
-      "id": "215475125014164",
-      "state": "open",
-      "author": "Luis Filipe Vidigal Rosado Pereira",
-      "preview": "Após várias insistências para cancelar o meu contrato, recebi um mail a comunicar que o mesmo estava cancelado desde o i"
-    },
     {
       "id": "215474760235834",
       "state": "open",
@@ -62,6 +56,12 @@
       "state": "open",
       "author": "Maria Manuela Moreira de Sousa Rodrigues Sarmento",
       "preview": "No meu templete, BOXIE, parece que tem um BUG, na visualizacao no telemovel mostra as 12 primeiras categurias, mas depoi"
+    },
+    {
+      "id": "215473827882659",
+      "state": "open",
+      "author": "Celia Dias",
+      "preview": "Quero esconder o RSS da página de contactos, na parte da personalização tenho a definição de esconder o RSS ativa, mas q"
     }
   ],
   "conv_by_year": {
@@ -79,148 +79,148 @@
     "2026": 706
   },
   "cohorts": {
-    "2023": {
-      "count": 75,
-      "gmv": 445398.0,
-      "gmv_avg": 5939.0,
-      "shipments": 14081,
-      "monthly_spend_total": 2100,
-      "monthly_spend_avg": 28.0,
-      "revenue_ctt": 6343.0,
-      "revenue_ctt_avg": 85.0,
+    "2022": {
+      "count": 8,
+      "gmv": 345593.0,
+      "gmv_avg": 43199.0,
+      "shipments": 9963,
+      "monthly_spend_total": 846,
+      "monthly_spend_avg": 106.0,
+      "revenue_ctt": 3119.0,
+      "revenue_ctt_avg": 390.0,
       "annual": 2,
-      "annual_rate": 2.7,
-      "custom_domain": 15,
-      "custom_domain_rate": 20.0,
-      "first_payments": 23,
-      "conversion_rate": 30.7,
-      "avg_days_to_fp": 38.0
-    },
-    "2020": {
-      "count": 33,
-      "gmv": 4967808.0,
-      "gmv_avg": 150540.0,
-      "shipments": 59538,
-      "monthly_spend_total": 3884,
-      "monthly_spend_avg": 118.0,
-      "revenue_ctt": 37159.0,
-      "revenue_ctt_avg": 1126.0,
-      "annual": 13,
-      "annual_rate": 39.4,
-      "custom_domain": 24,
-      "custom_domain_rate": 72.7,
-      "first_payments": 31,
-      "conversion_rate": 93.9,
-      "avg_days_to_fp": 60.0
-    },
-    "2024": {
-      "count": 129,
-      "gmv": 1449645.0,
-      "gmv_avg": 11238.0,
-      "shipments": 78068,
-      "monthly_spend_total": 4260,
-      "monthly_spend_avg": 33.0,
-      "revenue_ctt": 12449.0,
-      "revenue_ctt_avg": 97.0,
-      "annual": 17,
-      "annual_rate": 13.2,
-      "custom_domain": 28,
-      "custom_domain_rate": 21.7,
-      "first_payments": 35,
-      "conversion_rate": 27.1,
-      "avg_days_to_fp": 48.0
-    },
-    "2021": {
-      "count": 14,
-      "gmv": 994700.0,
-      "gmv_avg": 71050.0,
-      "shipments": 12200,
-      "monthly_spend_total": 1739,
-      "monthly_spend_avg": 124.0,
-      "revenue_ctt": 16169.0,
-      "revenue_ctt_avg": 1155.0,
-      "annual": 4,
-      "annual_rate": 28.6,
-      "custom_domain": 12,
-      "custom_domain_rate": 85.7,
-      "first_payments": 14,
-      "conversion_rate": 100.0,
-      "avg_days_to_fp": 119.0
+      "annual_rate": 25.0,
+      "custom_domain": 5,
+      "custom_domain_rate": 62.5,
+      "first_payments": 6,
+      "conversion_rate": 75.0,
+      "avg_days_to_fp": 16.0
     },
     "2026": {
       "count": 45,
-      "gmv": 7806.0,
-      "gmv_avg": 173.0,
-      "shipments": 77,
-      "monthly_spend_total": 441,
-      "monthly_spend_avg": 10.0,
-      "revenue_ctt": 792.0,
-      "revenue_ctt_avg": 18.0,
+      "gmv": 8982.0,
+      "gmv_avg": 200.0,
+      "shipments": 119,
+      "monthly_spend_total": 290,
+      "monthly_spend_avg": 6.0,
+      "revenue_ctt": 538.0,
+      "revenue_ctt_avg": 12.0,
       "annual": 1,
       "annual_rate": 2.2,
       "custom_domain": 6,
       "custom_domain_rate": 13.3,
-      "first_payments": 7,
-      "conversion_rate": 15.6,
-      "avg_days_to_fp": 17.0
+      "first_payments": 5,
+      "conversion_rate": 11.1,
+      "avg_days_to_fp": 16.0
+    },
+    "2023": {
+      "count": 79,
+      "gmv": 635429.0,
+      "gmv_avg": 8043.0,
+      "shipments": 16623,
+      "monthly_spend_total": 2359,
+      "monthly_spend_avg": 30.0,
+      "revenue_ctt": 9101.0,
+      "revenue_ctt_avg": 115.0,
+      "annual": 5,
+      "annual_rate": 6.3,
+      "custom_domain": 17,
+      "custom_domain_rate": 21.5,
+      "first_payments": 26,
+      "conversion_rate": 32.9,
+      "avg_days_to_fp": 37.0
     },
     "2025": {
-      "count": 115,
-      "gmv": 16196.0,
-      "gmv_avg": 141.0,
-      "shipments": 514,
-      "monthly_spend_total": 559,
-      "monthly_spend_avg": 5.0,
-      "revenue_ctt": 4411.0,
-      "revenue_ctt_avg": 38.0,
-      "annual": 5,
-      "annual_rate": 4.3,
-      "custom_domain": 9,
-      "custom_domain_rate": 7.8,
-      "first_payments": 19,
-      "conversion_rate": 16.5,
-      "avg_days_to_fp": 50.0
+      "count": 118,
+      "gmv": 56292.0,
+      "gmv_avg": 477.0,
+      "shipments": 1195,
+      "monthly_spend_total": 952,
+      "monthly_spend_avg": 8.0,
+      "revenue_ctt": 5820.0,
+      "revenue_ctt_avg": 49.0,
+      "annual": 8,
+      "annual_rate": 6.8,
+      "custom_domain": 12,
+      "custom_domain_rate": 10.2,
+      "first_payments": 21,
+      "conversion_rate": 17.8,
+      "avg_days_to_fp": 42.0
     },
-    "2022": {
-      "count": 9,
-      "gmv": 354834.0,
-      "gmv_avg": 39426.0,
-      "shipments": 10202,
-      "monthly_spend_total": 903,
-      "monthly_spend_avg": 100.0,
-      "revenue_ctt": 4644.0,
-      "revenue_ctt_avg": 516.0,
+    "2020": {
+      "count": 28,
+      "gmv": 2378528.0,
+      "gmv_avg": 84947.0,
+      "shipments": 57736,
+      "monthly_spend_total": 3589,
+      "monthly_spend_avg": 128.0,
+      "revenue_ctt": 34347.0,
+      "revenue_ctt_avg": 1227.0,
+      "annual": 13,
+      "annual_rate": 46.4,
+      "custom_domain": 20,
+      "custom_domain_rate": 71.4,
+      "first_payments": 28,
+      "conversion_rate": 100.0,
+      "avg_days_to_fp": 54.0
+    },
+    "2021": {
+      "count": 10,
+      "gmv": 1013324.0,
+      "gmv_avg": 101332.0,
+      "shipments": 17357,
+      "monthly_spend_total": 1080,
+      "monthly_spend_avg": 108.0,
+      "revenue_ctt": 11042.0,
+      "revenue_ctt_avg": 1104.0,
       "annual": 4,
-      "annual_rate": 44.4,
-      "custom_domain": 6,
-      "custom_domain_rate": 66.7,
-      "first_payments": 8,
-      "conversion_rate": 88.9,
-      "avg_days_to_fp": 16.0
+      "annual_rate": 40.0,
+      "custom_domain": 8,
+      "custom_domain_rate": 80.0,
+      "first_payments": 10,
+      "conversion_rate": 100.0,
+      "avg_days_to_fp": 147.0
+    },
+    "2024": {
+      "count": 132,
+      "gmv": 1248149.0,
+      "gmv_avg": 9456.0,
+      "shipments": 74517,
+      "monthly_spend_total": 3284,
+      "monthly_spend_avg": 25.0,
+      "revenue_ctt": 14359.0,
+      "revenue_ctt_avg": 109.0,
+      "annual": 19,
+      "annual_rate": 14.4,
+      "custom_domain": 33,
+      "custom_domain_rate": 25.0,
+      "first_payments": 40,
+      "conversion_rate": 30.3,
+      "avg_days_to_fp": 42.0
     }
   },
   "plan_counts": {
     "Corporate": 335,
-    "Corporate Plus": 15,
-    "Plus": 34,
-    "Base": 36
+    "Plus": 37,
+    "Corporate Plus": 14,
+    "Base": 34
   },
   "top_industries": {
     "Outros": 72,
-    "Compras/Vendas a Retalho": 47,
-    "Artesanato": 43,
-    "Vestuário": 33,
-    "Acessórios": 33,
-    "Arte & Design": 26,
-    "Alimentação": 16,
-    "Beleza/Spa/Cuidados pessoais": 16,
-    "Livraria": 10,
-    "Tecnologia": 8
+    "Artesanato": 50,
+    "Compras/Vendas a Retalho": 44,
+    "Vestuário": 34,
+    "Acessórios": 32,
+    "Arte & Design": 24,
+    "Beleza/Spa/Cuidados pessoais": 17,
+    "Alimentação": 15,
+    "Livraria": 9,
+    "Tecnologia": 9
   },
   "payment_methods": {
-    "Cartão Crédito": 33,
-    "MB Way": 35,
-    "Multibanco": 39,
+    "Cartão Crédito": 39,
+    "MB Way": 41,
+    "Multibanco": 44,
     "Transferência": 47
   },
   "top_stores": [
@@ -237,18 +237,6 @@
       "monthly_spend": 55
     },
     {
-      "name": "Garrafeira Campo de Ourique",
-      "cohort": 2020,
-      "industry": "Bebidas alcoólicas",
-      "plan": "Corporate",
-      "revenue_ctt": 1703.55,
-      "gmv": 104116.32,
-      "shipments": 488,
-      "paid_orders": 762,
-      "is_annual": true,
-      "monthly_spend": 28
-    },
-    {
       "name": "Sitedasferramentas",
       "cohort": 2020,
       "industry": "Compras/Vendas a Retalho",
@@ -259,6 +247,18 @@
       "paid_orders": 1024,
       "is_annual": false,
       "monthly_spend": 112
+    },
+    {
+      "name": "Grilo Kitchenware - Ernesto Grilo, Sucessores, Lda",
+      "cohort": 2020,
+      "industry": "Compras/Vendas a Retalho",
+      "plan": "Corporate",
+      "revenue_ctt": 1650.66,
+      "gmv": 151310.4,
+      "shipments": 5141,
+      "paid_orders": 4454,
+      "is_annual": false,
+      "monthly_spend": 269
     },
     {
       "name": "Teixeiras Confeções Lda",
@@ -345,6 +345,18 @@
       "monthly_spend": 54
     },
     {
+      "name": "NAI roupa interior",
+      "cohort": 2020,
+      "industry": "Vestuário intimo/Lingerie",
+      "plan": "Corporate",
+      "revenue_ctt": 1519.05,
+      "gmv": 215731.42,
+      "shipments": 6319,
+      "paid_orders": 5782,
+      "is_annual": true,
+      "monthly_spend": 322
+    },
+    {
       "name": "LavoreseCores by Célia",
       "cohort": 2020,
       "industry": "Artesanato",
@@ -357,40 +369,16 @@
       "monthly_spend": 104
     },
     {
-      "name": "Pop*Manga Portugal",
-      "cohort": 2021,
-      "industry": "Brinquedos",
+      "name": "Vesthyrso",
+      "cohort": 2020,
+      "industry": "Vestuário",
       "plan": "Corporate",
-      "revenue_ctt": 1494.45,
-      "gmv": 73504.19,
-      "shipments": 1420,
-      "paid_orders": 1426,
+      "revenue_ctt": 1412.04,
+      "gmv": 227918.71,
+      "shipments": 3719,
+      "paid_orders": 2765,
       "is_annual": true,
-      "monthly_spend": 128
-    },
-    {
-      "name": "BabyMStore",
-      "cohort": 2020,
-      "industry": "Artigos para crianças",
-      "plan": "Corporate",
-      "revenue_ctt": 1462.47,
-      "gmv": 164366.38,
-      "shipments": 4399,
-      "paid_orders": 4361,
-      "is_annual": false,
-      "monthly_spend": 294
-    },
-    {
-      "name": "Loja ALGAplus",
-      "cohort": 2020,
-      "industry": "Alimentação saúdavel/vegana/vegetariana",
-      "plan": "Corporate",
-      "revenue_ctt": 1441.56,
-      "gmv": 15972.81,
-      "shipments": 628,
-      "paid_orders": 554,
-      "is_annual": false,
-      "monthly_spend": 49
+      "monthly_spend": 223
     },
     {
       "name": "AMBikes",
@@ -403,6 +391,18 @@
       "paid_orders": 98,
       "is_annual": true,
       "monthly_spend": 57
+    },
+    {
+      "name": "Crioestética",
+      "cohort": 2023,
+      "industry": "Beleza/Spa/Cuidados pessoais",
+      "plan": "Corporate Plus",
+      "revenue_ctt": 1396.05,
+      "gmv": 36458.79,
+      "shipments": 868,
+      "paid_orders": 714,
+      "is_annual": false,
+      "monthly_spend": 145
     }
   ],
   "sample_size": 420,
@@ -410,8 +410,8 @@
     "categories": [
       {
         "name": "Expedição e Envios",
-        "count": 54,
-        "pct": 36,
+        "count": 53,
+        "pct": 35,
         "examples": [
           "Motivo custo envio",
           "Bom dia,Solicito o envio da fatura correspondente à Expedição de Encomenda n.º 5",
@@ -420,12 +420,12 @@
       },
       {
         "name": "Faturação e Pagamentos",
-        "count": 19,
+        "count": 20,
         "pct": 13,
         "examples": [
+          "Após várias insistências para cancelar o meu contrato, recebi um mail a comunica",
           "Bom dia, \n\nRecebi o email que reencaminho do software de faturação InvoiceExpres",
-          "Loja não publicada",
-          "Boa tarde Ex.mos,     Necessito de ajuda a resolver esta situação.   Verifico qu"
+          "Loja não publicada"
         ]
       },
       {
