@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T03:26:06.654871+00:00",
+  "generated_at": "2026-07-28T06:35:50.596915+00:00",
   "funnel": {
     "total": 4163,
     "first_payment": 1002,
@@ -7,11 +7,11 @@
     "open_conversations": 11
   },
   "totals": {
-    "gmv": 19088580.0,
-    "shipments": 366902,
+    "gmv": 19088879.0,
+    "shipments": 366906,
     "revenue_ctt": 790399.0,
-    "mrr": 54049,
-    "paid_orders": 405206,
+    "mrr": 54028,
+    "paid_orders": 405209,
     "companies_scanned": 4163
   },
   "open_conversations_list": [
@@ -81,20 +81,71 @@
   "cohorts": {
     "2024": {
       "count": 136,
-      "gmv": 1473927.0,
-      "gmv_avg": 10838.0,
-      "shipments": 76484,
-      "monthly_spend_total": 3960,
-      "monthly_spend_avg": 29.0,
-      "revenue_ctt": 17414.0,
-      "revenue_ctt_avg": 128.0,
-      "annual": 19,
-      "annual_rate": 14.0,
+      "gmv": 1316567.0,
+      "gmv_avg": 9681.0,
+      "shipments": 75545,
+      "monthly_spend_total": 3381,
+      "monthly_spend_avg": 25.0,
+      "revenue_ctt": 16903.0,
+      "revenue_ctt_avg": 124.0,
+      "annual": 18,
+      "annual_rate": 13.2,
       "custom_domain": 36,
       "custom_domain_rate": 26.5,
       "first_payments": 42,
       "conversion_rate": 30.9,
-      "avg_days_to_fp": 45.0
+      "avg_days_to_fp": 42.0
+    },
+    "2021": {
+      "count": 12,
+      "gmv": 1049002.0,
+      "gmv_avg": 87417.0,
+      "shipments": 18933,
+      "monthly_spend_total": 1210,
+      "monthly_spend_avg": 101.0,
+      "revenue_ctt": 13516.0,
+      "revenue_ctt_avg": 1126.0,
+      "annual": 4,
+      "annual_rate": 33.3,
+      "custom_domain": 10,
+      "custom_domain_rate": 83.3,
+      "first_payments": 12,
+      "conversion_rate": 100.0,
+      "avg_days_to_fp": 153.0
+    },
+    "2020": {
+      "count": 22,
+      "gmv": 4046091.0,
+      "gmv_avg": 183913.0,
+      "shipments": 36530,
+      "monthly_spend_total": 2268,
+      "monthly_spend_avg": 103.0,
+      "revenue_ctt": 25172.0,
+      "revenue_ctt_avg": 1144.0,
+      "annual": 10,
+      "annual_rate": 45.5,
+      "custom_domain": 18,
+      "custom_domain_rate": 81.8,
+      "first_payments": 22,
+      "conversion_rate": 100.0,
+      "avg_days_to_fp": 62.0
+    },
+    "2025": {
+      "count": 120,
+      "gmv": 81254.0,
+      "gmv_avg": 677.0,
+      "shipments": 1550,
+      "monthly_spend_total": 1105,
+      "monthly_spend_avg": 9.0,
+      "revenue_ctt": 6472.0,
+      "revenue_ctt_avg": 54.0,
+      "annual": 7,
+      "annual_rate": 5.8,
+      "custom_domain": 14,
+      "custom_domain_rate": 11.7,
+      "first_payments": 23,
+      "conversion_rate": 19.2,
+      "avg_days_to_fp": 21.0
     },
     "2022": {
       "count": 11,
@@ -117,8 +168,8 @@
       "count": 43,
       "gmv": 10040.0,
       "gmv_avg": 233.0,
-      "shipments": 83,
-      "monthly_spend_total": 386,
+      "shipments": 86,
+      "monthly_spend_total": 396,
       "monthly_spend_avg": 9.0,
       "revenue_ctt": 577.0,
       "revenue_ctt_avg": 13.0,
@@ -129,57 +180,6 @@
       "first_payments": 5,
       "conversion_rate": 11.6,
       "avg_days_to_fp": 23.0
-    },
-    "2025": {
-      "count": 120,
-      "gmv": 394351.0,
-      "gmv_avg": 3286.0,
-      "shipments": 1219,
-      "monthly_spend_total": 1024,
-      "monthly_spend_avg": 9.0,
-      "revenue_ctt": 6472.0,
-      "revenue_ctt_avg": 54.0,
-      "annual": 7,
-      "annual_rate": 5.8,
-      "custom_domain": 14,
-      "custom_domain_rate": 11.7,
-      "first_payments": 23,
-      "conversion_rate": 19.2,
-      "avg_days_to_fp": 20.0
-    },
-    "2020": {
-      "count": 22,
-      "gmv": 3971066.0,
-      "gmv_avg": 180503.0,
-      "shipments": 33239,
-      "monthly_spend_total": 2136,
-      "monthly_spend_avg": 97.0,
-      "revenue_ctt": 24987.0,
-      "revenue_ctt_avg": 1136.0,
-      "annual": 10,
-      "annual_rate": 45.5,
-      "custom_domain": 18,
-      "custom_domain_rate": 81.8,
-      "first_payments": 22,
-      "conversion_rate": 100.0,
-      "avg_days_to_fp": 60.0
-    },
-    "2021": {
-      "count": 12,
-      "gmv": 706048.0,
-      "gmv_avg": 58837.0,
-      "shipments": 8441,
-      "monthly_spend_total": 1000,
-      "monthly_spend_avg": 83.0,
-      "revenue_ctt": 13893.0,
-      "revenue_ctt_avg": 1158.0,
-      "annual": 3,
-      "annual_rate": 25.0,
-      "custom_domain": 10,
-      "custom_domain_rate": 83.3,
-      "first_payments": 12,
-      "conversion_rate": 100.0,
-      "avg_days_to_fp": 153.0
     },
     "2023": {
       "count": 76,
@@ -200,28 +200,28 @@
     }
   },
   "plan_counts": {
-    "Plus": 36,
-    "Corporate": 330,
-    "Corporate Plus": 20,
+    "Corporate Plus": 19,
+    "Corporate": 332,
+    "Plus": 35,
     "Base": 34
   },
   "top_industries": {
     "Outros": 65,
     "Compras/Vendas a Retalho": 42,
-    "Artesanato": 41,
+    "Artesanato": 42,
     "Acessórios": 36,
     "Vestuário": 35,
     "Beleza/Spa/Cuidados pessoais": 19,
     "Arte & Design": 16,
-    "Alimentação": 11,
-    "Tecnologia": 10,
-    "Negócio": 9
+    "Alimentação": 10,
+    "Livraria": 9,
+    "Tecnologia": 9
   },
   "payment_methods": {
-    "Cartão Crédito": 41,
-    "MB Way": 48,
+    "Cartão Crédito": 40,
+    "MB Way": 47,
     "Multibanco": 46,
-    "Transferência": 38
+    "Transferência": 39
   },
   "top_stores": [
     {
@@ -357,18 +357,6 @@
       "monthly_spend": 146
     },
     {
-      "name": "Digital Eletrónica - Comercio de Eletrónica.",
-      "cohort": 2021,
-      "industry": "Tecnologia",
-      "plan": "Corporate",
-      "revenue_ctt": 1293.96,
-      "gmv": 146400.45,
-      "shipments": 1985,
-      "paid_orders": 1544,
-      "is_annual": false,
-      "monthly_spend": 155
-    },
-    {
       "name": "A Caneca é Minha",
       "cohort": 2021,
       "industry": "Compras/Vendas a Retalho",
@@ -379,6 +367,18 @@
       "paid_orders": 77,
       "is_annual": false,
       "monthly_spend": 22
+    },
+    {
+      "name": "MeowMeow Babies and Kids Store",
+      "cohort": 2020,
+      "industry": "Artigos para crianças",
+      "plan": "Corporate",
+      "revenue_ctt": 1266.9,
+      "gmv": 107543.66,
+      "shipments": 3621,
+      "paid_orders": 3148,
+      "is_annual": true,
+      "monthly_spend": 178
     },
     {
       "name": "CASA DE VILAPOUCA",
