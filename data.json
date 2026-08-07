@@ -1,20 +1,26 @@
 {
-  "generated_at": "2026-08-07T00:10:56.650585+00:00",
+  "generated_at": "2026-08-07T03:56:35.483928+00:00",
   "funnel": {
     "total": 4180,
     "first_payment": 1004,
     "active": 523,
-    "open_conversations": 6
+    "open_conversations": 7
   },
   "totals": {
-    "gmv": 19226689.0,
-    "shipments": 369789,
+    "gmv": 19227264.0,
+    "shipments": 369796,
     "revenue_ctt": 793874.0,
-    "mrr": 53966,
-    "paid_orders": 408224,
+    "mrr": 53925,
+    "paid_orders": 408245,
     "companies_scanned": 4180
   },
   "open_conversations_list": [
+    {
+      "id": "215475390452119",
+      "state": "open",
+      "author": "Enjoy the BBQ",
+      "preview": "Pare de esfregar. Comece a grelhar. \n  Devolva a vida às grelhas sujas em minutos com a potente escova de limpeza rotati"
+    },
     {
       "id": "215475380212421",
       "state": "open",
@@ -59,7 +65,7 @@
     "2023": 3405,
     "2024": 4017,
     "2025": 3032,
-    "2026": 1528
+    "2026": 1529
   },
   "q1_by_year": {
     "2024": 1020,
@@ -67,6 +73,40 @@
     "2026": 706
   },
   "cohorts": {
+    "2026": {
+      "count": 46,
+      "gmv": 27466.0,
+      "gmv_avg": 597.0,
+      "shipments": 308,
+      "monthly_spend_total": 823,
+      "monthly_spend_avg": 18.0,
+      "revenue_ctt": 1371.0,
+      "revenue_ctt_avg": 30.0,
+      "annual": 3,
+      "annual_rate": 6.5,
+      "custom_domain": 10,
+      "custom_domain_rate": 21.7,
+      "first_payments": 9,
+      "conversion_rate": 19.6,
+      "avg_days_to_fp": 26.0
+    },
+    "2024": {
+      "count": 128,
+      "gmv": 637244.0,
+      "gmv_avg": 4978.0,
+      "shipments": 11891,
+      "monthly_spend_total": 2994,
+      "monthly_spend_avg": 23.0,
+      "revenue_ctt": 15915.0,
+      "revenue_ctt_avg": 124.0,
+      "annual": 16,
+      "annual_rate": 12.5,
+      "custom_domain": 31,
+      "custom_domain_rate": 24.2,
+      "first_payments": 40,
+      "conversion_rate": 31.2,
+      "avg_days_to_fp": 31.0
+    },
     "2020": {
       "count": 24,
       "gmv": 5451230.0,
@@ -84,56 +124,22 @@
       "conversion_rate": 100.0,
       "avg_days_to_fp": 56.0
     },
-    "2026": {
-      "count": 46,
-      "gmv": 27466.0,
-      "gmv_avg": 597.0,
-      "shipments": 306,
-      "monthly_spend_total": 840,
-      "monthly_spend_avg": 18.0,
-      "revenue_ctt": 1371.0,
-      "revenue_ctt_avg": 30.0,
-      "annual": 3,
-      "annual_rate": 6.5,
-      "custom_domain": 10,
-      "custom_domain_rate": 21.7,
-      "first_payments": 9,
-      "conversion_rate": 19.6,
-      "avg_days_to_fp": 26.0
-    },
     "2025": {
-      "count": 115,
-      "gmv": 71426.0,
-      "gmv_avg": 621.0,
-      "shipments": 773,
-      "monthly_spend_total": 883,
-      "monthly_spend_avg": 8.0,
-      "revenue_ctt": 5050.0,
-      "revenue_ctt_avg": 44.0,
-      "annual": 6,
-      "annual_rate": 5.2,
-      "custom_domain": 12,
-      "custom_domain_rate": 10.4,
-      "first_payments": 20,
-      "conversion_rate": 17.4,
+      "count": 114,
+      "gmv": 65845.0,
+      "gmv_avg": 578.0,
+      "shipments": 661,
+      "monthly_spend_total": 803,
+      "monthly_spend_avg": 7.0,
+      "revenue_ctt": 4773.0,
+      "revenue_ctt_avg": 42.0,
+      "annual": 5,
+      "annual_rate": 4.4,
+      "custom_domain": 11,
+      "custom_domain_rate": 9.6,
+      "first_payments": 19,
+      "conversion_rate": 16.7,
       "avg_days_to_fp": 25.0
-    },
-    "2024": {
-      "count": 127,
-      "gmv": 635862.0,
-      "gmv_avg": 5007.0,
-      "shipments": 11854,
-      "monthly_spend_total": 2955,
-      "monthly_spend_avg": 23.0,
-      "revenue_ctt": 15128.0,
-      "revenue_ctt_avg": 119.0,
-      "annual": 16,
-      "annual_rate": 12.6,
-      "custom_domain": 30,
-      "custom_domain_rate": 23.6,
-      "first_payments": 39,
-      "conversion_rate": 30.7,
-      "avg_days_to_fp": 31.0
     },
     "2023": {
       "count": 86,
@@ -154,8 +160,8 @@
     },
     "2021": {
       "count": 10,
-      "gmv": 1099869.0,
-      "gmv_avg": 109987.0,
+      "gmv": 1099903.0,
+      "gmv_avg": 109990.0,
       "shipments": 19542,
       "monthly_spend_total": 1195,
       "monthly_spend_avg": 120.0,
@@ -188,8 +194,8 @@
     }
   },
   "plan_counts": {
-    "Corporate": 328,
     "Plus": 41,
+    "Corporate": 328,
     "Corporate Plus": 14,
     "Base": 37
   },
@@ -201,8 +207,8 @@
     "Acessórios": 31,
     "Beleza/Spa/Cuidados pessoais": 23,
     "Arte & Design": 18,
-    "Negócio": 11,
     "Alimentação": 10,
+    "Negócio": 10,
     "Brinquedos": 9
   },
   "payment_methods": {
