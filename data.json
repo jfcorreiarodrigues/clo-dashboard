@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T04:25:39.280800+00:00",
+  "generated_at": "2026-08-09T05:54:00.465684+00:00",
   "funnel": {
     "total": 4181,
     "first_payment": 1005,
@@ -10,7 +10,7 @@
     "gmv": 19244288.0,
     "shipments": 370123,
     "revenue_ctt": 794918.0,
-    "mrr": 53982,
+    "mrr": 53978,
     "paid_orders": 408663,
     "companies_scanned": 4181
   },
@@ -67,23 +67,6 @@
     "2026": 706
   },
   "cohorts": {
-    "2026": {
-      "count": 41,
-      "gmv": 13188.0,
-      "gmv_avg": 322.0,
-      "shipments": 85,
-      "monthly_spend_total": 565,
-      "monthly_spend_avg": 14.0,
-      "revenue_ctt": 902.0,
-      "revenue_ctt_avg": 22.0,
-      "annual": 2,
-      "annual_rate": 4.9,
-      "custom_domain": 8,
-      "custom_domain_rate": 19.5,
-      "first_payments": 6,
-      "conversion_rate": 14.6,
-      "avg_days_to_fp": 22.0
-    },
     "2024": {
       "count": 127,
       "gmv": 1363198.0,
@@ -134,6 +117,23 @@
       "first_payments": 14,
       "conversion_rate": 100.0,
       "avg_days_to_fp": 128.0
+    },
+    "2026": {
+      "count": 41,
+      "gmv": 13188.0,
+      "gmv_avg": 322.0,
+      "shipments": 85,
+      "monthly_spend_total": 565,
+      "monthly_spend_avg": 14.0,
+      "revenue_ctt": 902.0,
+      "revenue_ctt_avg": 22.0,
+      "annual": 2,
+      "annual_rate": 4.9,
+      "custom_domain": 8,
+      "custom_domain_rate": 19.5,
+      "first_payments": 6,
+      "conversion_rate": 14.6,
+      "avg_days_to_fp": 22.0
     },
     "2022": {
       "count": 15,
@@ -188,8 +188,8 @@
     }
   },
   "plan_counts": {
-    "Plus": 37,
     "Corporate": 330,
+    "Plus": 37,
     "Corporate Plus": 17,
     "Base": 36
   },
