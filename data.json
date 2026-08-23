@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T04:46:36.048091+00:00",
+  "generated_at": "2026-08-23T05:37:45.666755+00:00",
   "funnel": {
     "total": 4226,
     "first_payment": 1005,
@@ -7,11 +7,11 @@
     "open_conversations": 6
   },
   "totals": {
-    "gmv": 19410007.0,
+    "gmv": 19410039.0,
     "shipments": 373822,
     "revenue_ctt": 804538.0,
     "mrr": 53946,
-    "paid_orders": 412157,
+    "paid_orders": 412158,
     "companies_scanned": 4226
   },
   "open_conversations_list": [
@@ -137,7 +137,7 @@
     },
     "2023": {
       "count": 77,
-      "gmv": 666720.0,
+      "gmv": 666753.0,
       "gmv_avg": 8659.0,
       "shipments": 12036,
       "monthly_spend_total": 1620,
