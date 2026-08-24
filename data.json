@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T04:54:58.086378+00:00",
+  "generated_at": "2026-08-24T05:46:17.843391+00:00",
   "funnel": {
     "total": 4228,
     "first_payment": 1005,
@@ -79,22 +79,22 @@
     "2026": 706
   },
   "cohorts": {
-    "2026": {
-      "count": 37,
-      "gmv": 7670.0,
-      "gmv_avg": 207.0,
-      "shipments": 90,
-      "monthly_spend_total": 510,
-      "monthly_spend_avg": 14.0,
-      "revenue_ctt": 887.0,
-      "revenue_ctt_avg": 24.0,
-      "annual": 1,
-      "annual_rate": 2.7,
-      "custom_domain": 4,
-      "custom_domain_rate": 10.8,
-      "first_payments": 7,
-      "conversion_rate": 18.9,
-      "avg_days_to_fp": 20.0
+    "2024": {
+      "count": 132,
+      "gmv": 978475.0,
+      "gmv_avg": 7413.0,
+      "shipments": 18380,
+      "monthly_spend_total": 4122,
+      "monthly_spend_avg": 31.0,
+      "revenue_ctt": 13202.0,
+      "revenue_ctt_avg": 100.0,
+      "annual": 16,
+      "annual_rate": 12.1,
+      "custom_domain": 29,
+      "custom_domain_rate": 22.0,
+      "first_payments": 38,
+      "conversion_rate": 28.8,
+      "avg_days_to_fp": 32.0
     },
     "2020": {
       "count": 27,
@@ -112,6 +112,23 @@
       "first_payments": 27,
       "conversion_rate": 100.0,
       "avg_days_to_fp": 49.0
+    },
+    "2026": {
+      "count": 37,
+      "gmv": 7670.0,
+      "gmv_avg": 207.0,
+      "shipments": 90,
+      "monthly_spend_total": 510,
+      "monthly_spend_avg": 14.0,
+      "revenue_ctt": 887.0,
+      "revenue_ctt_avg": 24.0,
+      "annual": 1,
+      "annual_rate": 2.7,
+      "custom_domain": 4,
+      "custom_domain_rate": 10.8,
+      "first_payments": 7,
+      "conversion_rate": 18.9,
+      "avg_days_to_fp": 20.0
     },
     "2025": {
       "count": 120,
@@ -163,23 +180,6 @@
       "first_payments": 11,
       "conversion_rate": 100.0,
       "avg_days_to_fp": 124.0
-    },
-    "2024": {
-      "count": 132,
-      "gmv": 978475.0,
-      "gmv_avg": 7413.0,
-      "shipments": 18380,
-      "monthly_spend_total": 4122,
-      "monthly_spend_avg": 31.0,
-      "revenue_ctt": 13202.0,
-      "revenue_ctt_avg": 100.0,
-      "annual": 16,
-      "annual_rate": 12.1,
-      "custom_domain": 29,
-      "custom_domain_rate": 22.0,
-      "first_payments": 38,
-      "conversion_rate": 28.8,
-      "avg_days_to_fp": 32.0
     },
     "2022": {
       "count": 16,
