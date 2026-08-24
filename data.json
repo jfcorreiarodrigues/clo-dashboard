@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T01:50:50.864760+00:00",
+  "generated_at": "2026-08-24T03:12:50.939486+00:00",
   "funnel": {
     "total": 4228,
     "first_payment": 1005,
@@ -7,11 +7,11 @@
     "open_conversations": 11
   },
   "totals": {
-    "gmv": 19418169.0,
+    "gmv": 19418212.0,
     "shipments": 373938,
     "revenue_ctt": 804978.0,
-    "mrr": 53984,
-    "paid_orders": 412402,
+    "mrr": 53887,
+    "paid_orders": 412403,
     "companies_scanned": 4228
   },
   "open_conversations_list": [
@@ -79,6 +79,23 @@
     "2026": 706
   },
   "cohorts": {
+    "2026": {
+      "count": 37,
+      "gmv": 7670.0,
+      "gmv_avg": 207.0,
+      "shipments": 90,
+      "monthly_spend_total": 510,
+      "monthly_spend_avg": 14.0,
+      "revenue_ctt": 887.0,
+      "revenue_ctt_avg": 24.0,
+      "annual": 1,
+      "annual_rate": 2.7,
+      "custom_domain": 4,
+      "custom_domain_rate": 10.8,
+      "first_payments": 7,
+      "conversion_rate": 18.9,
+      "avg_days_to_fp": 20.0
+    },
     "2020": {
       "count": 27,
       "gmv": 5563085.0,
@@ -101,7 +118,7 @@
       "gmv": 387571.0,
       "gmv_avg": 3230.0,
       "shipments": 1673,
-      "monthly_spend_total": 1169,
+      "monthly_spend_total": 1160,
       "monthly_spend_avg": 10.0,
       "revenue_ctt": 6043.0,
       "revenue_ctt_avg": 50.0,
@@ -147,23 +164,6 @@
       "conversion_rate": 100.0,
       "avg_days_to_fp": 124.0
     },
-    "2026": {
-      "count": 37,
-      "gmv": 16213.0,
-      "gmv_avg": 438.0,
-      "shipments": 244,
-      "monthly_spend_total": 551,
-      "monthly_spend_avg": 15.0,
-      "revenue_ctt": 984.0,
-      "revenue_ctt_avg": 27.0,
-      "annual": 1,
-      "annual_rate": 2.7,
-      "custom_domain": 4,
-      "custom_domain_rate": 10.8,
-      "first_payments": 7,
-      "conversion_rate": 18.9,
-      "avg_days_to_fp": 23.0
-    },
     "2024": {
       "count": 132,
       "gmv": 978475.0,
@@ -200,9 +200,9 @@
     }
   },
   "plan_counts": {
-    "Corporate": 330,
+    "Corporate": 331,
     "Corporate Plus": 17,
-    "Plus": 40,
+    "Plus": 39,
     "Base": 33
   },
   "top_industries": {
@@ -210,7 +210,7 @@
     "Outros": 50,
     "Acessórios": 39,
     "Vestuário": 36,
-    "Compras/Vendas a Retalho": 34,
+    "Compras/Vendas a Retalho": 35,
     "Beleza/Spa/Cuidados pessoais": 19,
     "Arte & Design": 18,
     "Negócio": 12,
@@ -218,10 +218,10 @@
     "Alimentação": 10
   },
   "payment_methods": {
-    "Cartão Crédito": 43,
-    "MB Way": 46,
-    "Multibanco": 49,
-    "Transferência": 43
+    "Cartão Crédito": 44,
+    "MB Way": 45,
+    "Multibanco": 50,
+    "Transferência": 42
   },
   "top_stores": [
     {
