@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T04:49:50.133525+00:00",
+  "generated_at": "2026-08-26T05:41:45.245543+00:00",
   "funnel": {
     "total": 4231,
     "first_payment": 1005,
@@ -7,11 +7,11 @@
     "open_conversations": 9
   },
   "totals": {
-    "gmv": 19458533.0,
-    "shipments": 374683,
+    "gmv": 19458867.0,
+    "shipments": 374686,
     "revenue_ctt": 805312.0,
     "mrr": 53728,
-    "paid_orders": 413266,
+    "paid_orders": 413272,
     "companies_scanned": 4231
   },
   "open_conversations_list": [
@@ -81,8 +81,8 @@
   "cohorts": {
     "2020": {
       "count": 27,
-      "gmv": 5883169.0,
-      "gmv_avg": 217895.0,
+      "gmv": 5883433.0,
+      "gmv_avg": 217905.0,
       "shipments": 87540,
       "monthly_spend_total": 5366,
       "monthly_spend_avg": 199.0,
@@ -166,9 +166,9 @@
     },
     "2021": {
       "count": 7,
-      "gmv": 1074122.0,
-      "gmv_avg": 153446.0,
-      "shipments": 19590,
+      "gmv": 1074191.0,
+      "gmv_avg": 153456.0,
+      "shipments": 19593,
       "monthly_spend_total": 1133,
       "monthly_spend_avg": 162.0,
       "revenue_ctt": 8148.0,
@@ -338,9 +338,9 @@
       "industry": "Vestuário intimo/Lingerie",
       "plan": "Corporate",
       "revenue_ctt": 1519.05,
-      "gmv": 219326.45,
+      "gmv": 219460.25,
       "shipments": 6429,
-      "paid_orders": 5872,
+      "paid_orders": 5873,
       "is_annual": true,
       "monthly_spend": 319
     },
