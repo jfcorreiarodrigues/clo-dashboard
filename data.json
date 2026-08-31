@@ -1,49 +1,31 @@
 {
-  "generated_at": "2026-08-31T05:18:14.584855+00:00",
+  "generated_at": "2026-08-31T13:29:42.251503+00:00",
   "funnel": {
-    "total": 4243,
+    "total": 4244,
     "first_payment": 1006,
-    "active": 520,
-    "open_conversations": 11
+    "active": 519,
+    "open_conversations": 7
   },
   "totals": {
-    "gmv": 19538780.0,
-    "shipments": 375793,
-    "revenue_ctt": 806890.0,
-    "mrr": 53566,
-    "paid_orders": 414946,
-    "companies_scanned": 4243
+    "gmv": 19546284.0,
+    "shipments": 375962,
+    "revenue_ctt": 807264.0,
+    "mrr": 53576,
+    "paid_orders": 415114,
+    "companies_scanned": 4244
   },
   "open_conversations_list": [
-    {
-      "id": "215475714506314",
-      "state": "open",
-      "author": "Sílvia Maria Ferreira Pinto De Carvalho",
-      "preview": "Olá, boa noite.\nNas páginas de produto da minha loja (www.meowmeow.com.pt), os dados\nestruturados (JSON-LD / schema.org)"
-    },
-    {
-      "id": "215475698256483",
-      "state": "open",
-      "author": "Alexandra Isabel Ribeiro Nobre Rasquete",
-      "preview": "bom dia, tenho seguinte duvida. para a emissão de fatura-recibo numa encomenda, devo passar o recibo pela totalidade do "
-    },
-    {
-      "id": "215475659117626",
-      "state": "open",
-      "author": "Helena Maria Quadrado Rodrigues de Sousa",
-      "preview": "Viva.\nUma encomenda foi devolvida por quebra de uma garrafa. Como posso reenviar a encomenda? \nObrigada"
-    },
-    {
-      "id": "215475043564691",
-      "state": "open",
-      "author": "Vasco Ascensão",
-      "preview": "Ao expedir as encomendas na plataforma Criar Lojas Online dos CTT beneficia da integração entre encomendas, expedição e "
-    },
     {
       "id": "215475627908589",
       "state": "open",
       "author": "Tânia Crespo Galvão",
       "preview": "Boa Noite, tudo bem? Gostaria de alterar o dominio takeitwithlove.pt para takeit.pt ambos os endreços tem redicionamento"
+    },
+    {
+      "id": "215475366671400",
+      "state": "open",
+      "author": "Roger",
+      "preview": "boa tarde"
     },
     {
       "id": "215475615088704",
@@ -62,6 +44,18 @@
       "state": "open",
       "author": "Ferraria  D\\&#39;Alge",
       "preview": "Olá bom dia.Criamos o primeiro post no blog.Acontece que as hiperligações não estão a ser evidenciadas do restante texto"
+    },
+    {
+      "id": "215474885016112",
+      "state": "open",
+      "author": "Maria Manuela Moreira de Sousa Rodrigues Sarmento",
+      "preview": "No meu templete, BOXIE, parece que tem um BUG, na visualizacao no telemovel mostra as 12 primeiras categurias, mas depoi"
+    },
+    {
+      "id": "215474708059713",
+      "state": "open",
+      "author": "João Baptista",
+      "preview": "Hi CTT Team,I was wondering why no images are being pulled from our shop when I share a link to a product page. \nE.g. I "
     }
   ],
   "conv_by_year": {
@@ -71,7 +65,7 @@
     "2023": 3405,
     "2024": 4017,
     "2025": 3032,
-    "2026": 1638
+    "2026": 1642
   },
   "q1_by_year": {
     "2024": 1020,
@@ -79,149 +73,149 @@
     "2026": 706
   },
   "cohorts": {
-    "2024": {
-      "count": 132,
-      "gmv": 735046.0,
-      "gmv_avg": 5569.0,
-      "shipments": 16961,
-      "monthly_spend_total": 3395,
-      "monthly_spend_avg": 26.0,
-      "revenue_ctt": 11541.0,
-      "revenue_ctt_avg": 87.0,
-      "annual": 13,
-      "annual_rate": 9.8,
-      "custom_domain": 28,
-      "custom_domain_rate": 21.2,
-      "first_payments": 39,
-      "conversion_rate": 29.5,
-      "avg_days_to_fp": 43.0
+    "2022": {
+      "count": 18,
+      "gmv": 733576.0,
+      "gmv_avg": 40754.0,
+      "shipments": 18974,
+      "monthly_spend_total": 1889,
+      "monthly_spend_avg": 105.0,
+      "revenue_ctt": 24009.0,
+      "revenue_ctt_avg": 1334.0,
+      "annual": 5,
+      "annual_rate": 27.8,
+      "custom_domain": 13,
+      "custom_domain_rate": 72.2,
+      "first_payments": 16,
+      "conversion_rate": 88.9,
+      "avg_days_to_fp": 22.0
     },
     "2020": {
       "count": 32,
-      "gmv": 4958925.0,
-      "gmv_avg": 154966.0,
-      "shipments": 58309,
-      "monthly_spend_total": 3639,
-      "monthly_spend_avg": 114.0,
-      "revenue_ctt": 46496.0,
-      "revenue_ctt_avg": 1453.0,
-      "annual": 16,
-      "annual_rate": 50.0,
-      "custom_domain": 26,
-      "custom_domain_rate": 81.2,
+      "gmv": 4876076.0,
+      "gmv_avg": 152377.0,
+      "shipments": 57565,
+      "monthly_spend_total": 3813,
+      "monthly_spend_avg": 119.0,
+      "revenue_ctt": 44244.0,
+      "revenue_ctt_avg": 1383.0,
+      "annual": 14,
+      "annual_rate": 43.8,
+      "custom_domain": 29,
+      "custom_domain_rate": 90.6,
       "first_payments": 32,
       "conversion_rate": 100.0,
       "avg_days_to_fp": 48.0
     },
-    "2021": {
-      "count": 10,
-      "gmv": 1297466.0,
-      "gmv_avg": 129747.0,
-      "shipments": 21657,
-      "monthly_spend_total": 1754,
-      "monthly_spend_avg": 175.0,
-      "revenue_ctt": 11047.0,
-      "revenue_ctt_avg": 1105.0,
-      "annual": 5,
-      "annual_rate": 50.0,
-      "custom_domain": 7,
-      "custom_domain_rate": 70.0,
-      "first_payments": 10,
-      "conversion_rate": 100.0,
-      "avg_days_to_fp": 127.0
-    },
-    "2026": {
-      "count": 39,
-      "gmv": 19913.0,
-      "gmv_avg": 511.0,
-      "shipments": 385,
-      "monthly_spend_total": 970,
-      "monthly_spend_avg": 25.0,
-      "revenue_ctt": 1805.0,
-      "revenue_ctt_avg": 46.0,
-      "annual": 3,
-      "annual_rate": 7.7,
-      "custom_domain": 6,
-      "custom_domain_rate": 15.4,
-      "first_payments": 11,
-      "conversion_rate": 28.2,
-      "avg_days_to_fp": 22.0
-    },
-    "2022": {
-      "count": 13,
-      "gmv": 644962.0,
-      "gmv_avg": 49612.0,
-      "shipments": 13117,
-      "monthly_spend_total": 1306,
-      "monthly_spend_avg": 100.0,
-      "revenue_ctt": 19553.0,
-      "revenue_ctt_avg": 1504.0,
-      "annual": 5,
-      "annual_rate": 38.5,
-      "custom_domain": 8,
-      "custom_domain_rate": 61.5,
-      "first_payments": 11,
-      "conversion_rate": 84.6,
-      "avg_days_to_fp": 23.0
-    },
     "2025": {
-      "count": 121,
-      "gmv": 67296.0,
-      "gmv_avg": 556.0,
-      "shipments": 2031,
-      "monthly_spend_total": 1231,
-      "monthly_spend_avg": 10.0,
-      "revenue_ctt": 6999.0,
-      "revenue_ctt_avg": 58.0,
+      "count": 118,
+      "gmv": 56276.0,
+      "gmv_avg": 477.0,
+      "shipments": 1589,
+      "monthly_spend_total": 993,
+      "monthly_spend_avg": 8.0,
+      "revenue_ctt": 5536.0,
+      "revenue_ctt_avg": 47.0,
+      "annual": 9,
+      "annual_rate": 7.6,
+      "custom_domain": 10,
+      "custom_domain_rate": 8.5,
+      "first_payments": 22,
+      "conversion_rate": 18.6,
+      "avg_days_to_fp": 64.0
+    },
+    "2024": {
+      "count": 129,
+      "gmv": 863731.0,
+      "gmv_avg": 6696.0,
+      "shipments": 73010,
+      "monthly_spend_total": 1709,
+      "monthly_spend_avg": 13.0,
+      "revenue_ctt": 9467.0,
+      "revenue_ctt_avg": 73.0,
       "annual": 12,
-      "annual_rate": 9.9,
-      "custom_domain": 15,
-      "custom_domain_rate": 12.4,
-      "first_payments": 25,
-      "conversion_rate": 20.7,
-      "avg_days_to_fp": 59.0
+      "annual_rate": 9.3,
+      "custom_domain": 26,
+      "custom_domain_rate": 20.2,
+      "first_payments": 37,
+      "conversion_rate": 28.7,
+      "avg_days_to_fp": 42.0
     },
     "2023": {
-      "count": 73,
-      "gmv": 579598.0,
-      "gmv_avg": 7940.0,
-      "shipments": 13795,
-      "monthly_spend_total": 1880,
-      "monthly_spend_avg": 26.0,
-      "revenue_ctt": 8244.0,
-      "revenue_ctt_avg": 113.0,
-      "annual": 5,
-      "annual_rate": 6.8,
-      "custom_domain": 11,
-      "custom_domain_rate": 15.1,
-      "first_payments": 22,
-      "conversion_rate": 30.1,
-      "avg_days_to_fp": 39.0
+      "count": 75,
+      "gmv": 779080.0,
+      "gmv_avg": 10388.0,
+      "shipments": 16077,
+      "monthly_spend_total": 2144,
+      "monthly_spend_avg": 29.0,
+      "revenue_ctt": 10937.0,
+      "revenue_ctt_avg": 146.0,
+      "annual": 4,
+      "annual_rate": 5.3,
+      "custom_domain": 12,
+      "custom_domain_rate": 16.0,
+      "first_payments": 25,
+      "conversion_rate": 33.3,
+      "avg_days_to_fp": 37.0
+    },
+    "2021": {
+      "count": 13,
+      "gmv": 1350005.0,
+      "gmv_avg": 103847.0,
+      "shipments": 30944,
+      "monthly_spend_total": 2183,
+      "monthly_spend_avg": 168.0,
+      "revenue_ctt": 24428.0,
+      "revenue_ctt_avg": 1879.0,
+      "annual": 7,
+      "annual_rate": 53.8,
+      "custom_domain": 10,
+      "custom_domain_rate": 76.9,
+      "first_payments": 13,
+      "conversion_rate": 100.0,
+      "avg_days_to_fp": 132.0
+    },
+    "2026": {
+      "count": 35,
+      "gmv": 11045.0,
+      "gmv_avg": 316.0,
+      "shipments": 177,
+      "monthly_spend_total": 268,
+      "monthly_spend_avg": 8.0,
+      "revenue_ctt": 573.0,
+      "revenue_ctt_avg": 16.0,
+      "annual": 0,
+      "annual_rate": 0.0,
+      "custom_domain": 1,
+      "custom_domain_rate": 2.9,
+      "first_payments": 6,
+      "conversion_rate": 17.1,
+      "avg_days_to_fp": 21.0
     }
   },
   "plan_counts": {
-    "Corporate": 337,
-    "Plus": 33,
-    "Corporate Plus": 17,
-    "Base": 33
+    "Corporate": 335,
+    "Plus": 37,
+    "Corporate Plus": 16,
+    "Base": 32
   },
   "top_industries": {
-    "Artesanato": 64,
-    "Outros": 50,
-    "Acessórios": 41,
-    "Compras/Vendas a Retalho": 35,
-    "Vestuário": 28,
-    "Arte & Design": 19,
+    "Artesanato": 61,
+    "Outros": 52,
+    "Acessórios": 42,
+    "Compras/Vendas a Retalho": 36,
+    "Vestuário": 31,
+    "Arte & Design": 18,
     "Beleza/Spa/Cuidados pessoais": 17,
-    "Bebidas alcoólicas": 15,
-    "Alimentação": 13,
-    "Negócio": 9
+    "Bebidas alcoólicas": 17,
+    "Animais": 10,
+    "Negócio": 10
   },
   "payment_methods": {
-    "Cartão Crédito": 43,
-    "MB Way": 40,
-    "Multibanco": 45,
-    "Transferência": 45
+    "Cartão Crédito": 38,
+    "MB Way": 43,
+    "Multibanco": 44,
+    "Transferência": 47
   },
   "top_stores": [
     {
@@ -235,6 +229,18 @@
       "paid_orders": 2,
       "is_annual": false,
       "monthly_spend": 303
+    },
+    {
+      "name": "Miaflô",
+      "cohort": 2021,
+      "industry": "Vestuário",
+      "plan": "Corporate",
+      "revenue_ctt": 11023.37,
+      "gmv": 28724.73,
+      "shipments": 0,
+      "paid_orders": 720,
+      "is_annual": false,
+      "monthly_spend": 306
     },
     {
       "name": "Novelos e Novelinhos",
@@ -259,18 +265,6 @@
       "paid_orders": 211,
       "is_annual": false,
       "monthly_spend": 41
-    },
-    {
-      "name": "PJ Barber for real gents®",
-      "cohort": 2020,
-      "industry": "Beleza/Spa/Cuidados pessoais",
-      "plan": "Corporate Plus",
-      "revenue_ctt": 2014.74,
-      "gmv": 4605.71,
-      "shipments": 571,
-      "paid_orders": 396,
-      "is_annual": false,
-      "monthly_spend": 55
     },
     {
       "name": "Dona Nuvem",
@@ -309,16 +303,16 @@
       "monthly_spend": 48
     },
     {
-      "name": "Charme Biju Online",
+      "name": "Garrafeira Campo de Ourique",
       "cohort": 2020,
-      "industry": "Joalharia",
+      "industry": "Bebidas alcoólicas",
       "plan": "Corporate",
-      "revenue_ctt": 1691.25,
-      "gmv": 99610.2,
-      "shipments": 646,
-      "paid_orders": 3137,
+      "revenue_ctt": 1703.55,
+      "gmv": 106378.3,
+      "shipments": 494,
+      "paid_orders": 770,
       "is_annual": true,
-      "monthly_spend": 50
+      "monthly_spend": 27
     },
     {
       "name": "Diz-me Se Gostas",
@@ -333,18 +327,6 @@
       "monthly_spend": 22
     },
     {
-      "name": "Pontos Com Arte",
-      "cohort": 2020,
-      "industry": "Artesanato",
-      "plan": "Corporate",
-      "revenue_ctt": 1664.19,
-      "gmv": 17277.5,
-      "shipments": 486,
-      "paid_orders": 492,
-      "is_annual": false,
-      "monthly_spend": 49
-    },
-    {
       "name": "HMS Sports Consulting Lda - HMS Sports Store",
       "cohort": 2020,
       "industry": "Desporto/Recriação/Actividades",
@@ -357,16 +339,16 @@
       "monthly_spend": 107
     },
     {
-      "name": "Oficinarte Store",
+      "name": "Pereira & Américo Carvalho,lda",
       "cohort": 2020,
-      "industry": "Bijuteria",
+      "industry": "Alimentação",
       "plan": "Corporate",
-      "revenue_ctt": 1617.45,
-      "gmv": 1803.86,
-      "shipments": 39,
-      "paid_orders": 75,
+      "revenue_ctt": 1629.75,
+      "gmv": 149045.49,
+      "shipments": 5097,
+      "paid_orders": 4496,
       "is_annual": true,
-      "monthly_spend": 24
+      "monthly_spend": 279
     },
     {
       "name": "Cardel",
@@ -374,9 +356,9 @@
       "industry": "Vestuário",
       "plan": "Corporate",
       "revenue_ctt": 1608.84,
-      "gmv": 84920.47,
+      "gmv": 85080.32,
       "shipments": 1038,
-      "paid_orders": 721,
+      "paid_orders": 722,
       "is_annual": false,
       "monthly_spend": 88
     },
@@ -393,16 +375,28 @@
       "monthly_spend": 42
     },
     {
-      "name": "Atelier Jessé Chaveiro",
+      "name": "LavoreseCores by Célia",
       "cohort": 2020,
-      "industry": "Arte & Design",
+      "industry": "Artesanato",
       "plan": "Corporate",
-      "revenue_ctt": 1531.35,
-      "gmv": 127.52,
-      "shipments": 1,
-      "paid_orders": 12,
+      "revenue_ctt": 1571.94,
+      "gmv": 63396.2,
+      "shipments": 1651,
+      "paid_orders": 1396,
       "is_annual": false,
-      "monthly_spend": 22
+      "monthly_spend": 103
+    },
+    {
+      "name": "Fit & Beauty",
+      "cohort": 2020,
+      "industry": "Beleza/Spa/Cuidados pessoais",
+      "plan": "Corporate",
+      "revenue_ctt": 1535.04,
+      "gmv": 12323.75,
+      "shipments": 488,
+      "paid_orders": 286,
+      "is_annual": true,
+      "monthly_spend": 49
     }
   ],
   "sample_size": 420,
@@ -410,28 +404,28 @@
     "categories": [
       {
         "name": "Expedição e Envios",
-        "count": 13,
-        "pct": 23,
+        "count": 19,
+        "pct": 29,
         "examples": [
-          "Encomenda não levantada",
-          "Cálculo de envio",
-          "Reenvio de código"
+          "Número de cliente",
+          "Alterar estado encomenda",
+          "Dados estruturados correção"
         ]
       },
       {
         "name": "Configurações e Backoffice",
-        "count": 12,
-        "pct": 21,
+        "count": 13,
+        "pct": 20,
         "examples": [
+          "Obrigado pelo seu email! \nEstarei fora do escritório de 19/08 a 02/09 com acesso",
           "Escrever sobre nós",
-          "Consulta Pedido Livre Resolução",
-          "como encerrar a minha conta?"
+          "Consulta Pedido Livre Resolução"
         ]
       },
       {
         "name": "Faturação e Pagamentos",
         "count": 10,
-        "pct": 18,
+        "pct": 15,
         "examples": [
           "Correção IVA incorreto",
           "Feed Instagram (NOVO)\n\nMostre as publicações do Instagram na sua loja online e i",
@@ -441,7 +435,7 @@
       {
         "name": "Templates e Design",
         "count": 6,
-        "pct": 11,
+        "pct": 9,
         "examples": [
           "Dificuldade com banner",
           "Ajuda no código",
@@ -451,7 +445,7 @@
       {
         "name": "Produtos e Catálogo",
         "count": 6,
-        "pct": 11,
+        "pct": 9,
         "examples": [
           "Edição de Destaques",
           "Localizar produto",
@@ -461,7 +455,7 @@
       {
         "name": "Integrações e Marketing",
         "count": 2,
-        "pct": 4,
+        "pct": 3,
         "examples": [
           "Integração Google Avaliações",
           "Problema instalação app"
@@ -469,16 +463,16 @@
       },
       {
         "name": "Outro",
-        "count": 8,
+        "count": 9,
         "pct": 14,
         "examples": [
+          "Whisky Live, BCB Berlin, trade meetings, Vinotte® simply extends every tasting.‌",
           "Descrição no Site",
-          "manutenção",
-          "Favicon e Nome Loja"
+          "manutenção"
         ]
       }
     ],
-    "total_analyzed": 57,
+    "total_analyzed": 65,
     "period_days": 90
   }
 }
