@@ -1,20 +1,32 @@
 {
-  "generated_at": "2026-10-19T21:00:56.779296+00:00",
+  "generated_at": "2026-10-20T00:16:34.975798+00:00",
   "funnel": {
     "total": 4423,
     "first_payment": 1024,
     "active": 532,
-    "open_conversations": 8
+    "open_conversations": 10
   },
   "totals": {
-    "gmv": 20098046.0,
-    "shipments": 391588,
+    "gmv": 20098925.0,
+    "shipments": 391595,
     "revenue_ctt": 834225.0,
-    "mrr": 54758,
-    "paid_orders": 431531,
+    "mrr": 54779,
+    "paid_orders": 431552,
     "companies_scanned": 4423
   },
   "open_conversations_list": [
+    {
+      "id": "215476468532278",
+      "state": "open",
+      "author": "Ultimate Outdoor Chef Knife",
+      "preview": "Criadas para o equilíbrio perfeito e um corte profissional. OFERTA LIMITADA – 70% DE DESCONTO  Aproveite antes que o sto"
+    },
+    {
+      "id": "215476456042183",
+      "state": "open",
+      "author": "COISAS3D",
+      "preview": "bom dia, estou a tentar criar uma caixa de texto nas opções extras, mas dá me sempre erro."
+    },
     {
       "id": "215476463631165",
       "state": "open",
@@ -50,18 +62,6 @@
       "state": "open",
       "author": "João Baptista",
       "preview": "Hi CTT Team,I was wondering why no images are being pulled from our shop when I share a link to a product page. \nE.g. I "
-    },
-    {
-      "id": "215475714506314",
-      "state": "open",
-      "author": "Sílvia Maria Ferreira Pinto De Carvalho",
-      "preview": "Olá, boa noite.\nNas páginas de produto da minha loja (www.meowmeow.com.pt), os dados\nestruturados (JSON-LD / schema.org)"
-    },
-    {
-      "id": "215474885016112",
-      "state": "open",
-      "author": "Maria Manuela Moreira de Sousa Rodrigues Sarmento",
-      "preview": "No meu templete, BOXIE, parece que tem um BUG, na visualizacao no telemovel mostra as 12 primeiras categurias, mas depoi"
     }
   ],
   "conv_by_year": {
@@ -71,7 +71,7 @@
     "2023": 3405,
     "2024": 4017,
     "2025": 3032,
-    "2026": 1906
+    "2026": 1907
   },
   "q1_by_year": {
     "2024": 1020,
@@ -79,149 +79,149 @@
     "2026": 706
   },
   "cohorts": {
+    "2024": {
+      "count": 137,
+      "gmv": 1730730.0,
+      "gmv_avg": 12633.0,
+      "shipments": 92589,
+      "monthly_spend_total": 4355,
+      "monthly_spend_avg": 32.0,
+      "revenue_ctt": 16789.0,
+      "revenue_ctt_avg": 123.0,
+      "annual": 19,
+      "annual_rate": 13.9,
+      "custom_domain": 33,
+      "custom_domain_rate": 24.1,
+      "first_payments": 50,
+      "conversion_rate": 36.5,
+      "avg_days_to_fp": 32.0
+    },
+    "2020": {
+      "count": 23,
+      "gmv": 1980897.0,
+      "gmv_avg": 86126.0,
+      "shipments": 47026,
+      "monthly_spend_total": 3129,
+      "monthly_spend_avg": 136.0,
+      "revenue_ctt": 45217.0,
+      "revenue_ctt_avg": 1966.0,
+      "annual": 12,
+      "annual_rate": 52.2,
+      "custom_domain": 19,
+      "custom_domain_rate": 82.6,
+      "first_payments": 23,
+      "conversion_rate": 100.0,
+      "avg_days_to_fp": 52.0
+    },
     "2026": {
-      "count": 68,
-      "gmv": 26238.0,
-      "gmv_avg": 386.0,
-      "shipments": 179,
-      "monthly_spend_total": 332,
-      "monthly_spend_avg": 5.0,
-      "revenue_ctt": 863.0,
-      "revenue_ctt_avg": 13.0,
-      "annual": 1,
-      "annual_rate": 1.5,
-      "custom_domain": 6,
-      "custom_domain_rate": 8.8,
+      "count": 66,
+      "gmv": 12567.0,
+      "gmv_avg": 190.0,
+      "shipments": 258,
+      "monthly_spend_total": 231,
+      "monthly_spend_avg": 4.0,
+      "revenue_ctt": 539.0,
+      "revenue_ctt_avg": 8.0,
+      "annual": 0,
+      "annual_rate": 0.0,
+      "custom_domain": 2,
+      "custom_domain_rate": 3.0,
       "first_payments": 7,
-      "conversion_rate": 10.3,
-      "avg_days_to_fp": 29.0
+      "conversion_rate": 10.6,
+      "avg_days_to_fp": 27.0
+    },
+    "2021": {
+      "count": 11,
+      "gmv": 1411727.0,
+      "gmv_avg": 128339.0,
+      "shipments": 26635,
+      "monthly_spend_total": 1603,
+      "monthly_spend_avg": 146.0,
+      "revenue_ctt": 12878.0,
+      "revenue_ctt_avg": 1171.0,
+      "annual": 5,
+      "annual_rate": 45.5,
+      "custom_domain": 10,
+      "custom_domain_rate": 90.9,
+      "first_payments": 10,
+      "conversion_rate": 90.9,
+      "avg_days_to_fp": 133.0
     },
     "2023": {
       "count": 36,
-      "gmv": 626226.0,
-      "gmv_avg": 17395.0,
-      "shipments": 12279,
-      "monthly_spend_total": 1698,
-      "monthly_spend_avg": 47.0,
-      "revenue_ctt": 11880.0,
-      "revenue_ctt_avg": 330.0,
-      "annual": 10,
-      "annual_rate": 27.8,
+      "gmv": 377785.0,
+      "gmv_avg": 10494.0,
+      "shipments": 8390,
+      "monthly_spend_total": 1370,
+      "monthly_spend_avg": 38.0,
+      "revenue_ctt": 12091.0,
+      "revenue_ctt_avg": 336.0,
+      "annual": 8,
+      "annual_rate": 22.2,
       "custom_domain": 22,
       "custom_domain_rate": 61.1,
       "first_payments": 26,
       "conversion_rate": 72.2,
-      "avg_days_to_fp": 47.0
-    },
-    "2024": {
-      "count": 137,
-      "gmv": 1135167.0,
-      "gmv_avg": 8286.0,
-      "shipments": 84677,
-      "monthly_spend_total": 2701,
-      "monthly_spend_avg": 20.0,
-      "revenue_ctt": 16557.0,
-      "revenue_ctt_avg": 121.0,
-      "annual": 19,
-      "annual_rate": 13.9,
-      "custom_domain": 32,
-      "custom_domain_rate": 23.4,
-      "first_payments": 50,
-      "conversion_rate": 36.5,
-      "avg_days_to_fp": 31.0
+      "avg_days_to_fp": 46.0
     },
     "2025": {
-      "count": 134,
-      "gmv": 60491.0,
-      "gmv_avg": 451.0,
-      "shipments": 1971,
-      "monthly_spend_total": 1065,
+      "count": 135,
+      "gmv": 70012.0,
+      "gmv_avg": 519.0,
+      "shipments": 1482,
+      "monthly_spend_total": 1074,
       "monthly_spend_avg": 8.0,
-      "revenue_ctt": 5654.0,
-      "revenue_ctt_avg": 42.0,
+      "revenue_ctt": 5925.0,
+      "revenue_ctt_avg": 44.0,
       "annual": 6,
-      "annual_rate": 4.5,
-      "custom_domain": 14,
-      "custom_domain_rate": 10.4,
-      "first_payments": 20,
-      "conversion_rate": 14.9,
-      "avg_days_to_fp": 22.0
+      "annual_rate": 4.4,
+      "custom_domain": 15,
+      "custom_domain_rate": 11.1,
+      "first_payments": 21,
+      "conversion_rate": 15.6,
+      "avg_days_to_fp": 23.0
     },
     "2022": {
-      "count": 13,
-      "gmv": 405039.0,
-      "gmv_avg": 31157.0,
-      "shipments": 10979,
-      "monthly_spend_total": 965,
-      "monthly_spend_avg": 74.0,
-      "revenue_ctt": 5546.0,
-      "revenue_ctt_avg": 427.0,
-      "annual": 5,
-      "annual_rate": 38.5,
-      "custom_domain": 8,
-      "custom_domain_rate": 61.5,
-      "first_payments": 12,
-      "conversion_rate": 92.3,
-      "avg_days_to_fp": 82.0
-    },
-    "2020": {
-      "count": 22,
-      "gmv": 4477650.0,
-      "gmv_avg": 203530.0,
-      "shipments": 47519,
-      "monthly_spend_total": 3025,
-      "monthly_spend_avg": 138.0,
-      "revenue_ctt": 44967.0,
-      "revenue_ctt_avg": 2044.0,
-      "annual": 13,
-      "annual_rate": 59.1,
-      "custom_domain": 17,
-      "custom_domain_rate": 77.3,
-      "first_payments": 22,
-      "conversion_rate": 100.0,
-      "avg_days_to_fp": 53.0
-    },
-    "2021": {
-      "count": 10,
-      "gmv": 1249479.0,
-      "gmv_avg": 124948.0,
-      "shipments": 20068,
-      "monthly_spend_total": 1230,
-      "monthly_spend_avg": 123.0,
-      "revenue_ctt": 11259.0,
-      "revenue_ctt_avg": 1126.0,
-      "annual": 5,
-      "annual_rate": 50.0,
-      "custom_domain": 8,
-      "custom_domain_rate": 80.0,
-      "first_payments": 9,
-      "conversion_rate": 90.0,
-      "avg_days_to_fp": 135.0
+      "count": 12,
+      "gmv": 384235.0,
+      "gmv_avg": 32020.0,
+      "shipments": 10606,
+      "monthly_spend_total": 916,
+      "monthly_spend_avg": 76.0,
+      "revenue_ctt": 4636.0,
+      "revenue_ctt_avg": 386.0,
+      "annual": 4,
+      "annual_rate": 33.3,
+      "custom_domain": 7,
+      "custom_domain_rate": 58.3,
+      "first_payments": 11,
+      "conversion_rate": 91.7,
+      "avg_days_to_fp": 61.0
     }
   },
   "plan_counts": {
-    "Corporate": 350,
-    "Plus": 32,
-    "Corporate Plus": 11,
-    "Base": 27
+    "Corporate": 344,
+    "Plus": 39,
+    "Corporate Plus": 13,
+    "Base": 24
   },
   "top_industries": {
-    "Vestuário": 58,
-    "Outros": 46,
-    "Artesanato": 42,
-    "Acessórios": 34,
-    "Compras/Vendas a Retalho": 30,
+    "Vestuário": 56,
+    "Outros": 48,
+    "Artesanato": 37,
+    "Compras/Vendas a Retalho": 34,
+    "Acessórios": 32,
     "Arte & Design": 24,
+    "Alimentação": 19,
     "Negócio": 18,
-    "Tecnologia": 16,
-    "Alimentação": 14,
+    "Tecnologia": 17,
     "Beleza/Spa/Cuidados pessoais": 11
   },
   "payment_methods": {
-    "Cartão Crédito": 38,
-    "MB Way": 36,
-    "Multibanco": 44,
-    "Transferência": 40
+    "Cartão Crédito": 41,
+    "MB Way": 41,
+    "Multibanco": 46,
+    "Transferência": 39
   },
   "top_stores": [
     {
@@ -321,6 +321,18 @@
       "monthly_spend": 49
     },
     {
+      "name": "A Mariazinha",
+      "cohort": 2020,
+      "industry": "Alimentação",
+      "plan": "Corporate",
+      "revenue_ctt": 1648.2,
+      "gmv": 42234.04,
+      "shipments": 1403,
+      "paid_orders": 1155,
+      "is_annual": true,
+      "monthly_spend": 77
+    },
+    {
       "name": "Pascal  Armazéns de Malhas, Atoalhados e Miudezas, Lda",
       "cohort": 2020,
       "industry": "Outros",
@@ -369,40 +381,28 @@
       "monthly_spend": 95
     },
     {
-      "name": "Mogavi - Decorações e Utilidades Domésticas, Lda.",
-      "cohort": 2020,
-      "industry": "Compras/Vendas a Retalho",
+      "name": "Pop*Manga Portugal",
+      "cohort": 2021,
+      "industry": "Brinquedos",
       "plan": "Corporate",
-      "revenue_ctt": 1500.6,
-      "gmv": 9952.32,
-      "shipments": 399,
-      "paid_orders": 252,
+      "revenue_ctt": 1494.45,
+      "gmv": 82851.84,
+      "shipments": 1611,
+      "paid_orders": 1616,
       "is_annual": true,
-      "monthly_spend": 37
+      "monthly_spend": 134
     },
     {
-      "name": "Companhia dos Colchões®",
+      "name": "AMBikes",
       "cohort": 2020,
-      "industry": "Mobiliário",
+      "industry": "Acessórios",
       "plan": "Corporate",
-      "revenue_ctt": 1472.31,
-      "gmv": 2476636.55,
-      "shipments": 965,
-      "paid_orders": 7033,
+      "revenue_ctt": 1402.2,
+      "gmv": 116219.48,
+      "shipments": 703,
+      "paid_orders": 104,
       "is_annual": true,
-      "monthly_spend": 76
-    },
-    {
-      "name": "Vesthyrso",
-      "cohort": 2020,
-      "industry": "Vestuário",
-      "plan": "Corporate",
-      "revenue_ctt": 1412.04,
-      "gmv": 240242.36,
-      "shipments": 3866,
-      "paid_orders": 2904,
-      "is_annual": true,
-      "monthly_spend": 219
+      "monthly_spend": 58
     }
   ],
   "sample_size": 420,
@@ -473,9 +473,9 @@
         "count": 28,
         "pct": 19,
         "examples": [
-          "Erro ao criar caixa de texto",
           "A sua almofada pode ser ainda mais confortável! \n \n\n   Experimente a Derila e si",
-          "Personalizar iPad"
+          "Personalizar iPad",
+          "Olá boa tarde . Como estão?"
         ]
       }
     ],
